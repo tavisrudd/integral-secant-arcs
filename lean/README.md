@@ -24,7 +24,7 @@ planes or complete `(k,n)`-arcs, and it does not formalize the modular
 stability theorems or the asymptotic reductions from the geometric hypotheses
 to the arithmetic bounds. No literature theorem is declared as a Lean axiom.
 
-Checked coverage snapshot: 17 claims; 11 absent; 6 fragmentary; 0 conditional;
+Checked coverage snapshot: 18 claims; 12 absent; 6 fragmentary; 0 conditional;
 0 complete; 12 reviewer terminals, of which 5 are machinery serving no current
 manuscript claim.
 

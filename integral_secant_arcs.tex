@@ -39,17 +39,20 @@
 \maketitle
 
 \begin{abstract}
-We study complete higher arcs in finite projective planes through the numbers
+We study complete \((k,n)\)-arcs in finite projective planes through the numbers
 of \(n\)-secants incident with each point.  We split the exact block-pair
 count between the arc and its complement and derive sharp integer bounds for
 both degree sequences.  The real relaxation recovers the classical incidence
-bound, while the integer bounds retain a linear obstruction at every rational
-equality parameter.  For each factorization \(\lambda=uv\), we obtain an
+bound.  Integer secant distributions retain arithmetic information lost by
+spectral mixing and give a linear obstruction at every rational equality
+parameter.  For each factorization \(\lambda=uv\), we obtain an
 explicit lower bound for \((k,n)\)-arcs such that every external point lies on
 at least \(\lambda\) \(n\)-secants, where \(q=(u+v+1)m\) and
 \(n=(u+1)m+1\).  This bound improves the spectral coefficient by a positive
-multiple of \(q\).  In the ordinary-completeness branch over \(\PG(2,3^h)\),
-we combine modular stability with the maximal-secant condition to prove
+multiple of \(q\).  On characteristic-compatible families, near equality
+forces bounded modular repair, and completeness converts that defect into
+further linear improvements.  In the ordinary-completeness branch over
+\(\PG(2,3^h)\), this proves
 \[
  k\ge \frac{q^2}{3}+\frac{4q}{3}-o(q),
  \qquad n=\frac{2q}{3}+1.
@@ -61,7 +64,7 @@ yields formulations for minimal multiple blocking sets and nonextendible
 projective codes.
 \end{abstract}
 
-\noindent\textbf{Keywords.} complete higher arc; \(n\)-secant; multiple
+\noindent\textbf{Keywords.} complete \((k,n)\)-arc; \(n\)-secant; multiple
 blocking set; symmetric design; projective code; incidence bound; modular
 stability.
 
@@ -92,7 +95,7 @@ material, and assumes responsibility for all content.
 \bibitem{AlabdullahHirschfeld}
 M.~Alabdullah and J.~W.~P.~Hirschfeld,
 \emph{A new lower bound for the smallest complete \((k,n)\)-arc in
-\(\PG(2,q)\)}, Designs Codes Cryptogr. (2019),
+\(\PG(2,q)\)}, Des. Codes Cryptogr. 87 (2019), 679--683,
 \href{https://doi.org/10.1007/s10623-018-00592-8}{doi:10.1007/s10623-018-00592-8}.
 
 \bibitem{AdriaensenSzonyiWeiner}
@@ -104,19 +107,20 @@ Desarguesian planes},
 \bibitem{BallFancsali}
 S.~Ball and S.~L.~Fancsali,
 \emph{Multiple blocking sets in finite projective spaces and improvements to
-the Griesmer bound for linear codes},
+the Griesmer bound for linear codes}, Des. Codes Cryptogr. 53 (2009),
+119--136,
 \href{https://doi.org/10.1007/s10623-009-9298-7}{doi:10.1007/s10623-009-9298-7}.
 
 \bibitem{BartoliTimpanella}
 D.~Bartoli and M.~Timpanella,
 \emph{Complete \((k,q+1)\)-arcs in \(\PG(2,\mathbb F_{q^6})\) from the
-Hermitian curve},
-\href{https://arxiv.org/abs/2306.01134}{arXiv:2306.01134v1}.
+Hermitian curve}, J. Algebraic Combin. 62 (2025), article 21,
+\href{https://doi.org/10.1007/s10801-025-01456-w}{doi:10.1007/s10801-025-01456-w}.
 
 \bibitem{BastioniMicheli}
 M.~Bastioni and G.~Micheli,
-\emph{On complete \(m\)-arcs},
-\href{https://arxiv.org/abs/2303.13670}{arXiv:2303.13670v1}.
+\emph{On complete \(m\)-arcs}, J. Algebra 638 (2024), 238--254,
+\href{https://doi.org/10.1016/j.jalgebra.2023.09.027}{doi:10.1016/j.jalgebra.2023.09.027}.
 
 \bibitem{BekerMitchellPiper}
 H.~Beker, C.~J.~Mitchell, and F.~C.~Piper,
@@ -125,24 +129,27 @@ H.~Beker, C.~J.~Mitchell, and F.~C.~Piper,
 
 \bibitem{BMS}
 A.~Bishnoi, S.~Mattheus, and J.~Schillewaert,
-\emph{Minimal multiple blocking sets}, Electron. J. Combin. 25 (2018),
-\href{https://arxiv.org/abs/1703.07843}{arXiv:1703.07843v3}.
+\emph{Minimal multiple blocking sets}, Electron. J. Combin. 25(4) (2018),
+P4.66,
+\href{https://doi.org/10.37236/7810}{doi:10.37236/7810}.
 
 \bibitem{CalderbankKantor}
 A.~R.~Calderbank and W.~M.~Kantor,
 \emph{The geometry of two-weight codes}, Bull. London Math. Soc. 18 (1986),
+97--122,
 \href{https://doi.org/10.1112/blms/18.2.97}{doi:10.1112/blms/18.2.97}.
 
 \bibitem{CsajbokWeiner}
 B.~Csajb\'ok and Zs.~Weiner,
-\emph{Generalizing Korchm\'aros--Mazzocca arcs},
+\emph{Generalizing Korchm\'aros--Mazzocca arcs}, Combinatorica 41 (2021),
+601--623,
 \href{https://doi.org/10.1007/s00493-020-4419-z}{doi:10.1007/s00493-020-4419-z}.
 
 \bibitem{KNS}
 G.~Korchm\'aros, G.~P.~Nagy, and T.~Sz\H{o}nyi,
 \emph{Algebraic approach to the completeness problem for \((k,n)\)-arcs in
-planes over finite fields},
-\href{https://arxiv.org/abs/2302.10162}{arXiv:2302.10162v1}.
+planes over finite fields}, J. Combin. Theory Ser. A 204 (2024), 105851,
+\href{https://doi.org/10.1016/j.jcta.2023.105851}{doi:10.1016/j.jcta.2023.105851}.
 
 \bibitem{Kohnert}
 A.~Kohnert,
@@ -151,12 +158,14 @@ A.~Kohnert,
 
 \bibitem{LundSaraf}
 B.~Lund and S.~Saraf,
-\emph{Incidence bounds for block designs},
-\href{https://arxiv.org/abs/1407.7513}{arXiv:1407.7513v2}.
+\emph{Incidence bounds for block designs}, SIAM J. Discrete Math. 30 (2016),
+1997--2010,
+\href{https://doi.org/10.1137/140996707}{doi:10.1137/140996707}.
 
 \bibitem{MurphyPetridis}
 B.~Murphy and G.~Petridis,
 \emph{A point-line incidence identity in finite fields, and applications},
+Mosc. J. Comb. Number Theory 6 (2016), 64--95,
 \href{https://arxiv.org/abs/1601.03981}{arXiv:1601.03981}.
 
 \bibitem{Ramani}
@@ -173,12 +182,13 @@ maximal size},
 \bibitem{SWmodp}
 T.~Sz\H{o}nyi and Zs.~Weiner,
 \emph{Stability of \(k\bmod p\) multisets and small weight codewords of the
-code generated by the lines of \(\PG(2,q)\)},
-\href{https://arxiv.org/abs/1901.09649}{arXiv:1901.09649}.
+code generated by the lines of \(\PG(2,q)\)}, J. Combin. Theory Ser. A 157
+(2018), 321--333,
+\href{https://doi.org/10.1016/j.jcta.2018.02.005}{doi:10.1016/j.jcta.2018.02.005}.
 
 \bibitem{SWeven}
 T.~Sz\H{o}nyi and Zs.~Weiner,
-\emph{On the stability of sets of even type}, Adv. Math. 267 (2014),
+\emph{On the stability of sets of even type}, Adv. Math. 267 (2014), 381--394,
 \href{https://doi.org/10.1016/j.aim.2014.09.007}{doi:10.1016/j.aim.2014.09.007}.
 
 \end{thebibliography}

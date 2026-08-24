@@ -15,6 +15,7 @@ digraph manuscript {
   "lem:repair-support" [fillcolor="#ffffff", tooltip="absent"];
   "lem:secant-number-near-equality" [fillcolor="#ffffff", tooltip="absent"];
   "prop:simultaneous-equality" [fillcolor="#ffffff", tooltip="absent"];
+  "prop:two-character-inverse" [fillcolor="#ffffff", tooltip="absent"];
   "thm:characteristic-three" [fillcolor="#fde8c8", tooltip="fragment"];
   "thm:characteristic-two" [fillcolor="#fde8c8", tooltip="fragment"];
   "thm:factor-pair" [fillcolor="#fde8c8", tooltip="fragment"];

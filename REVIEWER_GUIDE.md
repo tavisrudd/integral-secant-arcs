@@ -15,7 +15,7 @@ rational parameter calculation is in
 [`sections/04-rational-parameters.tex`](sections/04-rational-parameters.tex).
 The load-bearing modular steps are in Sections 5 and 6.
 
-## Seven checks
+## Eight checks
 
 1. **What integer information survives the real incidence bound?**
    The interval-overlap condition uses the actual pair count as a witness in
@@ -29,10 +29,11 @@ The load-bearing modular steps are in Sections 5 and 6.
    gives an ordered factorization `lambda = uv` in positive integers.  The
    manuscript makes no classification claim for rational nonintegral `a`.
 3. **Why is the number of `n`-secants localized?**
-   Lemma 4.2 combines the external coverage lower bound with the forward
-   difference of the two balanced pair-count minima.  It proves
-   `T = ud(v+1)m + O(1)` uniformly when the first-order coefficient of `k`
-   stays in a fixed bounded interval.
+   Lemma 4.2 fixes explicit bounds `C,K` for the first-order coefficient and
+   constant remainder.  It bounds `F(T_0)` by `Am`, uses the exact floor-sum
+   forward difference through `T_0+vm`, and then proves that the real lower
+   bound for the forward difference is positive for every later `T`.  Thus it
+   proves `T = ud(v+1)m + O_{u,v,C,K}(1)` uniformly over the bounded family.
 4. **Why are there only `O(q)` exceptional dual lines?**
    In the proofs of Theorems 1.1 and 1.3, the pair identity writes `-F(T)` as
    the sum of two nonnegative balancing losses.  The exact balancing-loss
@@ -57,6 +58,12 @@ The load-bearing modular steps are in Sections 5 and 6.
    repair support.  The exact Python evidence bundle and the Lean fragments
    independently check these terminal arithmetic calculations, but neither
    substitutes for the preceding geometric proof.
+8. **What inverse realization is actually proved?**
+   Proposition 7.3 treats an exact two-character point set in the dual plane.
+   Summing its line characters through one dual point reconstructs the primal
+   arc and proves that the dual point set is exactly its full maximal-secant
+   family.  The proposition does not assert that a bounded repair of a modular
+   core is realizable; that perturbed inverse problem remains open.
 
 ## Outside inputs
 
@@ -73,7 +80,7 @@ The adjacent Lean package is a partial formal companion.  Its public interface
 is
 [`PaperInterface.lean`](lean/TavisRuddFiniteGeom/Papers/IntegralSecantArcs/PaperInterface.lean),
 and [`claims.json`](lean/verification/claims.json) gives the exact
-manuscript-to-declaration map.  It classifies 17 manuscript claims as 11 absent
+manuscript-to-declaration map.  It classifies 18 manuscript claims as 12 absent
 and 6 fragmentary; none is complete.  Lean checks integer balancing and
 interval overlap, forward rational substitutions and coefficient algebra, and
 the terminal affine minima.  It does not formalize projective planes,
@@ -117,6 +124,8 @@ claim to perform that build.
 - Keep signed deficiencies signed; the characteristic-two even restriction
   costs `|D|/2` internally.
 - Pass to a subsequence before calling the bounded repair-support size fixed.
+- Fix uniform bounds for both the first-order coefficient and constant
+  remainder before invoking the secant-number localization lemma.
 - Require a spanning point set for the stated rank-three projective-code
   translation.
 - Do not use the Lean fragments or finite computational checks as premises for

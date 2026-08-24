@@ -1,7 +1,7 @@
 # Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs
 
 This directory contains the manuscript source and its verification materials.
-The paper studies complete higher arcs through the
+The paper studies complete `(k,n)`-arcs through the
 numbers of \(n\)-secants through each point.  Its principal
 application is the lower bound
 

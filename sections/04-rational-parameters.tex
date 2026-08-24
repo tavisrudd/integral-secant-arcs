@@ -60,12 +60,12 @@ stated separately because it is also used in the modular refinements.
 \begin{lemma}[Number of \(n\)-secants near equality]
 \label{lem:secant-number-near-equality}
 \coverage{absent}
-Fix \(u,v\ge1\), put \(d=u+v+1\), and suppose
+Fix \(u,v\ge1\) and constants \(C,K\ge0\), and put \(d=u+v+1\).  Suppose
 \[
  q=dm,\qquad n=(u+1)m+1,\qquad
- k=udm^2+cm+O(1),
+ k=udm^2+c_m m+e_m,
 \]
-where \(c\) remains bounded.  If every external point is on at least
+where \(|c_m|\le C\) and \(|e_m|\le K\).  If every external point is on at least
 \(uv\) \(n\)-secants and
 \begin{equation}\label{eq:F-definition}
  F(T):=\Phimin(k,nT)
@@ -73,43 +73,103 @@ where \(c\) remains bounded.  If every external point is on at least
 \end{equation}
 is nonpositive, then
 \begin{equation}\label{eq:T-localization}
- T=ud(v+1)m+O_{u,v,c}(1).
+ T=ud(v+1)m+O_{u,v,C,K}(1).
 \end{equation}
 \end{lemma}
 
 \begin{proof}
-Set \(b=q^2+q+1-k\).  The external incidence count gives
+Set
+\[
+ a=(u+1)(v+1),\qquad \lambda=uv,\qquad
+ T_*=ud(v+1)m,
+\]
+and let \(b=q^2+q+1-k\).  Thus
+\[
+ b=d(v+1)m^2+(d-c_m)m+1-e_m.
+\]
+The external incidence count gives
 \begin{equation}\label{eq:T-minimum}
  T\ge T_0:=\left\lceil\frac{uvb}{vm}\right\rceil
- =ud(v+1)m+O(1).
+ =T_*+r_m,
 \end{equation}
-Direct substitution in \eqref{eq:phi-min} gives
-\(F(T_0)=O_{u,v,c}(m)\).  Moreover,
+where \(|r_m|\le R_0\) for a constant \(R_0=R_0(u,v,C,K)\).
+
+We first record a uniform bound at this left endpoint.  Since
+\[
+ nT_0-ak=O_{u,v,C,K}(m),\qquad
+ 0\le vmT_0-\lambda b=O_{u,v,C,K}(m),
+\]
+the balanced internal degrees at \(T_0\) lie in \(\{a-1,a,a+1\}\),
+and the balanced external degrees lie in \(\{\lambda,\lambda+1\}\), for
+all sufficiently large \(m\).  Formula \eqref{eq:phi-min} therefore gives
+\[
+ \Phimin(k,nT_0)=k\binom a2+O_{u,v,C,K}(m),\qquad
+ \Phimin(b,vmT_0)=b\binom\lambda2+O_{u,v,C,K}(m).
+\]
+After substituting \(k=udm^2+O(m)\),
+\(b=d(v+1)m^2+O(m)\), and \(T_0=T_*+O(1)\), the coefficient of \(m^2\)
+in
+\[
+ k\binom a2+b\binom\lambda2-\binom{T_0}2
+\]
+vanishes by the identity
+\[
+ ud\binom a2+d(v+1)\binom\lambda2
+ =\frac{u^2d^2(v+1)^2}{2}.
+\]
+Consequently there is a constant
+\(A=A(u,v,C,K)\) such that
+\begin{equation}\label{eq:F-left-bound}
+ |F(T_0)|\le Am
+\end{equation}
+for all sufficiently large \(m\).
+
+Write \(\Delta F(T)=F(T+1)-F(T)\).  Its exact value is
 \begin{equation}\label{eq:F-difference}
- F(T+1)-F(T)
+ \Delta F(T)
  =\sum_{i=0}^{n-1}\left\lfloor\frac{nT+i}{k}\right\rfloor
  +\sum_{i=0}^{vm-1}\left\lfloor\frac{vmT+i}{b}\right\rfloor-T.
 \end{equation}
-From \(T_0\) through an interval of length \(vm+O(1)\), the first family of
-floors is at least \((u+1)(v+1)-1\), and the second is at least \(uv\).
-Thus \eqref{eq:F-difference} is at least
-\(vm-(T-T_0)+O(1)\).  Beyond this interval, use
-\(\lfloor x\rfloor\ge x-1\) and
+For every \(T\ge T_0\), the first family of floors is at least \(a-1\),
+and the second is at least \(\lambda\).  Hence, uniformly for
+\(0\le s\le vm\),
+\begin{equation}\label{eq:F-first-regime}
+ \Delta F(T_0+s)
+ \ge n(a-1)+vm\lambda-T_0-s
+ =vm-s+O_{u,v,C,K}(1).
+\end{equation}
+Choose a fixed integer \(S>2A/v+2\).  Equations
+\eqref{eq:F-left-bound} and \eqref{eq:F-first-regime} show that
+\(F(T_0+s)>0\) for \(S\le s\le vm/2\), once \(m\) is sufficiently large.
+From \(vm/2\) to \(vm\), the same lower bound is bounded below by a
+constant, while the accumulated increase at \(vm/2\) has order \(m^2\).
+Thus
+\begin{equation}\label{eq:F-positive-first-regime}
+ F(T_0+s)>0\qquad(S\le s\le vm).
+\end{equation}
+
+It remains to exclude a later return to nonpositive values.  Using
+\(\lfloor x\rfloor\ge x-1\) in \eqref{eq:F-difference} gives
+\begin{equation}\label{eq:F-second-regime}
+ \Delta F(T)\ge
+ T\left(\frac{n^2}{k}+\frac{v^2m^2}{b}-1\right)-(n+vm).
+\end{equation}
+Here
 \[
  \frac{n^2}{k}+\frac{v^2m^2}{b}-1
  =\frac1{u(v+1)}+O(m^{-1}).
 \]
-By the midpoint of the first interval, \(F\) has increased by a positive
-quantity of order \(m^2\), whereas \(F(T_0)=O(m)\).  For larger \(T\), a
-lower bound for \eqref{eq:F-difference} is
+At \(T=T_0+vm\), the right side of \eqref{eq:F-second-regime}, divided by
+\(m\), tends to
 \[
- T\left(\frac{n^2}{k}+\frac{v^2m^2}{b}-1\right)-(n+vm),
+ \frac{u d(v+1)+v}{u(v+1)}-d
+ =\frac{v}{u(v+1)}>0.
 \]
-which is increasing because the coefficient of \(T\) is positive and is
-already positive at the end of the first interval.  It follows that
-\(F(T)>0\) whenever \(T-T_0\) exceeds a constant depending only on the fixed
-parameters.  Therefore \(F(T)\le0\) implies
-\eqref{eq:T-localization}.
+The coefficient of \(T\) in \eqref{eq:F-second-regime} is also positive for
+all sufficiently large \(m\).  Therefore \(\Delta F(T)>0\) for every
+\(T\ge T_0+vm\).  Together with \eqref{eq:F-positive-first-regime}, this
+shows that \(F(T)\le0\) forces \(0\le T-T_0<S\).  Since
+\(T_0-T_*=O_{u,v,C,K}(1)\), this proves \eqref{eq:T-localization}.
 \end{proof}
 
 \begin{proof}[Proof of Theorem~\ref{thm:factor-pair}]
@@ -178,14 +238,20 @@ every even \(u\).
 \end{proposition}
 
 \begin{proof}
-Polynomial division in \(v\), followed by multiplication by \((2u+1)^2\),
-gives
+Since \(M_0=(2u+1)v+u\),
+\(\gcd(M_0,2u+1)=\gcd(u,2u+1)=1\).  Modulo \(M_0\),
+\[
+ (2u+1)(v+1)\equiv u+1,
+ \qquad
+ (2u+1)(u^2v+u^2-v)\equiv u(u^2+u+1).
+\]
+It follows that
 \[
  (2u+1)^2u(v+1)(u^2v+u^2-v)
- =M_0Q(u,v)+u^2(u+1)(u^2+u+1)
+ \equiv u^2(u+1)(u^2+u+1)\pmod{M_0}.
 \]
-for an integer polynomial \(Q\).  Since
-\(\gcd(M_0,2u+1)=1\), integrality of \(h_*\) is equivalent to
+Because \(2u+1\) is invertible modulo \(M_0\), integrality of \(h_*\) is
+equivalent to
 \eqref{eq:simultaneous-equality-divisibility}.  When \(v=u\),
 \[
  h_*=-\frac{u(u^2+u-1)}2,

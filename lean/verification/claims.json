@@ -45,7 +45,7 @@
       "hypotheses": "The offset is respectively odd or even, expressed by its residue modulo two.",
       "conclusion": "The odd branch has coefficient at least 73/6 and the even branch has coefficient at least 37/3.",
       "cautions": "Lean proves only the two discrete minimizations. It does not formalize sets of even type, the stability theorem, the generator-line count, or the asymptotic projective-geometric argument.",
-      "statement_digest": "b6c3453a281fe3297a13c0710ab37d15dc43c6769b798f350dbe8f85aa2310b2",
+      "statement_digest": "9c8ea46761986a0b94465390b25925b9f4562cb05150a50661c99819f1d2afba",
       "terminal_digest": "846e7baca9556025481d349a162f0ff31d52d8b36fbe65aa9c194797a5741720"
     },
     {
@@ -122,10 +122,10 @@
       "coverage": "absent",
       "declarations": [],
       "objects": "The exact balanced pair-count function F(T) along a rational equality family.",
-      "hypotheses": "Bounded first-order arc coefficient, prescribed external coverage, and F(T) <= 0.",
+      "hypotheses": "Fixed bounds C and K for the first-order coefficient and constant remainder, prescribed external coverage, and F(T) <= 0.",
       "conclusion": "The number T of n-secants differs by O(1) from its leading value.",
       "cautions": "The floor-sum forward-difference argument and its uniform asymptotic bounds are not formalized.",
-      "statement_digest": "30ab125af11f45ad9db3a9d73aba5f7d963433c5131c2bf4ea2770d24a0a5607"
+      "statement_digest": "e8ac208424aa3fdb31467b7b084b2c50bb7d54e0bc28b6fe155d08187c1e09db"
     },
     {
       "manuscript_label": "prop:simultaneous-equality",
@@ -134,7 +134,7 @@
       "objects": "The rational crossing h_* associated with positive integers u and v.",
       "hypotheses": "The manuscript's definitions of h_* and M_0.",
       "conclusion": "Integrality of h_* is equivalent to the displayed divisibility condition, with an even diagonal family as a corollary.",
-      "cautions": "The polynomial division and divisibility cancellation are not formalized.",
+      "cautions": "The direct modular calculation and divisibility cancellation are not formalized.",
       "statement_digest": "4dc62ec993b87440978a675f4bdd13d6bd6b6362e2419279305eeae4bb2d8fb2"
     },
     {
@@ -152,20 +152,20 @@
       "coverage": "absent",
       "declarations": [],
       "objects": "The characteristic-three dual secant multiset with exact one-modulo-three line intersections.",
-      "hypotheses": "The stated asymptotic form, coefficient below four, and zero repair support.",
+      "hypotheses": "A complete arc with the stated asymptotic form, coefficient below four, and zero repair support.",
       "conclusion": "The exact pair identity is impossible.",
       "cautions": "The congruence-restricted convex pair-count calculation is checked by the separate exact Python evidence but is not represented in Lean.",
-      "statement_digest": "f4f9bf4add4ac5a33b986c0fee1d0f0f1da670e19bb39eb9d57347f703850b4e"
+      "statement_digest": "0f09242ca196a2fc164f6a954765b51707444715b965d7b175a3b8875d7da0f2"
     },
     {
       "manuscript_label": "lem:even-type-case",
       "coverage": "absent",
       "declarations": [],
       "objects": "The characteristic-two dual n-secant set when the repair set is empty.",
-      "hypotheses": "Every dual line has even intersection and the stated near-equality parameters.",
+      "hypotheses": "A doubly covered arc with the stated near-equality parameters and an empty even-type repair set.",
       "conclusion": "The first-order coefficient is at least sixteen.",
       "cautions": "The congruence-restricted pair-count calculation is checked by the separate exact Python evidence but is not represented in Lean.",
-      "statement_digest": "27c8d208beec08740298bbb94ab372bef1f4c611cd01fb1ab648fa7e7bdde818"
+      "statement_digest": "09b96d99efb1e7bf18d9bf58ec087a6052b03ababcf7292c4d0a665ff975db6d"
     },
     {
       "manuscript_label": "lem:repair-parity",
@@ -196,6 +196,16 @@
       "conclusion": "The two degree sequences satisfy the exact interval condition in the point--hyperplane design.",
       "cautions": "The code/projective-system dictionary and the projective point--hyperplane design are not formalized.",
       "statement_digest": "dbc4e5eb29f57d62abfe09f7226e1411f34efd93422b51048f54f185d52bbc8c"
+    },
+    {
+      "manuscript_label": "prop:two-character-inverse",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A nontrivial two-character point set in the dual projective plane and its dual family of primal lines.",
+      "hypotheses": "Both line characters lambda and a occur, with 1 <= lambda < a.",
+      "conclusion": "The high-character primal points form a complete arc whose full maximal-secant family is the dual of the original point set, with the displayed parameters and exact external multiplicity.",
+      "cautions": "The projective duality and two-character incidence reconstruction are not formalized in Lean.",
+      "statement_digest": "ffb89f390e56357b0f4678054c77ea1b4cb9cf2ce80a6e44ae5f89f35f582b14"
     }
   ],
   "machinery": [

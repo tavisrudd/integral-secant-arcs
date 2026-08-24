@@ -66,8 +66,13 @@ point class.
 \end{proof}
 
 Exact two-valued hyperplane intersections correspond to projective two-weight
-codes~\cite{CalderbankKantor}.  In the simultaneously tight families of
-Proposition~\ref{prop:simultaneous-equality}, all but \(O(q)\) dual lines have
+codes~\cite{CalderbankKantor}.  Consider a near-equality sequence satisfying
+the hypotheses of Theorem~\ref{thm:factor-pair}, with bounded first-order
+coefficient and with the coverage and pair-count bounds simultaneously tight
+to first order at an integral \(h_*\) from
+Proposition~\ref{prop:simultaneous-equality}.  The balancing-loss argument in
+the proofs of Theorems~\ref{thm:characteristic-three} and
+\ref{thm:characteristic-two} then shows that all but \(O(q)\) dual lines have
 the two intersection numbers
 \[
  uv\quad\hbox{and}\quad (u+1)(v+1).
@@ -77,6 +82,58 @@ along an infinite Desarguesian family.  This agrees with the classical
 divisibility condition for exact projective two-weight codes.  The present
 argument does not classify the \(O(q)\) exceptional lines.
 
+The exact two-character case does, however, admit a canonical inverse.  The
+following observation is the dual incidence form of the classical
+two-character-set dictionary~\cite{CalderbankKantor}.
+
+\begin{proposition}[Exact two-character inverse]
+\label{prop:two-character-inverse}
+\coverage{absent}
+Let \(B\) be a nonempty proper point set in the dual of \(\PG(2,q)\), and
+suppose both line characters \(\lambda<a\) occur, with \(\lambda\ge1\).
+Let \(\cS\) be the primal lines dual to the points of \(B\), put
+\(d=a-\lambda\), and define
+\[
+ \mathcal A=\{P:\deg_{\cS}(P)=a\}.
+\]
+Then \(d\mid q\), and \(\mathcal A\) is a complete \((k,n)\)-arc whose full
+set of \(n\)-secants is \(\cS\), where
+\[
+ k=\frac{|B|(q+1)-\lambda(q^2+q+1)}d,
+ \qquad
+ n=\frac{|B|+q-\lambda(q+1)}d.
+\]
+Every external point of \(\mathcal A\) lies on exactly \(\lambda\)
+\(n\)-secants, and every line outside \(\cS\) meets \(\mathcal A\) in
+\(n-q/d\) points.
+\end{proposition}
+
+\begin{proof}
+For a dual point \(x\), let \(N_a(x)\) be the number of lines through \(x\)
+that meet \(B\) in \(a\) points.  Summing \(|L\cap B|\) over the dual lines
+through \(x\) gives \(|B|+q\) when \(x\in B\), because \(x\) is counted on
+all \(q+1\) lines, and gives \(|B|\) when \(x\notin B\).  Therefore
+\[
+ N_a(x)=
+ \begin{cases}
+ \bigl(|B|+q-\lambda(q+1)\bigr)/d,&x\in B,\\[2mm]
+ \bigl(|B|-\lambda(q+1)\bigr)/d,&x\notin B.
+ \end{cases}
+\]
+The two values differ by \(q/d\), so \(d\mid q\).  Under duality,
+\(N_a(\ell^*)=|\ell\cap\mathcal A|\).  Thus the lines in \(\cS\) meet
+\(\mathcal A\) in \(n\) points and every other line meets it in
+\(n-q/d<n\) points.  Hence \(\cS\) is exactly the full set of maximal
+secants.  An external point has \(\cS\)-degree \(\lambda\), so
+\(\lambda\ge1\) proves completeness and the stated multiplicity.
+
+Finally, summing \(|L\cap B|\) over all dual lines gives
+\[
+ |B|(q+1)=ak+\lambda(q^2+q+1-k),
+\]
+which yields the formula for \(k\).
+\end{proof}
+
 \section{Concluding remarks}\label{sec:conclusion}
 
 The first two incidence moments already contain the classical spectral bound.
@@ -85,6 +142,12 @@ loses, and at each rational equality parameter this loss has linear order.
 Modular stability then converts the nearly two-valued dual intersection
 distribution into a bounded repair.  Completeness assigns a further linear
 cost to every point in that repair support.
+
+Proposition~\ref{prop:two-character-inverse} closes the inverse-realization
+problem for an exact two-character dual set: the high-character lines recover
+the arc canonically, and the dual point set is exactly its maximal-secant
+family.  The remaining inverse problem begins only after bounded repair, where
+the perturbed modular core need not retain exact maximal intersections.
 
 The characteristic-three result leaves a concrete extremal problem:
 \begin{equation}\label{eq:open-asymptotic}
