@@ -1,0 +1,228 @@
+{
+  "schema": "integral-secant-arcs-lean-claims-v1",
+  "terminal_namespace": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs",
+  "reviewer_module": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.PaperInterface",
+  "reviewer_modules": [
+    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Combinatorics.IntegerDegreeBounds",
+    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.RationalEqualityParameters",
+    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.CharacteristicBounds"
+  ],
+  "claims": [
+    {
+      "manuscript_label": "thm:characteristic-three",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds"
+      ],
+      "objects": "An integer secant-number offset h, an integer repair-support size r, and the two rational affine lower bounds used at the end of the characteristic-three argument.",
+      "hypotheses": "The support is nonempty, and it has size at least two when h is congruent to one modulo three.",
+      "conclusion": "The maximum of the pair-count bound and the repair-support bound is at least four.",
+      "cautions": "Lean proves only the final discrete minimization. It does not define the projective plane or arc, import the Szőnyi--Weiner theorem, construct the repaired multiset, prove the support bounds, or carry out the asymptotic reduction.",
+      "statement_digest": "7d8e2acd85e1107dc8938e99dec6cb59595a0475107f449878a6f65293cd64fb",
+      "terminal_digest": "855ece6ac936d685eaa9fde7cda7c19285ce9c6929dbdc54e02847b7c38043a2"
+    },
+    {
+      "manuscript_label": "thm:factor-pair",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.coefficient_difference_factorization"
+      ],
+      "objects": "Positive rational parameters u and v and the manuscript's balanced-integer and real-incidence first-order coefficients.",
+      "hypotheses": "Both rational parameters are positive.",
+      "conclusion": "The coefficient difference equals the displayed positive rational factorization.",
+      "cautions": "Lean does not prove the complete arc bound, the integer minimization defining c_Z, the classification of all rational equality parameters, or any asymptotic localization of the number of n-secants.",
+      "statement_digest": "ee56c9ad2ef183d3d739fa020ac4e34b77d36cec133d9decd598fe1a2c0daa7c",
+      "terminal_digest": "e1c6212b878d6b33596678915c1fcf3ba5bddc16a5e6de8f7189660ecc2a56ad"
+    },
+    {
+      "manuscript_label": "thm:characteristic-two",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_odd_affine_bounds",
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_even_affine_bounds"
+      ],
+      "objects": "The integer secant-number offset and the two pairs of rational affine lower bounds in the odd- and even-offset branches.",
+      "hypotheses": "The offset is respectively odd or even, expressed by its residue modulo two.",
+      "conclusion": "The odd branch has coefficient at least 73/6 and the even branch has coefficient at least 37/3.",
+      "cautions": "Lean proves only the two discrete minimizations. It does not formalize sets of even type, the stability theorem, the generator-line count, or the asymptotic projective-geometric argument.",
+      "statement_digest": "b6c3453a281fe3297a13c0710ab37d15dc43c6769b798f350dbe8f85aa2310b2",
+      "terminal_digest": "846e7baca9556025481d349a162f0ff31d52d8b36fbe65aa9c194797a5741720"
+    },
+    {
+      "manuscript_label": "lem:degree-extrema",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.balanced_twicePairCount_lower"
+      ],
+      "objects": "A finite integer degree sequence with prescribed sum N*a+w and twice the unordered-pair weight z(z-1).",
+      "hypotheses": "Only the exact sum identity is required; the theorem is valid for integer-valued sequences.",
+      "conclusion": "The twice-pair sum is at least N*a(a-1)+2aw, which is twice the manuscript's balanced minimum when 0 <= w < N.",
+      "cautions": "The formal theorem covers the lower balanced bound but not the upper-box filling formula or its equality characterization. The manuscript states the result for nonnegative integer degrees and divides the formal identity by two.",
+      "statement_digest": "81c6db7a77721dc7788f8a9771995e58e8b32c280ff0e3f895167a7f0989d622",
+      "terminal_digest": "ef3c9d89931b702e722a87da14c552cd07da55ff87af8e1058a5962bc3d4ad7c"
+    },
+    {
+      "manuscript_label": "thm:paired-envelope",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.integerPairIntervals_overlap"
+      ],
+      "objects": "Two integer pair counts, their lower and upper bounds, and a total pair count partitioned between them.",
+      "hypotheses": "The two actual counts sum to the total and each lies in its declared integer interval.",
+      "conclusion": "The external interval meets the reflection of the internal interval through the total pair count.",
+      "cautions": "Lean proves the interval-overlap implication once the pair partition and endpoints are supplied. It does not define symmetric designs, double-count block intersections, or compute heterogeneous integer-box extrema.",
+      "statement_digest": "93e07d8550bf08097edef4eb8aed50fb02c5a12e6f2938e2ecb053e152f2f063",
+      "terminal_digest": "3c024b96ba9df93aeab831c9707fb4e5fa5ecbb947ca5e2eccbfca4b44a4cc1a"
+    },
+    {
+      "manuscript_label": "cor:mixing-relaxation",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A selected block family in a symmetric design and its two point classes.",
+      "hypotheses": "The hypotheses of the exact integer incidence condition.",
+      "conclusion": "The standard real incidence inequality and its constant-degree equality condition.",
+      "cautions": "No Lean declaration currently represents the Cauchy--Schwarz derivation or its equivalence with incidence mixing.",
+      "statement_digest": "26b3e21a3337130b41a7b495e6a9537bafbb4dd0c7634826e3ffacc9c527ba2d"
+    },
+    {
+      "manuscript_label": "lem:pencil-bounds",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A (k,n)-arc and its internal and external n-secant degrees.",
+      "hypotheses": "The projective-plane incidence axioms and the n-secant property.",
+      "conclusion": "The two pencil bounds and the incidence and pair-count identities.",
+      "cautions": "Finite projective planes, arcs, secants, and their double counts are not defined in this package.",
+      "statement_digest": "4d6d671efeb818fcfb6c04ffef475b4c815ca8dee47a43c6131a21b401acbf96"
+    },
+    {
+      "manuscript_label": "cor:n-secant-feasibility",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The family of all n-secants of a (k,n)-arc with prescribed external coverage multiplicity.",
+      "hypotheses": "Every external point is incident with at least lambda n-secants.",
+      "conclusion": "The stated range for the number of n-secants and the exact integer interval condition.",
+      "cautions": "The specialization of the abstract arithmetic to projective incidence geometry is not formalized.",
+      "statement_digest": "ddf29e3a4c5885a3693791bc01ce5505a1e1276fe8fc8a619bf2fccb77710517"
+    },
+    {
+      "manuscript_label": "lem:rational-parameters",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters_satisfy_equations"
+      ],
+      "objects": "Positive rational factors u and v and the associated alpha, beta, lambda, and a.",
+      "hypotheses": "The factors u and v are positive.",
+      "conclusion": "The displayed factor-indexed parameters satisfy the two continuous equality equations.",
+      "cautions": "Lean proves the forward substitution only. It does not prove that every rational solution arises uniquely from an ordered factorization.",
+      "statement_digest": "fe60d422cd1fd51bb947d5741944a32a435ed8e129c6db3f848e62f70306b6f7",
+      "terminal_digest": "a2148f1e98e8e0ce4d63d374469fe3e173d1c9880461a384f0dbc4057ec7df71"
+    },
+    {
+      "manuscript_label": "lem:secant-number-near-equality",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The exact balanced pair-count function F(T) along a rational equality family.",
+      "hypotheses": "Bounded first-order arc coefficient, prescribed external coverage, and F(T) <= 0.",
+      "conclusion": "The number T of n-secants differs by O(1) from its leading value.",
+      "cautions": "The floor-sum forward-difference argument and its uniform asymptotic bounds are not formalized.",
+      "statement_digest": "30ab125af11f45ad9db3a9d73aba5f7d963433c5131c2bf4ea2770d24a0a5607"
+    },
+    {
+      "manuscript_label": "prop:simultaneous-equality",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The rational crossing h_* associated with positive integers u and v.",
+      "hypotheses": "The manuscript's definitions of h_* and M_0.",
+      "conclusion": "Integrality of h_* is equivalent to the displayed divisibility condition, with an even diagonal family as a corollary.",
+      "cautions": "The polynomial division and divisibility cancellation are not formalized.",
+      "statement_digest": "4dc62ec993b87440978a675f4bdd13d6bd6b6362e2419279305eeae4bb2d8fb2"
+    },
+    {
+      "manuscript_label": "lem:repair-support",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A dual multiset of n-secants and a finite support on which it is changed to exact modular type.",
+      "hypotheses": "Characteristic compatibility, external secant coverage, fixed nonzero repair support, and the stated asymptotic parameters.",
+      "conclusion": "Each repair-support point adds the displayed amount to the first-order lower bound.",
+      "cautions": "The dual incidence construction, modular residues, and generator-line completeness count are not formalized.",
+      "statement_digest": "ec59bf052d97d5337c5744565f6eb3bd86adeb5fdc873d2b70792cfd79d6da09"
+    },
+    {
+      "manuscript_label": "lem:no-uncorrected-characteristic-three",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The characteristic-three dual secant multiset with exact one-modulo-three line intersections.",
+      "hypotheses": "The stated asymptotic form, coefficient below four, and zero repair support.",
+      "conclusion": "The exact pair identity is impossible.",
+      "cautions": "The congruence-restricted convex pair-count calculation is checked by the separate exact Python evidence but is not represented in Lean.",
+      "statement_digest": "f4f9bf4add4ac5a33b986c0fee1d0f0f1da670e19bb39eb9d57347f703850b4e"
+    },
+    {
+      "manuscript_label": "lem:even-type-case",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The characteristic-two dual n-secant set when the repair set is empty.",
+      "hypotheses": "Every dual line has even intersection and the stated near-equality parameters.",
+      "conclusion": "The first-order coefficient is at least sixteen.",
+      "cautions": "The congruence-restricted pair-count calculation is checked by the separate exact Python evidence but is not represented in Lean.",
+      "statement_digest": "27c8d208beec08740298bbb94ab372bef1f4c611cd01fb1ab648fa7e7bdde818"
+    },
+    {
+      "manuscript_label": "lem:repair-parity",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A nonempty symmetric-difference repair set in characteristic two.",
+      "hypotheses": "The dual n-secant set differs from a set of even type at r points.",
+      "conclusion": "Odd and even repair sizes give the stated external-excess bounds, and r, T, and h have the same parity.",
+      "cautions": "Symmetric differences of projective lines and their external-point counts are not formalized.",
+      "statement_digest": "0062036ed0a4ef4223cbc1d89fe1296bc4575558abee89f10a704498b11a4898"
+    },
+    {
+      "manuscript_label": "cor:blocking-set-form",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The complement of a complete (k,2q/3+1)-arc.",
+      "hypotheses": "The characteristic-three theorem and the standard complement correspondence.",
+      "conclusion": "The complement is a minimal q/3-fold blocking set with the displayed upper bound.",
+      "cautions": "Neither the geometric complement dictionary nor the asymptotic theorem is formalized.",
+      "statement_digest": "5b88427b3bf966240626333531a7f3eb96b6d27566c6ff4bb124cdb271efa592"
+    },
+    {
+      "manuscript_label": "cor:projective-codes",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A projective linear code, the hyperplanes containing the maximum number of columns, and candidate extension columns.",
+      "hypotheses": "The standard projective-system representation of the code.",
+      "conclusion": "The two degree sequences satisfy the exact interval condition in the point--hyperplane design.",
+      "cautions": "The code/projective-system dictionary and the projective point--hyperplane design are not formalized.",
+      "statement_digest": "dbc4e5eb29f57d62abfe09f7226e1411f34efd93422b51048f54f185d52bbc8c"
+    }
+  ],
+  "machinery": [
+    {
+      "declaration": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount",
+      "reason": "This is twice the binomial pair-count function used throughout the integer degree formalization.",
+      "terminal_digest": "5ff0b236e30876d55dc152b302f6761348ce10a0f94bbe5ab4760c4ed9b6ea1d"
+    },
+    {
+      "declaration": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_unit_transfer",
+      "reason": "This is the local smoothing identity used by the balanced-minimum proof.",
+      "terminal_digest": "74631c94d24af4d4e751c761e48509eb015f8df7c400bd6f0930f833e8f17b50"
+    },
+    {
+      "declaration": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.consecutiveIntegerProduct_nonnegative",
+      "reason": "This supplies the integer sign fact that makes every balancing remainder nonnegative.",
+      "terminal_digest": "0c3dd311b2f03e78578c5a8385fe6a71ba170ad8c4bb9abc4d2e580dc6531767"
+    },
+    {
+      "declaration": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_balancing_decomposition",
+      "reason": "This is the exact sum decomposition from which the balanced lower bound follows.",
+      "terminal_digest": "2fdc8e697c27098350d3334270fc6c3c4bc622f64c075a5477907c7e38f0dc3d"
+    },
+    {
+      "declaration": "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters",
+      "reason": "This packages the four rational quantities whose substitution is checked by the equality-parameter theorem.",
+      "terminal_digest": "71d8aec8f122c8677894059d085462ad9a6a4bebc15bfa12117a6c1be345b63b"
+    }
+  ]
+}

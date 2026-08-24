@@ -1,0 +1,120 @@
+\section{The characteristic-two family}\label{sec:characteristic-two}
+
+We turn to the ordered factorization \((u,v)=(2,1)\).  Thus
+\[
+ q=8m,\qquad n=6m+1,\qquad \lambda=2.
+\]
+Near equality write
+\begin{equation}\label{eq:characteristic-two-asymptotic}
+ k=32m^2+cm+o(m),\qquad T=32m+h+o(1).
+\end{equation}
+The integer pair condition and the external incidence count give
+\begin{equation}\label{eq:characteristic-two-linear}
+ 6c-h\ge76,\qquad
+ e=2(c+h-8)m+o(m),
+\end{equation}
+where \(e=\sum_{Q\notin\mathcal K}(\sigma_n(Q)-2)\) is the total excess
+above the required two \(n\)-secants.
+
+The dual set \(\mathcal L^*\) has only \(O(q)\) odd-secants.  For sufficiently
+large even \(q\), this is below the Sz\H{o}nyi--Weiner threshold
+\((\lfloor\sqrt q\rfloor+1)(q+1-\lfloor\sqrt q\rfloor)\).  Their stability
+theorem~\cite[Theorem~1.1]{SWeven} therefore writes it as the symmetric difference
+\begin{equation}\label{eq:even-type-repair}
+ \mathcal L^*=\mathcal E\mathbin{\triangle}R,
+\end{equation}
+where every line meets \(\mathcal E\) in an even number of points and
+\(|R|=r=\lceil\delta/(q+1)\rceil=O(1)\), with \(\delta\) the number of
+odd-secants of \(\mathcal L^*\).
+
+\begin{lemma}[The even-type case]\label{lem:even-type-case}
+\coverage{absent}
+If \(R=\varnothing\) in \eqref{eq:even-type-repair}, then \(c\ge16\).
+\end{lemma}
+
+\begin{proof}
+The balanced internal multiplicities are five and six, and the balanced
+external multiplicity is two.  Put \(D=6k-nT\), the signed internal
+deficiency from six.  The incidence equations and the unrestricted integer
+pair bound give
+\begin{align*}
+ D&=(6c-6h-32)m+o(m),\\
+ e&=2(c+h-8)m+o(m),\\
+ \text{available pair slack}&=(12c-2h-152)m+o(m).
+\end{align*}
+If every multiplicity is even, restricting the two balanced distributions to
+even integers raises their minimum pair sum by
+\[
+ \frac{D+e}{2}=(4c-2h-24)m+o(m).
+\]
+The available slack must be at least this large, which simplifies to
+\(c\ge16\).
+\end{proof}
+
+\begin{lemma}[Parity of the repair]\label{lem:repair-parity}
+\coverage{absent}
+Suppose \(R\ne\varnothing\) in \eqref{eq:even-type-repair}.  If \(r\) is
+odd, then
+\begin{equation}\label{eq:odd-repair-bound}
+ c+h\ge9.
+\end{equation}
+If \(r\) is even, then
+\begin{equation}\label{eq:even-repair-bound}
+ c+h\ge10.
+\end{equation}
+Moreover, \(r\equiv T\equiv h\pmod2\).
+\end{lemma}
+
+\begin{proof}
+Every even-type set has even cardinality, so
+\(r\equiv|\mathcal L^*|=T\pmod2\); the leading term \(32m\) is even, giving
+the last congruence.
+
+Dualize the points of \(R\) to \(r\) lines of the original plane.  On each
+such line, at most \(r-1\) points can cancel with the other generators in the
+symmetric difference.  Thus at least \(q-r+2\) points have odd
+\(n\)-secant multiplicity.  At most \(n=3q/4+1\) of them lie in
+\(\mathcal K\), so a single generator contributes at least
+\(q/4-r+1\) external points to the excess \(e\).
+
+If \(r\) is odd, then \(r\ge1\) and hence \(e\ge q/4-O(1)=2m-O(1)\).
+If \(r\) is even, then \(r\ge2\); taking the union of two generator lines
+loses only their intersection, and \(e\ge q/2-O(1)=4m-O(1)\).  Comparing
+with \eqref{eq:characteristic-two-linear} proves
+\eqref{eq:odd-repair-bound} and \eqref{eq:even-repair-bound}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:characteristic-two}]
+Suppose the theorem fails.  Pass to a sequence for which the coefficient
+\(c_m=(k-32m^2)/m\) is bounded above by
+\(73/6-8\varepsilon\).  The classical incidence bound bounds \(c_m\) below,
+so pass to a subsequence with \(c_m\to c\).  The leading incidence bound and
+Lemma~\ref{lem:secant-number-near-equality} give
+\(T-32m=O(1)\).  Pass to a further subsequence with fixed integer difference
+\(h\).
+
+The incidence sums and the \(O(m)\) pair-count slack show, by the same strict
+convexity argument as in the characteristic-three proof, that only \(O(q)\)
+dual lines have the wrong parity.  Therefore
+Sz\H{o}nyi--Weiner's theorem gives \eqref{eq:even-type-repair} with fixed \(r\).
+Lemma~\ref{lem:even-type-case} excludes \(r=0\) in the range under
+consideration.  If \(h\) is odd, Lemma~\ref{lem:repair-parity} and
+\eqref{eq:characteristic-two-linear} give
+\[
+ c\ge\max\left\{\frac{76+h}{6},9-h\right\}.
+\]
+The minimum over odd \(h\) is \(73/6\), attained at \(h=-3\).  If \(h\) is
+even, the corresponding bound is
+\[
+ c\ge\max\left\{\frac{76+h}{6},10-h\right\},
+\]
+whose minimum over even \(h\) is \(37/3\), attained at \(h=-2\).  Both
+contradict the chosen sequence.  Since \(q=8m\), this proves
+\eqref{eq:characteristic-two-bound}.
+\imports{SWeven:repair}
+\uses{lem:even-type-case,lem:repair-parity,lem:secant-number-near-equality}
+\end{proof}
+
+The parity argument uses only the repair theorem and the fact that an
+\(n\)-secant contains at most \(n\) points of the arc.  It does not require a
+classification of even-type sets of size \(4q+O(1)\).

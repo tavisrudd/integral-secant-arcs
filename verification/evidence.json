@@ -1,0 +1,13 @@
+{
+  "schema": "integral-secant-arcs-evidence-v1",
+  "note": "Every theorem in the manuscript has a mathematical proof. The bundle below is an independent exact-arithmetic cross-check and is not a premise of a theorem.",
+  "evidence": {
+    "integral-secant-checks": {
+      "role": "Checks the balanced and bounded integer degree formulas against independent dynamic programs; verifies the incidence-mixing polynomial identity; recomputes the rational equality coefficients from exact pair counts; and checks the declared bounded characteristic-three and characteristic-two residue cases. It verifies finite algebra and stated bounded grids, not the existence or nonexistence of projective arcs outside those grids and not the imported modular-stability theorems.",
+      "checksum_manifest": "verification/integral-secant-checks.sha256",
+      "commands": [
+        "nix shell nixpkgs#python3 --command python3 verification/check_integral_secant_distributions.py check"
+      ]
+    }
+  }
+}

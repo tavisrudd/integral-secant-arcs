@@ -1,0 +1,21 @@
+import TavisRuddFiniteGeom.Papers.IntegralSecantArcs.PaperInterface
+
+/-!
+# Axiom audit for the integral-secant reviewer interface
+
+The commands print the kernel-reported axiom dependencies of every theorem
+exported by the reviewer interface.
+-/
+
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_unit_transfer
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.consecutiveIntegerProduct_nonnegative
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_balancing_decomposition
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.balanced_twicePairCount_lower
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.integerPairIntervals_overlap
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters_satisfy_equations
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.coefficient_difference_factorization
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_odd_affine_bounds
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_even_affine_bounds

@@ -1,0 +1,99 @@
+\section{Blocking sets and projective codes}\label{sec:translations}
+
+The complement of a \((k,n)\)-arc \(\mathcal K\) in a projective plane of
+order \(q\) is a \((q+1-n)\)-fold blocking set.  Completeness says more: each
+point of the complement lies on a line meeting it in exactly \(q+1-n\)
+points.  Thus the complement is a minimal multiple blocking set.  Under this
+correspondence, \(n\)-secants of \(\mathcal K\) are the
+\((q+1-n)\)-secants of its complement, and the hypothesis
+\(\sigma_n(Q)\ge\lambda\) says that every point of the blocking set is on at
+least \(\lambda\) such secants.  This is precisely the dual setting of
+Bishnoi--Mattheus--Schillewaert~\cite[Section~8]{BMS}.
+
+In particular, Theorem~\ref{thm:characteristic-three} is equivalent to the
+following statement.
+
+\begin{corollary}\label{cor:blocking-set-form}
+\coverage{absent}
+Let \(q=3^h\) and let \(B\) be the complement of a complete
+\((k,2q/3+1)\)-arc in \(\PG(2,q)\).  Then \(B\) is a minimal
+\(q/3\)-fold blocking set and
+\[
+ |B|\le \frac{2q^2}{3}-\frac q3+1+o(q).
+\]
+\uses{thm:characteristic-three}
+\end{corollary}
+
+There is also a standard coding interpretation; compare Kohnert's incidence
+criterion for projective code extension~\cite{Kohnert} and the
+multiple-blocking-set/code correspondence of Ball--Fancsali~\cite{BallFancsali}.
+Projective representatives
+of the points of a \((k,n)\)-arc form the columns of a generator matrix for a
+projective \([k,3,k-n]_q\) code.  A line meeting the arc in \(n\) points
+corresponds to a minimum-weight projective codeword.  Adding a new projective
+column raises the minimum distance by one exactly when no minimum-weight
+hyperplane contains that column.  Hence completeness is equivalent to
+nonextendibility.  The condition \(\sigma_n(Q)\ge\lambda\) records at least
+\(\lambda\) minimum-weight hyperplanes through every candidate column.
+
+The same statement is available in every projective dimension \(r-1\ge2\).
+Points and hyperplanes of \(\PG(r-1,q)\) form a symmetric design with parameters
+\begin{equation}\label{eq:projective-design-parameters}
+ v=\frac{q^r-1}{q-1},\qquad
+ K=\frac{q^{r-1}-1}{q-1},\qquad
+ \Lambda=\frac{q^{r-2}-1}{q-1}.
+\end{equation}
+
+\begin{corollary}[Projective codes]\label{cor:projective-codes}
+\coverage{absent}
+Let \(C\) be a projective \([k,r,k-n]_q\) code, and let \(\cS\) be the
+hyperplanes containing \(n\) columns of a projective system for \(C\).
+Partition the points of \(\PG(r-1,q)\) into the
+\(k\) columns of \(C\) and the remaining candidate columns.  For every
+integer \(T=|\cS|\), the two selected-hyperplane degree sequences satisfy the
+exact interval condition \eqref{eq:interval-overlap}, with the parameters in
+\eqref{eq:projective-design-parameters}.  Any prescribed lower bound on the
+number of hyperplanes in \(\cS\) through a candidate column may be used
+as the lower endpoint of its integer degree interval.
+\end{corollary}
+
+\begin{proof}
+Apply Theorem~\ref{thm:paired-envelope} to the point--hyperplane design of
+\(\PG(r-1,q)\).  A minimum-weight hyperplane contains exactly \(n\) columns,
+so the selected blocks have constant intersection size \(n\) with the first
+point class.
+\uses{thm:paired-envelope}
+\end{proof}
+
+Exact two-valued hyperplane intersections correspond to projective two-weight
+codes~\cite{CalderbankKantor}.  In the simultaneously tight families of
+Proposition~\ref{prop:simultaneous-equality}, all but \(O(q)\) dual lines have
+the two intersection numbers
+\[
+ uv\quad\hbox{and}\quad (u+1)(v+1).
+\]
+Their difference is \(u+v+1\), which must be a power of the characteristic
+along an infinite Desarguesian family.  This agrees with the classical
+divisibility condition for exact projective two-weight codes.  The present
+argument does not classify the \(O(q)\) exceptional lines.
+
+\section{Concluding remarks}\label{sec:conclusion}
+
+The first two incidence moments already contain the classical spectral bound.
+Their sharp integer degree ranges retain information that the real relaxation
+loses, and at each rational equality parameter this loss has linear order.
+Modular stability then converts the nearly two-valued dual intersection
+distribution into a bounded repair.  Completeness assigns a further linear
+cost to every point in that repair support.
+
+The characteristic-three result leaves a concrete extremal problem:
+\begin{equation}\label{eq:open-asymptotic}
+ t_{2q/3+1}(2,q)
+ \stackrel{?}{=}\frac{q^2}{3}+\frac{4q}{3}+o(q)
+ \qquad(q=3^h\to\infty).
+\end{equation}
+A matching construction would determine the first two asymptotic terms.  A
+second problem is structural: classify the sets of dual points with only
+\(O(q)\) lines outside the two predicted intersection numbers and determine
+which of them can occur as the full set of \(n\)-secants of a complete
+\((k,n)\)-arc.

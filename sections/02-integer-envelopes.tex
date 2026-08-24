@@ -1,0 +1,118 @@
+\section{Sharp integer degree bounds}\label{sec:integer-envelopes}
+
+For integers \(N\ge1\) and \(R\ge0\), write \(R=aN+w\) with
+\(0\le w<N\), and define
+\begin{equation}\label{eq:phi-min}
+ \Phimin(N,R)=(N-w)\binomtwo a+w\binomtwo{a+1}.
+\end{equation}
+If \(L\le U\), \(NL\le R\le NU\), put
+\(E=R-NL=t(U-L)+w\), where \(0\le w<U-L\), and define
+\begin{equation}\label{eq:phi-max}
+ \Phimax(N,L,U,R)
+ =N\binomtwo L+LE+t\binomtwo{U-L}+\binomtwo w.
+\end{equation}
+When \(L=U\), the latter expression has its evident constant interpretation.
+
+\begin{lemma}[Balanced and filled degree sequences]\label{lem:degree-extrema}
+\coverage{fragment}
+Among integer sequences \(z_1,\dots,z_N\) with sum \(R\), the minimum of
+\(\sum_i\binomtwo{z_i}\) is \(\Phimin(N,R)\).  With the additional bounds
+\(L\le z_i\le U\), its maximum is \(\Phimax(N,L,U,R)\).
+\lean{balanced_twicePairCount_lower}
+\end{lemma}
+
+\begin{proof}
+If \(z_i\ge z_j+2\), replacing \((z_i,z_j)\) by
+\((z_i-1,z_j+1)\) lowers the sum by \(z_i-z_j-1\).  Repetition leaves only
+the adjacent values \(a,a+1\), proving \eqref{eq:phi-min}.  For the maximum,
+the reverse exchange moves one unit from a smaller nonminimal coordinate to a
+larger nonmaximal one and raises the sum.  Hence all but at most one coordinate
+lie at \(L\) or \(U\); counting the filled coordinates gives
+\eqref{eq:phi-max}.
+\end{proof}
+
+\begin{theorem}[Exact integer incidence condition]\label{thm:paired-envelope}
+\coverage{fragment}
+Let \(\mathcal D\) be a symmetric \(2\)-\((v,K,\Lambda)\) design whose point
+set is partitioned into \(A\sqcup B\).  Let \(\cS\) be a family of \(T\)
+blocks, each meeting \(A\) in \(s\) points.  Suppose the selected-block
+degrees satisfy integer bounds
+\[
+ L_x\le z_x\le U_x\qquad(x\in A\sqcup B).
+\]
+At the fixed totals
+\[
+ \sum_{x\in A}z_x=sT,
+ \qquad
+ \sum_{x\in B}z_x=(K-s)T,
+\]
+let \([P_A^-,P_A^+]\) and \([P_B^-,P_B^+]\) be the exact minimum and maximum
+of the two sums \(\sum\binomtwo{z_x}\) over their respective integer boxes.
+Then
+\begin{equation}\label{eq:interval-overlap}
+ [P_B^-,P_B^+]
+ \cap
+ \left[\Lambda\binomtwo T-P_A^+,
+       \Lambda\binomtwo T-P_A^-\right]\ne\varnothing.
+\end{equation}
+For uniform boxes the endpoints are given by
+Lemma~\ref{lem:degree-extrema}; heterogeneous endpoints are obtained by
+integer water filling.
+\lean{integerPairIntervals_overlap}
+\end{theorem}
+
+\begin{proof}
+Count triples \((x,S_1,S_2)\) with \(S_1,S_2\in\cS\), \(S_1\ne S_2\), and
+\(x\in S_1\cap S_2\).  Two blocks of a symmetric design meet in exactly
+\(\Lambda\) points, so
+\begin{equation}\label{eq:pair-partition}
+ \sum_{x\in A}\binomtwo{z_x}
+ +\sum_{x\in B}\binomtwo{z_x}
+ =\Lambda\binomtwo T.
+\end{equation}
+Each sum lies in its exact integer interval.  Reflecting the interval for
+\(A\) through the right side of \eqref{eq:pair-partition} gives
+\eqref{eq:interval-overlap}.
+\uses{lem:degree-extrema}
+\end{proof}
+
+The real relaxation is familiar, but the following formulation makes the
+loss of information exact.
+
+\begin{corollary}[Incidence mixing as the real relaxation]
+\label{cor:mixing-relaxation}
+\coverage{absent}
+In the setting of Theorem~\ref{thm:paired-envelope},
+\begin{equation}\label{eq:real-relaxation}
+ T\left(\frac{s^2}{|A|}+\frac{(K-s)^2}{|B|}-\Lambda\right)
+ \le K-\Lambda.
+\end{equation}
+This is algebraically identical to the incidence-graph mixing inequality for
+the point set \(B\) and block family \(\cS\).  Equality requires constant
+selected-block degree on both point classes.
+\imports{LundSaraf:incidence-bound,MurphyPetridis:variance-identity}
+\end{corollary}
+
+\begin{proof}
+Cauchy--Schwarz and \eqref{eq:pair-partition} give
+\[
+ \frac{s^2T^2}{|A|}-sT
+ +\frac{(K-s)^2T^2}{|B|}-(K-s)T
+ \le \Lambda T(T-1).
+\]
+Divide by \(T\) and use \(K=s+(K-s)\).  Conversely, expanding the standard
+mixing inequality and substituting
+\(K(K-1)=\Lambda(v-1)\) gives the same expression.  Equality in the two
+Cauchy inequalities is equivalent to constant degrees.
+\uses{thm:paired-envelope}
+\end{proof}
+
+For uniform lower bounds without an upper cap, the balancing remainder has the
+closed form
+\begin{equation}\label{eq:rounding-remainder}
+ \Phimin(N,R)=\frac{R^2/N-R}{2}+\frac{w(N-w)}{2N},
+ \qquad R\equiv w\pmod N,\qquad 0\le w<N.
+\end{equation}
+The last term is precisely what the real relaxation discards.  Along some
+rational equality families, it has linear size and cannot be absorbed into
+lower-order error.

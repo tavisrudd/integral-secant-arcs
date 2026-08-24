@@ -1,0 +1,149 @@
+\section{Introduction}
+
+A \((k,n)\)-arc in a projective plane is a set of \(k\) points meeting every
+line in at most \(n\) points, with some line meeting it in exactly \(n\)
+points.  It is complete if it is maximal under inclusion, or equivalently if
+every external point lies on an \(n\)-secant.  The minimum size of a complete
+\((k,n)\)-arc is denoted by \(t_n(2,q)\) in
+\(\PG(2,q)\).  Lower bounds for this quantity are usually obtained by counting
+\(n\)-secants or, dually, by bounding minimal multiple blocking sets; see
+Alabdullah--Hirschfeld~\cite{AlabdullahHirschfeld} and
+Bishnoi--Mattheus--Schillewaert~\cite{BMS}.  Recent work has also developed
+algebraic and curve-based methods for proving completeness itself; see, for
+example, Bastioni--Micheli~\cite{BastioniMicheli},
+Korchm\'aros--Nagy--Sz\H{o}nyi~\cite{KNS}, and
+Bartoli--Timpanella~\cite{BartoliTimpanella}.
+
+The incidence estimate used in the existing lower bounds is an instance of
+the standard block-design incidence inequality; we use the normalization of
+Lund--Saraf~\cite{LundSaraf} and the variance formulation of
+Murphy--Petridis~\cite{MurphyPetridis}.  Exact quotient equations for tactical
+decompositions are classical~\cite{BekerMitchellPiper}, but the selected
+family of all \(n\)-secants need not be tactical.  Ramani's recent
+first-incidence identity for uniform intersecting linear hypergraphs
+\cite{Ramani} provides a related degree-defect viewpoint.  Our argument uses
+both point classes and their exact pair-count ranges.
+
+This paper keeps the \(n\)-secants as a family rather than eliminating their
+number at the first counting step.  The degrees of that family on the arc and
+on its complement have fixed sums, and their pair counts add to the number of
+pairs of secants.  Integer convexity gives the exact range of each pair count.
+The two ranges must overlap.  Replacing the integer extrema by quadratic real
+averages recovers the classical incidence-mixing inequality; retaining them
+gives the new bounds.
+
+The first application concerns ordinary completeness in characteristic
+three.
+
+\begin{theorem}[Characteristic-three bound]\label{thm:characteristic-three}
+\coverage{fragment}
+For every \(\varepsilon>0\), there is \(h_0\) such that, for \(h\ge h_0\),
+every complete \((k,2q/3+1)\)-arc in \(\PG(2,q)\), where \(q=3^h\), satisfies
+\begin{equation}\label{eq:characteristic-three-bound}
+ k\ge \frac{q^2}{3}+\left(\frac43-\varepsilon\right)q.
+\end{equation}
+Equivalently,
+\[
+ t_{2q/3+1}(2,q)\ge \frac{q^2}{3}+\frac{4q}{3}-o(q)
+ \qquad (q=3^h\to\infty).
+\]
+\imports{SWmodp:repair}
+\lean{characteristicThree_affine_bounds}
+\end{theorem}
+
+The incidence-mixing bound gives only \(q^2/3+q+O(1)\) in this regime.  The
+integer degree bounds first raise the linear coefficient to \(6/5\); a
+modular repair theorem of Sz\H{o}nyi--Weiner~\cite{SWmodp} then raises it to
+\(4/3\).  The second step uses more than modular stability: each point changed
+in the dual repaired multiset becomes a primal line on which completeness
+forces a linear amount of external secant excess.
+
+The arithmetic source of the first improvement is visible whenever the real
+incidence bound is tight at a rational parameter.  Fix a coverage multiplicity
+\(\lambda\), factor it as
+\(\lambda=uv\), and put \(d=u+v+1\).  For \(h\in\mathbb Z\), define
+\begin{align}
+ c_{\mathrm{bal}}
+ &=\frac{u(uv^2+4uv+2u+2v^2+4v+1)}{2uv+u+v},\label{eq:c-balanced}\\
+ h_*&=-\frac{u(v+1)(u^2v+u^2-v)}{2uv+u+v},\label{eq:h-star}\\
+ \mu&=\frac{2v}{(u+v)(2uv+u+v+1)},\nonumber\\
+ L(h)&=d-\frac hu,\qquad
+ C(h)=c_{\mathrm{bal}}+\mu(h-h_*),\nonumber\\
+ c_{\mathbb Z}&=\min_{h\in\mathbb Z}\max\{L(h),C(h)\}.
+ \label{eq:c-integer}
+\end{align}
+
+\begin{theorem}[Rational equality families]\label{thm:factor-pair}
+\coverage{fragment}
+Let \(u,v\ge1\), \(\lambda=uv\), and \(d=u+v+1\).  Suppose that a
+\((k,(u+1)m+1)\)-arc in a projective plane of order \(q=dm\) has at least
+\(\lambda\) \(n\)-secants through every external point.  Then
+\begin{equation}\label{eq:factor-pair-bound}
+ k\ge udm^2+c_{\mathbb Z}m-O_{u,v}(1).
+\end{equation}
+Moreover, the classical incidence-mixing bound has linear coefficient
+\[
+ c_{\mathrm{mix}}=\frac{u(uv+3u+2v+3)}{2u+1},
+\]
+and
+\begin{equation}\label{eq:strict-gap}
+ c_{\mathrm{bal}}-c_{\mathrm{mix}}
+ =\frac{u(v+1)(u^2+u+1)}{(2u+1)(2uv+u+v)}>0.
+\end{equation}
+Every rational equality parameter of the continuous bound arises from exactly one
+ordered factorization \(\lambda=uv\).
+\imports{BMS:spectral-bound}
+\lean{coefficient_difference_factorization}
+\end{theorem}
+
+Thus the strict improvement is not an isolated rounding effect.  At fixed
+coverage multiplicity there is one equality family for each divisor, and every
+family has a positive linear integrality penalty.  The two integers adjacent
+to \(h_*\) determine \(c_{\mathbb Z}\), so the coefficient is explicit.
+
+The same integer incidence condition holds in arbitrary symmetric designs.
+In a projective plane there are two further bounds.  At most
+\(\lfloor(k-1)/(n-1)\rfloor\) \(n\)-secants pass through a point of the arc,
+and at most \(\lfloor k/n\rfloor\) pass through an external point.  These
+geometric bounds sharpen the general condition for complete arcs.
+
+In characteristic two the first family in which the two first-order bounds
+are simultaneously tight yields a second
+application.
+
+\begin{theorem}[Characteristic-two parity bound]\label{thm:characteristic-two}
+\coverage{fragment}
+For every \(\varepsilon>0\), there is \(h_0\) such that, for \(h\ge h_0\),
+if \(q=2^h\), \(8\mid q\), and every external point of a
+\((k,3q/4+1)\)-arc in \(\PG(2,q)\) lies on at least two \((3q/4+1)\)-secants,
+then
+\begin{equation}\label{eq:characteristic-two-bound}
+ k\ge \frac{q^2}{2}+\left(\frac{73}{48}-\varepsilon\right)q.
+\end{equation}
+\imports{SWeven:repair}
+\lean{characteristicTwo_odd_affine_bounds,
+characteristicTwo_even_affine_bounds}
+\end{theorem}
+
+The proof separates odd and even repair support.  The parity of the selected
+secant family fixes the parity of the support, while the symmetric difference
+of its generator lines supplies respectively \(q/4-O(1)\) or \(q/2-O(1)\)
+external points of excess degree.
+
+The projective-code translation is immediate.  A point set in
+\(\PG(r-1,q)\) gives a projective \([k,r,k-n]_q\) code.  Hyperplanes meeting
+the point set in \(n\) columns correspond to minimum-weight codewords, and a
+candidate extension column is obstructed by each such hyperplane through it.
+The same integer degree theorem
+therefore bounds nonextendibility with multiple minimum-weight witnesses.
+We keep the finite-geometry language primary and record this translation
+after the planar applications.
+
+The paper is organized as follows.  Section~\ref{sec:integer-envelopes}
+proves the symmetric-design inequality and identifies incidence mixing as its
+real relaxation.  The next two sections specialize to \(n\)-secants and
+prove Theorem~\ref{thm:factor-pair}.  The modular-stability sections prove
+Theorems~\ref{thm:characteristic-three} and
+\ref{thm:characteristic-two}.  The final section gives the blocking-set and
+coding translations and records the exact computational checks used to guard
+the finite algebra.

@@ -1,0 +1,38 @@
+digraph manuscript {
+  rankdir=BT;
+  node [shape=box, style=filled, fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=8];
+  "cor:blocking-set-form" [fillcolor="#ffffff", tooltip="absent"];
+  "cor:mixing-relaxation" [fillcolor="#ffffff", tooltip="absent"];
+  "cor:n-secant-feasibility" [fillcolor="#ffffff", tooltip="absent"];
+  "cor:projective-codes" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:degree-extrema" [fillcolor="#fde8c8", tooltip="fragment"];
+  "lem:even-type-case" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:no-uncorrected-characteristic-three" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:pencil-bounds" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:rational-parameters" [fillcolor="#fde8c8", tooltip="fragment"];
+  "lem:repair-parity" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:repair-support" [fillcolor="#ffffff", tooltip="absent"];
+  "lem:secant-number-near-equality" [fillcolor="#ffffff", tooltip="absent"];
+  "prop:simultaneous-equality" [fillcolor="#ffffff", tooltip="absent"];
+  "thm:characteristic-three" [fillcolor="#fde8c8", tooltip="fragment"];
+  "thm:characteristic-two" [fillcolor="#fde8c8", tooltip="fragment"];
+  "thm:factor-pair" [fillcolor="#fde8c8", tooltip="fragment"];
+  "thm:paired-envelope" [fillcolor="#fde8c8", tooltip="fragment"];
+  "BMS:spectral-bound" [shape=note, fillcolor="#eeeeee"];
+  "LundSaraf:incidence-bound" [shape=note, fillcolor="#eeeeee"];
+  "MurphyPetridis:variance-identity" [shape=note, fillcolor="#eeeeee"];
+  "SWeven:repair" [shape=note, fillcolor="#eeeeee"];
+  "SWmodp:repair" [shape=note, fillcolor="#eeeeee"];
+  "BMS:spectral-bound" -> "thm:factor-pair" [style=dotted];
+  "LundSaraf:incidence-bound" -> "cor:mixing-relaxation" [style=dotted];
+  "MurphyPetridis:variance-identity" -> "cor:mixing-relaxation" [style=dotted];
+  "SWeven:repair" -> "thm:characteristic-two" [style=dotted];
+  "SWmodp:repair" -> "thm:characteristic-three" [style=dotted];
+  "lem:degree-extrema" -> "thm:paired-envelope" [style=solid];
+  "lem:pencil-bounds" -> "cor:n-secant-feasibility" [style=solid];
+  "thm:characteristic-three" -> "cor:blocking-set-form" [style=dashed];
+  "thm:paired-envelope" -> "cor:mixing-relaxation" [style=solid];
+  "thm:paired-envelope" -> "cor:n-secant-feasibility" [style=solid];
+  "thm:paired-envelope" -> "cor:projective-codes" [style=solid];
+}

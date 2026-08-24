@@ -1,0 +1,13 @@
+# Fully qualified terminal: exact kernel-reported axiom list
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount: none
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_unit_transfer: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.consecutiveIntegerProduct_nonnegative: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.twicePairCount_balancing_decomposition: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.balanced_twicePairCount_lower: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.integerPairIntervals_overlap: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.rationalEqualityParameters_satisfy_equations: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.coefficient_difference_factorization: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_odd_affine_bounds: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_even_affine_bounds: propext, Classical.choice, Quot.sound

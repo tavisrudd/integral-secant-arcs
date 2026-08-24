@@ -1,0 +1,186 @@
+\section{Rational equality parameters}\label{sec:rational-parameters}
+
+We first determine when the real incidence bound can be tight while the
+limiting number of \(n\)-secants through a point of the arc is an integer.
+Suppose that
+\[
+ \frac nq\longrightarrow\alpha,\qquad
+ \frac{k}{q^2}\longrightarrow\beta,
+\]
+that equality holds asymptotically in \eqref{eq:classical-arc-bound}, and that
+the limiting value of \(\rho_n(P)\) is an integer \(a>\lambda\).  Equality in
+the incidence and coverage bounds gives
+\begin{equation}\label{eq:rational-system}
+ a=\frac{\lambda\alpha(1-\beta)}{(1-\alpha)\beta},
+ \qquad
+ \lambda(\alpha-\beta)^2=\beta(1-\alpha).
+\end{equation}
+If \(d=a-\lambda\), eliminating \(\beta\) gives
+\begin{equation}\label{eq:rational-discriminant}
+ d^2\alpha^2-d(d+1)\alpha+a=0,
+ \qquad
+ (d+1)^2-4a=(a-\lambda-1)^2-4\lambda.
+\end{equation}
+
+\begin{lemma}[Classification of the rational parameters]
+\label{lem:rational-parameters}
+\coverage{fragment}
+The rational solutions of \eqref{eq:rational-system} are in bijection with
+ordered factorizations \(\lambda=uv\), where \(u,v\ge1\).  They are
+\begin{equation}\label{eq:rational-parameter-values}
+ d=u+v+1,\qquad
+ \alpha=\frac{u+1}{u+v+1},\qquad
+ \beta=\frac{u}{u+v+1},\qquad
+ a=(u+1)(v+1).
+\end{equation}
+\lean{rationalEqualityParameters_satisfy_equations}
+\end{lemma}
+
+\begin{proof}
+The last expression in \eqref{eq:rational-discriminant} must be a square.
+Factoring the difference of squares gives two positive factors of
+\(4\lambda\) with the same parity.  Both factors are even; write them as
+\(2u\) and \(2v\).  Then \(uv=\lambda\), and substitution gives
+\eqref{eq:rational-parameter-values}.  Conversely, the displayed values
+satisfy \eqref{eq:rational-system}.  Their order distinguishes the two roots,
+so the correspondence is one-to-one.
+\end{proof}
+
+We next control \(T=\tau_n\) near one of these parameters.  The argument is
+stated separately because it is also used in the modular refinements.
+
+\begin{lemma}[Number of \(n\)-secants near equality]
+\label{lem:secant-number-near-equality}
+\coverage{absent}
+Fix \(u,v\ge1\), put \(d=u+v+1\), and suppose
+\[
+ q=dm,\qquad n=(u+1)m+1,\qquad
+ k=udm^2+cm+O(1),
+\]
+where \(c\) remains bounded.  If every external point is on at least
+\(uv\) \(n\)-secants and
+\begin{equation}\label{eq:F-definition}
+ F(T):=\Phimin(k,nT)
+ +\Phimin(q^2+q+1-k,vmT)-\binom T2
+\end{equation}
+is nonpositive, then
+\begin{equation}\label{eq:T-localization}
+ T=ud(v+1)m+O_{u,v,c}(1).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set \(b=q^2+q+1-k\).  The external incidence count gives
+\begin{equation}\label{eq:T-minimum}
+ T\ge T_0:=\left\lceil\frac{uvb}{vm}\right\rceil
+ =ud(v+1)m+O(1).
+\end{equation}
+Direct substitution in \eqref{eq:phi-min} gives
+\(F(T_0)=O_{u,v,c}(m)\).  Moreover,
+\begin{equation}\label{eq:F-difference}
+ F(T+1)-F(T)
+ =\sum_{i=0}^{n-1}\left\lfloor\frac{nT+i}{k}\right\rfloor
+ +\sum_{i=0}^{vm-1}\left\lfloor\frac{vmT+i}{b}\right\rfloor-T.
+\end{equation}
+From \(T_0\) through an interval of length \(vm+O(1)\), the first family of
+floors is at least \((u+1)(v+1)-1\), and the second is at least \(uv\).
+Thus \eqref{eq:F-difference} is at least
+\(vm-(T-T_0)+O(1)\).  Beyond this interval, use
+\(\lfloor x\rfloor\ge x-1\) and
+\[
+ \frac{n^2}{k}+\frac{v^2m^2}{b}-1
+ =\frac1{u(v+1)}+O(m^{-1}).
+\]
+By the midpoint of the first interval, \(F\) has increased by a positive
+quantity of order \(m^2\), whereas \(F(T_0)=O(m)\).  For larger \(T\), a
+lower bound for \eqref{eq:F-difference} is
+\[
+ T\left(\frac{n^2}{k}+\frac{v^2m^2}{b}-1\right)-(n+vm),
+\]
+which is increasing because the coefficient of \(T\) is positive and is
+already positive at the end of the first interval.  It follows that
+\(F(T)>0\) whenever \(T-T_0\) exceeds a constant depending only on the fixed
+parameters.  Therefore \(F(T)\le0\) implies
+\eqref{eq:T-localization}.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:factor-pair}]
+Lemma~\ref{lem:rational-parameters} proves the classification.  If
+\((k-udm^2)/m\) exceeds a fixed constant larger than
+\(c_{\mathbb Z}\), the claimed bound is automatic.
+In the remaining range, Lemma~\ref{lem:secant-number-near-equality} applies
+uniformly to the actual number of \(n\)-secants, because
+\eqref{eq:arc-integer-condition} implies \(F(T)\le0\).  Hence
+\[
+ T=ud(v+1)m+h
+\]
+for an integer \(h\) in a fixed finite set.  Put
+\(c_m=(k-udm^2)/m\).  Substitution in the external coverage inequality
+\(uvb\le vmT\) gives
+\begin{equation}\label{eq:coverage-linear}
+ k\ge udm^2+L(h)m-O_{u,v}(1).
+\end{equation}
+
+At these parameters the balanced internal degrees are
+\((u+1)(v+1)-1\) and \((u+1)(v+1)\); the balanced external degrees are
+\(uv\) and \(uv+1\).  Substitution in \eqref{eq:phi-min} gives
+\begin{equation}\label{eq:pair-linear}
+ \frac{F(T)}m
+ =\frac{(u+v)(2uv+u+v+1)}2\bigl(C(h)-c_m\bigr)+O_{u,v}(m^{-1}).
+\end{equation}
+The integer condition \eqref{eq:arc-integer-condition} implies \(F(T)\le0\),
+so
+\[
+ k\ge udm^2+C(h)m-O_{u,v}(1).
+\]
+The affine functions \(L\) and \(C\) are decreasing and increasing,
+respectively, and meet at \(h_*\).  Their maximum over the integers is
+minimized at \(\lfloor h_*\rfloor\) or \(\lceil h_*\rceil\).  Since \(h\)
+ranges over a fixed finite set, the bounded terms are uniform.  This proves
+\eqref{eq:factor-pair-bound}.
+
+Expanding the real bound \eqref{eq:classical-arc-bound} gives
+\(c_{\mathrm{mix}}\).  Subtraction from \(c_{\mathrm{bal}}\) gives the
+factorization \eqref{eq:strict-gap}.
+\uses{lem:rational-parameters,lem:secant-number-near-equality,cor:n-secant-feasibility}
+\end{proof}
+
+For the first three ordered factorizations, the integer coefficients are
+\begin{equation}\label{eq:first-integer-coefficients}
+ (u,v)=(1,1):\ \frac{18}{5},\qquad
+ (u,v)=(1,2):\ \frac92,\qquad
+ (u,v)=(2,1):\ 6.
+\end{equation}
+The first is the ordinary-completeness family
+\(q=3m\), \(n=2m+1\).  The other two have two \(n\)-secants through every
+external point and limiting ratios \(n/q=1/2\) and \(3/4\).
+
+There is also an elementary description of the parameters for which the
+coverage and pair-count inequalities are simultaneously tight to first order.
+
+\begin{proposition}[Simultaneous first-order equality]
+\label{prop:simultaneous-equality}
+\coverage{absent}
+Put \(M_0=2uv+u+v\).  Then \(h_*\) is an integer if and only if
+\begin{equation}\label{eq:simultaneous-equality-divisibility}
+ M_0\mid u^2(u+1)(u^2+u+1).
+\end{equation}
+In particular, the case \(v=u\) has simultaneous first-order equality for
+every even \(u\).
+\end{proposition}
+
+\begin{proof}
+Polynomial division in \(v\), followed by multiplication by \((2u+1)^2\),
+gives
+\[
+ (2u+1)^2u(v+1)(u^2v+u^2-v)
+ =M_0Q(u,v)+u^2(u+1)(u^2+u+1)
+\]
+for an integer polynomial \(Q\).  Since
+\(\gcd(M_0,2u+1)=1\), integrality of \(h_*\) is equivalent to
+\eqref{eq:simultaneous-equality-divisibility}.  When \(v=u\),
+\[
+ h_*=-\frac{u(u^2+u-1)}2,
+\]
+which is integral for even \(u\).
+\end{proof}

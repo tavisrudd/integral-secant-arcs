@@ -1,0 +1,162 @@
+\section{Modular stability and completeness}\label{sec:modular-stability}
+
+Assume now that the plane is \(\PG(2,q)\), where \(q=p^e\).  Dualizing the
+set of \(n\)-secants gives a point set \(\mathcal L^*\) in the dual plane.
+The intersection of \(\mathcal L^*\) with the line dual to a point
+\(X\) has size \(\rho_n(X)\) or \(\sigma_n(X)\), according as
+\(X\in\mathcal K\) or \(X\notin\mathcal K\).  At a rational equality
+parameter from Section~\ref{sec:rational-parameters}, the two limiting
+intersection numbers are
+\[
+ \lambda=uv,\qquad a=(u+1)(v+1),\qquad a-\lambda=u+v+1.
+\]
+When \(u+v+1\) is a power of \(p\), these two numbers are congruent modulo
+\(p\).
+
+Sz\H{o}nyi and Weiner prove that, for \(q=p^e>27\) with \(e>1\), a multiset in
+\(\PG(2,q)\) having \(\delta\) lines with the wrong intersection residue can,
+under their stated upper bound on \(\delta\), be changed at exactly
+\(\lceil\delta/(q+1)\rceil\) distinct support points into a multiset having
+the prescribed residue on every line \cite[Theorem~1.2]{SWmodp}.  In our
+application \(e>2\), \(\delta=O(q)\), and their threshold is
+\((\lfloor\sqrt q\rfloor+1)(q+1-\lfloor\sqrt q\rfloor)\).  Thus the threshold
+holds for all sufficiently large \(q\), and the number of changed support
+points is bounded.  Related applications of
+modular stability to arc and direction problems appear in
+Csajb\'ok--Weiner~\cite{CsajbokWeiner} and
+Adriaensen--Sz\H{o}nyi--Weiner~\cite{AdriaensenSzonyiWeiner}.
+
+The following observation is where completeness re-enters the modular
+argument.
+
+\begin{lemma}[Contribution of the repair support]
+\label{lem:repair-support}
+\coverage{absent}
+Fix an ordered factorization \(\lambda=uv\) and suppose
+\(d=u+v+1\) is a power of the characteristic.  Let
+\[
+ q=dm,\qquad n=(u+1)m+1,\qquad
+ k=udm^2+cm+o(m),\qquad
+ T=ud(v+1)m+h+o(1),
+\]
+where \(h\in\mathbb Z\).  Suppose every external point is on at least
+\(\lambda\) \(n\)-secants, and suppose \(\mathcal L^*\) can be changed at
+\(r\) distinct support points into a multiset meeting every line in
+\(\lambda\pmod p\) points.  If \(r\) is fixed and nonzero, then
+\begin{equation}\label{eq:repair-support-bound}
+ c\ge L(h)+\frac ru.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Dualize the \(r\) support points to \(r\) lines of the original plane.
+Away from their pairwise intersections, a point on one of these lines has
+\(n\)-secant multiplicity different from \(\lambda\pmod p\).  If it is
+external, its multiplicity is at least \(\lambda+1\).  A support line contains
+at most \(n\) points of \(\mathcal K\), and the union loses only
+\(O(r^2)\) points at pairwise intersections.  Hence the total external excess
+over multiplicity \(\lambda\) is at least
+\begin{equation}\label{eq:repair-excess-lower}
+ r(q+1-n)-O(r^2)=rvm-O(r^2).
+\end{equation}
+On the other hand, the incidence sum gives the exact first-order expression
+\begin{equation}\label{eq:repair-excess-exact}
+ (q+1-n)T-\lambda(q^2+q+1-k)
+ =uv\bigl(c-L(h)\bigr)m+o(m).
+\end{equation}
+Comparing \eqref{eq:repair-excess-lower} and
+\eqref{eq:repair-excess-exact} proves \eqref{eq:repair-support-bound}.
+\end{proof}
+
+There is a useful restriction when \(r=1\).  Summing the line intersections
+of an exact \(\lambda\pmod p\) multiset over a pencil shows that its total
+multiplicity is \(\lambda\pmod p\).  Along a characteristic-compatible
+family the leading term of \(T\) is divisible by \(p\), so the correction has
+total multiplicity \(h-\lambda\pmod p\).  Consequently, if
+\begin{equation}\label{eq:support-one-obstruction}
+ h\equiv\lambda\pmod p,
+\end{equation}
+then a nonzero correction cannot have support one.
+
+We apply this first to ordinary completeness.  Write \(q=3m\),
+\(n=2m+1\), and suppose
+\begin{equation}\label{eq:characteristic-three-asymptotic}
+ k=3m^2+cm+o(m),\qquad T=6m+h+o(1).
+\end{equation}
+The coverage and pair-count inequalities from Sections~\ref{sec:n-secants}
+and \ref{sec:rational-parameters} become
+\begin{equation}\label{eq:characteristic-three-linear-bounds}
+ c+h\ge3,\qquad 5c-h\ge18.
+\end{equation}
+
+\begin{lemma}[The uncorrected case is impossible]
+\label{lem:no-uncorrected-characteristic-three}
+\coverage{absent}
+Under \eqref{eq:characteristic-three-asymptotic}, if
+\(c<4\) and every line meets \(\mathcal L^*\) in \(1\pmod3\) points, then
+the exact pair identity \eqref{eq:n-secant-pairs} cannot hold.
+\end{lemma}
+
+\begin{proof}
+Near this equality parameter the balanced internal multiplicities are
+\(3,4\), and the balanced external multiplicities are \(1,2\).  Let \(D\)
+be the signed internal deficiency \(4k-nT\), and let \(E\) be the total
+external excess above one.  The incidence sums give
+\begin{align}
+ D&=(4c-2h-6)m+o(m),\label{eq:D-characteristic-three}\\
+ E&=(c+h-3)m+o(m).\label{eq:E-characteristic-three}
+\end{align}
+Without the congruence restriction, the available pair-count slack is
+\begin{equation}\label{eq:pair-slack-characteristic-three}
+ (5c-h-18)m+o(m).
+\end{equation}
+If every multiplicity is \(1\pmod3\), congruence-restricted integer
+convexity replaces the internal adjacent values \(3,4\) by \(1,4\), raising
+the minimum pair count by \(D\).  It replaces the external adjacent values
+\(1,2\) by \(1,4\), raising that minimum by \(E\).  Feasibility would therefore
+require
+\[
+ 5c-h-18\ge \frac{D+E}{m}+o(1)=5c-h-9+o(1),
+\]
+which is impossible.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:characteristic-three}]
+Suppose the assertion fails.  For some \(\varepsilon>0\), pass to a sequence
+with
+\[
+ k\le3m^2+(4-3\varepsilon)m.
+\]
+The classical incidence bound supplies a lower bound for
+\(c_m=(k-3m^2)/m\), so, after passing to a subsequence, \(c_m\to c\) with
+\(c\le4-3\varepsilon\).  The leading real inequality has a unique equality
+point at \(T/m=6\).  Lemma~\ref{lem:secant-number-near-equality} then gives
+\(T-6m=O(1)\); pass to a further subsequence on which this difference is a
+fixed integer \(h\).
+
+The incidence sums show that the numbers of internal degree-three points and
+external degree-two points are \(O(m)\).  The pair-count slack is also
+\(O(m)\), and strict convexity charges at least one unit for every further
+departure from the adjacent balanced degrees.  Hence only \(O(q)\) dual
+lines fail to meet \(\mathcal L^*\) in \(1\pmod3\) points.
+Sz\H{o}nyi--Weiner's repair theorem changes
+\(\mathcal L^*\) at a fixed number \(r\) of support points to obtain an exact
+\(1\pmod3\) multiset.  Lemma~\ref{lem:no-uncorrected-characteristic-three}
+excludes \(r=0\).  Lemma~\ref{lem:repair-support} gives
+\[
+ c\ge L(h)+r=3-h+r.
+\]
+By \eqref{eq:support-one-obstruction}, \(r\ge2\) when
+\(h\equiv1\pmod3\), and \(r\ge1\) otherwise.  Together with the pair-count
+bound \(c\ge(18+h)/5\), this yields
+\begin{equation}\label{eq:characteristic-three-minimum}
+ c\ge
+ \min_{h\in\mathbb Z}
+ \max\left\{\frac{18+h}{5},3-h+r_{\min}(h)\right\}=4,
+\end{equation}
+where \(r_{\min}(h)=2\) for \(h\equiv1\pmod3\) and is one otherwise.  This
+contradicts the chosen sequence and proves
+\eqref{eq:characteristic-three-bound}.
+\imports{SWmodp:repair}
+\uses{lem:repair-support,lem:no-uncorrected-characteristic-three,cor:n-secant-feasibility}
+\end{proof}

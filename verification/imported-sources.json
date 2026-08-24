@@ -1,0 +1,70 @@
+{
+  "schema": "integral-secant-arcs-imported-sources-v1",
+  "sources": {
+    "BMS:spectral-bound": {
+      "citation": "BMS",
+      "pinpoint": "Theorem 8.1",
+      "used": "The classical quadratic lower bound for a point set with a prescribed number of maximal secants through every external point.",
+      "conventions": [
+        {
+          "aspect": "duality",
+          "requirement": "The theorem is applied to the complement/minimal-multiple-blocking-set formulation.",
+          "matched": "The manuscript derives the same cleared quadratic from the selected maximal-secants and explicitly identifies the variables under complementation."
+        }
+      ]
+    },
+    "LundSaraf:incidence-bound": {
+      "citation": "LundSaraf",
+      "pinpoint": "Theorem 1 and the expander-mixing calculation",
+      "used": "The standard real incidence bound for a block design.",
+      "conventions": [
+        {
+          "aspect": "design parameters",
+          "requirement": "The incidence matrix is that of a 2-(v,K,Lambda) design.",
+          "matched": "The symmetric design in Corollary 2.3 is a 2-design with the same parameter identity K(K-1)=Lambda(v-1)."
+        }
+      ]
+    },
+    "MurphyPetridis:variance-identity": {
+      "citation": "MurphyPetridis",
+      "pinpoint": "Lemma 1 and its block-design form",
+      "used": "The classical equivalence between the second incidence moment and the spectral/variance identity.",
+      "conventions": [
+        {
+          "aspect": "normalization",
+          "requirement": "Incidences are counted with unweighted point and block indicators.",
+          "matched": "Every selected block and every point has multiplicity one in the real relaxation."
+        }
+      ]
+    },
+    "SWmodp:repair": {
+      "citation": "SWmodp",
+      "pinpoint": "Theorem 1.2",
+      "used": "Repair of a multiset with few non-k mod p lines to an exact k mod p multiset by changing boundedly many support points.",
+      "conventions": [
+        {
+          "aspect": "field",
+          "requirement": "The plane is PG(2,p^h), h>1, and the number of exceptional lines lies below the theorem's threshold.",
+          "matched": "The characteristic-three proof works along q=3^h and produces only O(q) exceptional lines, eventually below the stated threshold."
+        },
+        {
+          "aspect": "multiplicity",
+          "requirement": "The repaired object is a multiset and corrections may have arbitrary nonzero residues modulo p.",
+          "matched": "The proof uses only the number of distinct correction-support points and never assumes unit coefficients."
+        }
+      ]
+    },
+    "SWeven:repair": {
+      "citation": "SWeven",
+      "pinpoint": "Theorem 1.1",
+      "used": "Repair of a point set with few odd-secants to a set of even type.",
+      "conventions": [
+        {
+          "aspect": "field",
+          "requirement": "The projective plane has even Desarguesian order and the odd-secant count lies in the stability range.",
+          "matched": "The characteristic-two branch has q=2^h and O(q) odd-secants, so the condition holds for all sufficiently large h."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+name = "IntegralSecantArcs"
+defaultTargets = ["IntegralSecantArcs"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "571b8a8e54219b4d393f75f4b8653fac08197fcc"
+
+[[lean_lib]]
+name = "IntegralSecantArcs"
+roots = [
+  "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Combinatorics.IntegerDegreeBounds",
+  "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.RationalEqualityParameters",
+  "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.CharacteristicBounds",
+  "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.PaperInterface",
+]
+
+[[lean_lib]]
+name = "IntegralSecantArcsVerification"
+roots = ["TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Verification.AxiomAudit"]

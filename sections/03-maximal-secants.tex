@@ -1,0 +1,114 @@
+\section{The distribution of \texorpdfstring{\(n\)}{n}-secants}
+\label{sec:n-secants}
+
+Let \(\mathcal K\) be a \((k,n)\)-arc in a projective plane of order \(q\).
+We use the standard secant notation
+\[
+ \tau_i=\#\{\text{\(i\)-secants of \(\mathcal K\)}\},
+\]
+and write \(\rho_i(P)\) for the number of \(i\)-secants through
+\(P\in\mathcal K\), and \(\sigma_i(Q)\) for the number through
+\(Q\notin\mathcal K\).  Only \(i=n\) will occur below.  Put
+\[
+ b=q^2+q+1-k,\qquad \tau=q+1-n,\qquad T=\tau_n.
+\]
+
+The geometry supplies two bounds that need not hold for a selected block
+family in an arbitrary design.
+
+\begin{lemma}[Secants in a pencil]\label{lem:pencil-bounds}
+\coverage{absent}
+For every \(P\in\mathcal K\) and \(Q\notin\mathcal K\),
+\begin{equation}\label{eq:pencil-bounds}
+ \rho_n(P)\le D:=\left\lfloor\frac{k-1}{n-1}\right\rfloor,
+ \qquad
+ \sigma_n(Q)\le M:=\left\lfloor\frac{k}{n}\right\rfloor.
+\end{equation}
+Moreover,
+\begin{align}
+ \sum_{P\in\mathcal K}\rho_n(P)&=nT,&
+ \sum_{Q\notin\mathcal K}\sigma_n(Q)&=\tau T,
+ \label{eq:n-secant-incidences}\\
+ \sum_{P\in\mathcal K}\binom{\rho_n(P)}2
+ +\sum_{Q\notin\mathcal K}\binom{\sigma_n(Q)}2&=\binom T2.
+ \label{eq:n-secant-pairs}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+The \(n\)-secants through \(P\) have disjoint sets of \(n-1\) further
+points of \(\mathcal K\).  Those through \(Q\) have disjoint \(n\)-point
+intersections with \(\mathcal K\).  This proves \eqref{eq:pencil-bounds}.
+The first two equations count incidences.  Every two distinct projective lines
+meet once, either in \(\mathcal K\) or outside it, which gives
+\eqref{eq:n-secant-pairs}.
+\end{proof}
+
+We will sometimes impose the stronger hypothesis
+\begin{equation}\label{eq:lambda-coverage}
+ \sigma_n(Q)\ge\lambda\qquad(Q\notin\mathcal K),
+\end{equation}
+where \(\lambda\ge1\).  For \(\lambda=1\), this is precisely completeness.
+Rather than introduce another name for \eqref{eq:lambda-coverage}, we state
+the multiplicity explicitly in each result.
+
+\begin{corollary}[Integer feasibility for the \(n\)-secants]
+\label{cor:n-secant-feasibility}
+\coverage{absent}
+Assume \eqref{eq:lambda-coverage}.  Then there is an integer \(T\) satisfying
+\begin{gather}
+ \left\lceil\frac{\lambda b}{\tau}\right\rceil
+ \le T\le
+ \left\lfloor\frac{k(k-1)}{n(n-1)}\right\rfloor,
+ \label{eq:T-range}\\
+ [\Phimin(b,\tau T),\Phimax(b,\lambda,M,\tau T)]
+ \cap
+ [\binom T2-\Phimax(k,0,D,nT),
+  \binom T2-\Phimin(k,nT)]\ne\varnothing.
+ \label{eq:arc-integer-condition}
+\end{gather}
+\end{corollary}
+
+\begin{proof}
+Equation~\eqref{eq:lambda-coverage} and
+\eqref{eq:n-secant-incidences} give the lower bound for \(T\).  Each
+\(n\)-secant contains \(\binom n2\) pairs of points of \(\mathcal K\), and
+each pair lies on one line, giving the upper bound.  Apply
+Theorem~\ref{thm:paired-envelope} to the point--line design of the plane,
+using Lemma~\ref{lem:pencil-bounds} for the degree bounds.
+\uses{thm:paired-envelope,lem:pencil-bounds}
+\end{proof}
+
+If
+\[
+ v_{\mathcal K}\equiv nT\pmod k,\qquad 0\le v_{\mathcal K}<k,
+ \qquad
+ v_{\mathrm{ext}}\equiv\tau T\pmod b,\qquad 0\le v_{\mathrm{ext}}<b,
+\]
+then the two minimum terms in \eqref{eq:arc-integer-condition} imply
+\begin{equation}\label{eq:integer-incidence-bound}
+ T\left(\frac{n^2}{k}+\frac{\tau^2}{b}-1\right)
+ +\frac{v_{\mathcal K}(k-v_{\mathcal K})}{kT}
+ +\frac{v_{\mathrm{ext}}(b-v_{\mathrm{ext}})}{bT}
+ \le q.
+\end{equation}
+Discarding the two nonnegative residue terms gives the familiar real
+incidence bound.  Since \(T\ge\lambda b/\tau\), we obtain
+\begin{equation}\label{eq:classical-arc-bound}
+ \frac{\lambda b}{\tau}
+ \left(\frac{n^2}{k}+\frac{\tau^2}{b}-1\right)\le q.
+\end{equation}
+After denominators are cleared, \eqref{eq:classical-arc-bound} is the
+quadratic in Bishnoi--Mattheus--Schillewaert~\cite[Theorem~8.1]{BMS}.
+Thus the classical bound is the real relaxation of
+\eqref{eq:arc-integer-condition}; the residue terms record part of the
+discarded integer information.  Schillewaert~\cite{Schillewaert} determines
+the equality cases of the corresponding bound for minimal multiple blocking
+sets.
+
+\begin{remark}\label{rem:ordinary-completeness}
+For a complete \((k,n)\)-arc one takes \(\lambda=1\).  The stronger values of
+\(\lambda\) below mean only that every external point is on at least
+\(\lambda\) \(n\)-secants.  This is the same multiplicity hypothesis used in
+the dual form of Bishnoi--Mattheus--Schillewaert~\cite[Theorem~8.1]{BMS}.
+\end{remark}

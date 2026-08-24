@@ -1,0 +1,35 @@
+# Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs
+
+This directory contains the manuscript source and its verification materials.
+The paper studies complete higher arcs through the
+numbers of \(n\)-secants through each point.  Its principal
+application is the lower bound
+
+\[
+t_{2q/3+1}(2,q)\ge q^2/3+4q/3-o(q)
+\]
+
+over the tower \(q=3^h\).
+
+Build from the repository root with:
+
+```text
+make -C papers/integral_secant_arcs manuscript
+```
+
+Run the complete paper gate with:
+
+```text
+make -C papers/integral_secant_arcs check
+```
+
+The `lean/` directory contains a pinned Mathlib-only partial formal companion.
+Its reviewer interface checks the integer balancing and interval-overlap core,
+the rational coefficient identities, and the final discrete affine
+minimizations. The Lean README and claim map state the exact coverage and
+limitations.
+
+The release-facing [`literature-audit.md`](literature-audit.md) records the
+read depth of every discussed source, the exact recent-weeks searches through
+24 August 2026, and the database coverage gaps governing the paper's bounded
+positioning language.
