@@ -76,7 +76,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "5cf7b582d59bcb582e446c22cbb5fb17db5e1e77122ff1788631edbaba50a655",
+      "sha256": "e890c7bdd5bbe879c4f799538e64187a73330abd336e4308c9cd5a3dc54898ed",
       "source_blob": null
     },
     {
@@ -435,5 +435,5 @@
   "repository": "integral-secant-arcs",
   "repository_map_sha256": "bbe3f256111bdfc18c197d4a31ba7df1e7a4195bd3b892569b876d4bbbc32d35",
   "schema_version": 1,
-  "source_commit": "edf4d49f7ec72b72db2685f28e04d6a9145b6020"
+  "source_commit": "e4dbe678f3204950304de3da51fb244ae5a75d62"
 }
