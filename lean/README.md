@@ -28,13 +28,20 @@ Checked coverage snapshot: 17 claims; 11 absent; 6 fragmentary; 0 conditional;
 0 complete; 12 reviewer terminals, of which 5 are machinery serving no current
 manuscript claim.
 
-From this directory, build the public interface and axiom audit with
+Within the monorepo, do not invoke Lean or Lake directly.  From the monorepo
+root, queue the public interface and axiom audit through the repository build
+front door:
 
 ```text
-nix develop --command lake build \
+lean/scripts/lean-build-queue.py build \
   TavisRuddFiniteGeom.Papers.IntegralSecantArcs.PaperInterface \
-  TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Verification.AxiomAudit
+  TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Verification.AxiomAudit \
+  --lean-root "$PWD/papers/integral_secant_arcs/lean" --cores 20-23
 ```
+
+The standalone paper repository does not bundle the monorepo build scheduler;
+its `make check` target therefore runs the source-level correspondence gate but
+does not claim a fresh kernel build.
 
 The manuscript correspondence and expected-axiom baseline are checked with
 

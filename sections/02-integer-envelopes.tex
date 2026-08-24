@@ -13,6 +13,19 @@ If \(L\le U\), \(NL\le R\le NU\), put
 \end{equation}
 When \(L=U\), the latter expression has its evident constant interpretation.
 
+We will use the following exact form of the balancing loss.  If
+\(R=Na+w\), then every integer sequence with sum \(R\) satisfies
+\begin{equation}\label{eq:balancing-loss}
+ \sum_{i=1}^N\binomtwo{z_i}-\Phimin(N,R)
+ =\frac12\sum_{i=1}^N(z_i-a)(z_i-a-1).
+\end{equation}
+Every summand on the right is nonnegative, and every index with
+\(z_i\notin\{a,a+1\}\) contributes at least one to the left side.  Thus an
+\(O(m)\) total balancing loss permits only \(O(m)\) departures from the two
+adjacent balanced degrees.  This quantitative consequence, rather than an
+unstated stability principle, will control the exceptional lines in
+Sections~\ref{sec:modular-stability} and \ref{sec:characteristic-two}.
+
 \begin{lemma}[Balanced and filled degree sequences]\label{lem:degree-extrema}
 \coverage{fragment}
 Among integer sequences \(z_1,\dots,z_N\) with sum \(R\), the minimum of
@@ -56,8 +69,9 @@ Then
        \Lambda\binomtwo T-P_A^-\right]\ne\varnothing.
 \end{equation}
 For uniform boxes the endpoints are given by
-Lemma~\ref{lem:degree-extrema}; heterogeneous endpoints are obtained by
-integer water filling.
+Lemma~\ref{lem:degree-extrema}; for heterogeneous boxes, repeated unit
+transfers toward the lower bounds give the minimum, and repeated transfers
+toward the upper bounds give the maximum.
 \lean{integerPairIntervals_overlap}
 \end{theorem}
 
@@ -82,7 +96,8 @@ loss of information exact.
 \begin{corollary}[Incidence mixing as the real relaxation]
 \label{cor:mixing-relaxation}
 \coverage{absent}
-In the setting of Theorem~\ref{thm:paired-envelope},
+In the setting of Theorem~\ref{thm:paired-envelope}, assume additionally that
+\(A\) and \(B\) are nonempty and that \(T>0\).  Then
 \begin{equation}\label{eq:real-relaxation}
  T\left(\frac{s^2}{|A|}+\frac{(K-s)^2}{|B|}-\Lambda\right)
  \le K-\Lambda.

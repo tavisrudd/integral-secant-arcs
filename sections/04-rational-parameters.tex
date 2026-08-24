@@ -25,8 +25,14 @@ If \(d=a-\lambda\), eliminating \(\beta\) gives
 \begin{lemma}[Classification of the rational parameters]
 \label{lem:rational-parameters}
 \coverage{fragment}
-The rational solutions of \eqref{eq:rational-system} are in bijection with
-ordered factorizations \(\lambda=uv\), where \(u,v\ge1\).  They are
+Fix an integer \(\lambda\ge1\).  The triples
+\((\alpha,\beta,a)\in\mathbb Q^2\times\mathbb Z\) satisfying
+\eqref{eq:rational-system},
+\[
+ 0<\beta<\alpha<1,\qquad a>\lambda,
+\]
+are in bijection with ordered factorizations \(\lambda=uv\) in positive
+integers.  They are
 \begin{equation}\label{eq:rational-parameter-values}
  d=u+v+1,\qquad
  \alpha=\frac{u+1}{u+v+1},\qquad
@@ -37,13 +43,15 @@ ordered factorizations \(\lambda=uv\), where \(u,v\ge1\).  They are
 \end{lemma}
 
 \begin{proof}
-The last expression in \eqref{eq:rational-discriminant} must be a square.
+The last expression in \eqref{eq:rational-discriminant} must be an integer
+square.
 Factoring the difference of squares gives two positive factors of
 \(4\lambda\) with the same parity.  Both factors are even; write them as
 \(2u\) and \(2v\).  Then \(uv=\lambda\), and substitution gives
 \eqref{eq:rational-parameter-values}.  Conversely, the displayed values
-satisfy \eqref{eq:rational-system}.  Their order distinguishes the two roots,
-so the correspondence is one-to-one.
+satisfy \eqref{eq:rational-system}.  The inequalities on \(\alpha\) and
+\(\beta\) make the factors positive, and their order distinguishes the two
+roots, so the correspondence is one-to-one.
 \end{proof}
 
 We next control \(T=\tau_n\) near one of these parameters.  The argument is

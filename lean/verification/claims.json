@@ -30,8 +30,8 @@
       "objects": "Positive rational parameters u and v and the manuscript's balanced-integer and real-incidence first-order coefficients.",
       "hypotheses": "Both rational parameters are positive.",
       "conclusion": "The coefficient difference equals the displayed positive rational factorization.",
-      "cautions": "Lean does not prove the complete arc bound, the integer minimization defining c_Z, the classification of all rational equality parameters, or any asymptotic localization of the number of n-secants.",
-      "statement_digest": "ee56c9ad2ef183d3d739fa020ac4e34b77d36cec133d9decd598fe1a2c0daa7c",
+      "cautions": "Lean does not prove the complete arc bound, the integer minimization defining c_Z, the converse classification under the manuscript's integral-degree hypothesis, or any asymptotic localization of the number of n-secants.",
+      "statement_digest": "942596fc965c90bfa6cf09499e885c32b00a5aa08b6ba770b3441ed95b399272",
       "terminal_digest": "e1c6212b878d6b33596678915c1fcf3ba5bddc16a5e6de8f7189660ecc2a56ad"
     },
     {
@@ -71,7 +71,7 @@
       "hypotheses": "The two actual counts sum to the total and each lies in its declared integer interval.",
       "conclusion": "The external interval meets the reflection of the internal interval through the total pair count.",
       "cautions": "Lean proves the interval-overlap implication once the pair partition and endpoints are supplied. It does not define symmetric designs, double-count block intersections, or compute heterogeneous integer-box extrema.",
-      "statement_digest": "93e07d8550bf08097edef4eb8aed50fb02c5a12e6f2938e2ecb053e152f2f063",
+      "statement_digest": "7e93132d540e5ce29066148e7180dad3a809dd34978cece07be5e65389b1efd5",
       "terminal_digest": "3c024b96ba9df93aeab831c9707fb4e5fa5ecbb947ca5e2eccbfca4b44a4cc1a"
     },
     {
@@ -79,10 +79,10 @@
       "coverage": "absent",
       "declarations": [],
       "objects": "A selected block family in a symmetric design and its two point classes.",
-      "hypotheses": "The hypotheses of the exact integer incidence condition.",
+      "hypotheses": "The hypotheses of the exact integer incidence condition, with both point classes nonempty and T positive.",
       "conclusion": "The standard real incidence inequality and its constant-degree equality condition.",
       "cautions": "No Lean declaration currently represents the Cauchy--Schwarz derivation or its equivalence with incidence mixing.",
-      "statement_digest": "26b3e21a3337130b41a7b495e6a9537bafbb4dd0c7634826e3ffacc9c527ba2d"
+      "statement_digest": "df10b493555f6629c7fa7dad538c92f4fa66199cec11ac1509c0aa1049cf1260"
     },
     {
       "manuscript_label": "lem:pencil-bounds",
@@ -113,8 +113,8 @@
       "objects": "Positive rational factors u and v and the associated alpha, beta, lambda, and a.",
       "hypotheses": "The factors u and v are positive.",
       "conclusion": "The displayed factor-indexed parameters satisfy the two continuous equality equations.",
-      "cautions": "Lean proves the forward substitution only. It does not prove that every rational solution arises uniquely from an ordered factorization.",
-      "statement_digest": "fe60d422cd1fd51bb947d5741944a32a435ed8e129c6db3f848e62f70306b6f7",
+      "cautions": "Lean proves the forward substitution only. It does not prove the converse classification for triples with integral a greater than lambda.",
+      "statement_digest": "b7c8233efd2f7343e18d0b83f0ca75afe546575d8faa2cfa6b1433c4a98963e7",
       "terminal_digest": "a2148f1e98e8e0ce4d63d374469fe3e173d1c9880461a384f0dbc4057ec7df71"
     },
     {

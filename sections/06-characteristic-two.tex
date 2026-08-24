@@ -42,8 +42,10 @@ pair bound give
  e&=2(c+h-8)m+o(m),\\
  \text{available pair slack}&=(12c-2h-152)m+o(m).
 \end{align*}
-If every multiplicity is even, restricting the two balanced distributions to
-even integers raises their minimum pair sum by
+If every multiplicity is even, restricting the internal balanced distribution
+to even integers raises its minimum by \(|D|/2\), while the external
+restriction raises its minimum by \(e/2\).  The total increase is therefore
+at least
 \[
  \frac{D+e}{2}=(4c-2h-24)m+o(m).
 \]
@@ -93,10 +95,23 @@ Lemma~\ref{lem:secant-number-near-equality} give
 \(T-32m=O(1)\).  Pass to a further subsequence with fixed integer difference
 \(h\).
 
-The incidence sums and the \(O(m)\) pair-count slack show, by the same strict
-convexity argument as in the characteristic-three proof, that only \(O(q)\)
-dual lines have the wrong parity.  Therefore
-Sz\H{o}nyi--Weiner's theorem gives \eqref{eq:even-type-repair} with fixed \(r\).
+As in the characteristic-three proof, the exact decomposition of \(-F(T)\)
+into the two nonnegative balancing losses and
+Equation~\eqref{eq:balancing-loss} show that only \(O(m)\) internal degrees
+lie outside \(\{5,6\}\), and only \(O(m)\) external degrees lie outside
+\(\{2,3\}\).  Moreover,
+\[
+ D=6k-nT=\sum_{P\in\mathcal K}(6-\rho_n(P))=O(m).
+\]
+For \(z\notin\{5,6\}\), the absolute value of \(6-z\) is at most twice the
+corresponding summand in \eqref{eq:balancing-loss}; hence the number of
+internal degree-five points is \(O(m)\).  Since every external degree is at
+least two and
+\(e=\sum_Q(\sigma_n(Q)-2)=O(m)\), the number of external degree-three points
+is also \(O(m)\).  These are the wrong-parity adjacent degrees, so only
+\(O(m)=O(q)\) dual lines have the wrong parity.  Therefore
+Sz\H{o}nyi--Weiner's theorem gives \eqref{eq:even-type-repair} with bounded
+integer \(r\).  Pass to a further subsequence on which \(r\) is fixed.
 Lemma~\ref{lem:even-type-case} excludes \(r=0\) in the range under
 consideration.  If \(h\) is odd, Lemma~\ref{lem:repair-parity} and
 \eqref{eq:characteristic-two-linear} give

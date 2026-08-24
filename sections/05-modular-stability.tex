@@ -134,14 +134,36 @@ point at \(T/m=6\).  Lemma~\ref{lem:secant-number-near-equality} then gives
 \(T-6m=O(1)\); pass to a further subsequence on which this difference is a
 fixed integer \(h\).
 
-The incidence sums show that the numbers of internal degree-three points and
-external degree-two points are \(O(m)\).  The pair-count slack is also
-\(O(m)\), and strict convexity charges at least one unit for every further
-departure from the adjacent balanced degrees.  Hence only \(O(q)\) dual
-lines fail to meet \(\mathcal L^*\) in \(1\pmod3\) points.
+For the actual degree sequences, the pair identity gives the exact
+decomposition
+\[
+ -F(T)=
+ \left(\sum_{P\in\mathcal K}\binom{\rho_n(P)}2-\Phimin(k,nT)\right)
+ +\left(\sum_{Q\notin\mathcal K}\binom{\sigma_n(Q)}2
+              -\Phimin(b,(q+1-n)T)\right).
+\]
+Both parentheses are nonnegative.  Equation~\eqref{eq:pair-linear}, with
+bounded \(c_m\) and fixed \(h\), shows that their sum is \(O(m)\).
+Equation~\eqref{eq:balancing-loss} therefore shows that only \(O(m)\)
+internal degrees lie outside \(\{3,4\}\), and only \(O(m)\) external degrees
+lie outside \(\{1,2\}\).
+
+It remains to count the wrong adjacent degrees.  The signed deficiency
+\(D=4k-nT=O(m)\) equals \(\sum_{P\in\mathcal K}(4-\rho_n(P))\).
+For every nonnegative integer \(z\notin\{3,4\}\),
+\[
+ |4-z|\le (z-3)(z-4),
+\]
+so the total contribution of the nonadjacent internal degrees is \(O(m)\)
+by \eqref{eq:balancing-loss}.  Hence the number of internal degree-three
+points is \(O(m)\).  Externally, completeness gives \(\sigma_n(Q)\ge1\), and
+the excess \(E=\sum_Q(\sigma_n(Q)-1)=O(m)\) bounds the number of degree-two
+points.  Thus only \(O(m)=O(q)\) dual lines fail to meet \(\mathcal L^*\) in
+\(1\pmod3\) points.
 Sz\H{o}nyi--Weiner's repair theorem changes
-\(\mathcal L^*\) at a fixed number \(r\) of support points to obtain an exact
-\(1\pmod3\) multiset.  Lemma~\ref{lem:no-uncorrected-characteristic-three}
+\(\mathcal L^*\) at a bounded integer number \(r\) of support points to obtain
+an exact \(1\pmod3\) multiset.  Pass to a further subsequence on which \(r\)
+is fixed.  Lemma~\ref{lem:no-uncorrected-characteristic-three}
 excludes \(r=0\).  Lemma~\ref{lem:repair-support} gives
 \[
  c\ge L(h)+r=3-h+r.

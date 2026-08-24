@@ -1,0 +1,123 @@
+# A referee's route through the proof
+
+The manuscript proves an exact integer incidence condition for a selected
+block family in a symmetric design and applies it to the family of
+`n`-secants of a complete `(k,n)`-arc.  The characteristic-three and
+characteristic-two bounds add modular stability to that integer condition.
+
+## A first pass
+
+Read the three theorem statements in
+[`sections/01-introduction.tex`](sections/01-introduction.tex), then the pair
+identity and integer feasibility condition in
+[`sections/03-maximal-secants.tex`](sections/03-maximal-secants.tex).  The
+rational parameter calculation is in
+[`sections/04-rational-parameters.tex`](sections/04-rational-parameters.tex).
+The load-bearing modular steps are in Sections 5 and 6.
+
+## Seven checks
+
+1. **What integer information survives the real incidence bound?**
+   The interval-overlap condition uses the actual pair count as a witness in
+   two intervals determined by exact integer extrema.  It does not claim that
+   every integer between those extrema is attainable.  The closed
+   balancing-remainder formula identifies the nonnegative residue term
+   discarded by the real relaxation.
+2. **Where do the rational equality parameters come from?**
+   Lemma 4.1 classifies triples with integral limiting internal degree
+   `a > lambda`.  Under that hypothesis, factoring the integral discriminant
+   gives an ordered factorization `lambda = uv` in positive integers.  The
+   manuscript makes no classification claim for rational nonintegral `a`.
+3. **Why is the number of `n`-secants localized?**
+   Lemma 4.2 combines the external coverage lower bound with the forward
+   difference of the two balanced pair-count minima.  It proves
+   `T = ud(v+1)m + O(1)` uniformly when the first-order coefficient of `k`
+   stays in a fixed bounded interval.
+4. **Why are there only `O(q)` exceptional dual lines?**
+   In the proofs of Theorems 1.1 and 1.3, the pair identity writes `-F(T)` as
+   the sum of two nonnegative balancing losses.  The exact balancing-loss
+   identity charges every degree outside the adjacent balanced pair.  The
+   signed deficiency and external excess then count the wrong member of each
+   adjacent pair.  This is the step to check before applying either modular
+   stability theorem.
+5. **Do the imported repair theorems apply?**
+   Section 5 records the Szőnyi--Weiner hypotheses `q=p^e>27`, `e>1`, their
+   exceptional-line threshold, and the exact support size
+   `ceil(delta/(q+1))`.  Section 6 records the even-type threshold and support
+   size.  Since `delta=O(q)`, both thresholds hold eventually and the support
+   size is bounded; the proofs pass to a subsequence on which it is fixed.
+6. **Where does completeness enter after repair?**
+   Lemma 5.1 dualizes every repair-support point to a primal line.  Away from
+   intersections of those lines, a wrong residue and the external lower
+   degree force positive secant excess.  This produces the additional linear
+   term.  Equation (5.4) rules out support one in one residue class.
+7. **Are the final constants correct?**
+   The characteristic-three proof minimizes two affine bounds over the three
+   residue classes.  The characteristic-two proof separates odd and even
+   repair support.  The exact Python evidence bundle and the Lean fragments
+   independently check these terminal arithmetic calculations, but neither
+   substitutes for the preceding geometric proof.
+
+## Outside inputs
+
+The proof imports the Bishnoi--Mattheus--Schillewaert real incidence bound only
+for comparison and imports two Szőnyi--Weiner modular stability theorems in the
+headline applications.  [`verification/imported-sources.json`](verification/imported-sources.json)
+records the source location, hypotheses, and convention match for each import.
+The manuscript states the integer incidence condition before deriving the
+classical real inequality as a corollary.
+
+## Formal and computational boundary
+
+The adjacent Lean package is a partial formal companion.  Its public interface
+is
+[`PaperInterface.lean`](lean/TavisRuddFiniteGeom/Papers/IntegralSecantArcs/PaperInterface.lean),
+and [`claims.json`](lean/verification/claims.json) gives the exact
+manuscript-to-declaration map.  It classifies 17 manuscript claims as 11 absent
+and 6 fragmentary; none is complete.  Lean checks integer balancing and
+interval overlap, forward rational substitutions and coefficient algebra, and
+the terminal affine minima.  It does not formalize projective planes,
+`(k,n)`-arcs, the exceptional-line estimate, either modular stability theorem,
+repair support, or the asymptotic reductions.
+
+[`expected_axioms.txt`](lean/verification/expected_axioms.txt) is the baseline
+for a captured kernel audit, not evidence of a fresh run by itself.  The
+paper-local static gate checks statement digests, coverage annotations,
+declarations, and the dependency graph.  The repository-wide trust registry
+adopts the manuscript labels and claim manifest but does not advertise the
+paper-local Lean declarations as portfolio terminals until that registry has
+an extraction unit for adjacent packages.
+
+The exact Python bundle checks finite integer/rational identities and bounded
+test domains recorded in JSON.  It neither proves the asymptotic theorems nor
+searches for projective arcs.  See
+[`verification/README.md`](verification/README.md).
+
+## Replay
+
+From the paper or standalone repository root, run:
+
+```text
+make check
+```
+
+This replays the exact evidence checker, the source-level formal
+correspondence gate, the pinned manuscript build, and the TeX-warning gate.  A
+fresh Lean kernel build and axiom transcript use the guarded repository Lean
+workflow described in [`lean/README.md`](lean/README.md); `make check` does not
+claim to perform that build.
+
+## Hypothesis-smuggling checklist
+
+- Keep `a in Z`, `a > lambda`, and `u,v in Z_{>0}` in the rational
+  classification.
+- Keep `A,B` nonempty and `T>0` when dividing in the real relaxation.
+- Treat pair-count intervals as necessary enclosing intervals, not as sets of
+  all attainable values.
+- Keep signed deficiencies signed; the characteristic-two even restriction
+  costs `|D|/2` internally.
+- Pass to a subsequence before calling the bounded repair-support size fixed.
+- Require a spanning point set for the stated rank-three projective-code
+  translation.
+- Do not use the Lean fragments or finite computational checks as premises for
+  the geometric or asymptotic steps.

@@ -1,5 +1,41 @@
-% Typographically empty provenance annotations.  Identifiers resolve in the
-% claim map and the registries under verification/.
+% Formal annotations.
+%
+% Each theorem-like environment in this manuscript carries a machine-readable
+% record of its provenance.  All six macros below are typographically empty and
+% take comma-separated identifiers only:
+%
+%   \coverage{...}  the strength at which the statement is formalized, one of
+%                   absent, fragment, conditional_deduction, complete;
+%   \lean{...}      the reviewer terminals carrying it, named without their
+%                   common namespace;
+%   \uses{...}      the labels of the statements this one depends on, listed
+%                   inside the statement body for a conceptual dependency and
+%                   inside a proof for a logical one;
+%   \proves{...}    the label a proof establishes, for a proof separated from
+%                   its statement, where the two cannot be paired by position;
+%   \imports{...}   the identifiers of the external results this statement uses,
+%                   resolved in verification/imported-sources.json, which records
+%                   each one's citation key, pinpoint, the form in which it is
+%                   used, and the conventions of framing, coordinates, and
+%                   normalization that must be matched for the use to be valid;
+%   \evidence{...}  the identifiers of the computational evidence bundles a
+%                   statement rests on, resolved in verification/evidence.json,
+%                   which records each one's role, checksum manifest, and replay
+%                   command.  A statement carrying one rests on a trusted
+%                   execution rather than on a certificate.
+%
+% \lean, \uses, and \proves-style association follow the conventions of the Lean
+% blueprint system of P. Massot, whose print-mode macros are likewise empty, and
+% the statement-versus-proof reading of \uses follows KnowTeX.  \coverage,
+% \imports, and \evidence are local.  \coverage replaces the blueprint system's
+% two-valued formalization flag, because a statement here may also be represented
+% by a strictly weaker fragment or by a conditional deduction whose external
+% premises are exposed in the theorem type.  Every annotation takes identifiers
+% only; all detail lives in the files named above, so that a citation, a
+% convention, or a replay command has exactly one home.  The annotations are read
+% by lean/verification/check_formal_artifact.py, which resolves every identifier
+% and rejects any disagreement with the per-claim record in
+% lean/verification/claims.json.
 \newcommand{\lean}[1]{}
 \newcommand{\coverage}[1]{}
 \newcommand{\uses}[1]{}

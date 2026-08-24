@@ -22,12 +22,14 @@ decompositions are classical~\cite{BekerMitchellPiper}, but the selected
 family of all \(n\)-secants need not be tactical.  Ramani's recent
 first-incidence identity for uniform intersecting linear hypergraphs
 \cite{Ramani} provides a related degree-defect viewpoint.  Our argument uses
-both point classes and their exact pair-count ranges.
+both point classes and the intervals determined by their exact pair-count
+extrema.
 
 This paper keeps the \(n\)-secants as a family rather than eliminating their
 number at the first counting step.  The degrees of that family on the arc and
 on its complement have fixed sums, and their pair counts add to the number of
-pairs of secants.  Integer convexity gives the exact range of each pair count.
+pairs of secants.  Integer convexity gives the exact extrema of each pair
+count.
 The two ranges must overlap.  Replacing the integer extrema by quadratic real
 averages recovers the classical incidence-mixing inequality; retaining them
 gives the new bounds.
@@ -90,8 +92,9 @@ and
  c_{\mathrm{bal}}-c_{\mathrm{mix}}
  =\frac{u(v+1)(u^2+u+1)}{(2u+1)(2uv+u+v)}>0.
 \end{equation}
-Every rational equality parameter of the continuous bound arises from exactly one
-ordered factorization \(\lambda=uv\).
+Every rational equality parameter of the continuous bound whose limiting
+internal degree is an integer \(a>\lambda\) arises from exactly one ordered
+factorization \(\lambda=uv\).
 \imports{BMS:spectral-bound}
 \lean{coefficient_difference_factorization}
 \end{theorem}
@@ -130,7 +133,7 @@ secant family fixes the parity of the support, while the symmetric difference
 of its generator lines supplies respectively \(q/4-O(1)\) or \(q/2-O(1)\)
 external points of excess degree.
 
-The projective-code translation is immediate.  A point set in
+The projective-code translation is immediate.  A spanning point set in
 \(\PG(r-1,q)\) gives a projective \([k,r,k-n]_q\) code.  Hyperplanes meeting
 the point set in \(n\) columns correspond to minimum-weight codewords, and a
 candidate extension column is obstructed by each such hyperplane through it.
