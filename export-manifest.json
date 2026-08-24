@@ -76,17 +76,17 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "1c1751da45542722387c439e40c661987e1bea9cce43fa2415676edefa0ed782",
+      "sha256": "e84caa37eac03a1e6f8a3669f25b22b40cb7b423524839499ee254968eef8b06",
       "source_blob": null
     },
     {
-      "bytes": 5755,
+      "bytes": 6080,
       "mode": "100644",
       "path": "README.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "ef6099c4982076356794f54ed4bf742a528a113ae50762ed0d921d1d46db882e",
-      "source_blob": "d02d4e0e550212f14528e4f3318d7ca029a35080"
+      "sha256": "fdd2975b5574e6866564ab39ae078aa2e28cb3f8f20c6be58ed379ca2af0dfe1",
+      "source_blob": "23716059854f3c083be74bab483057c70ba0ab5b"
     },
     {
       "bytes": 7452,
@@ -435,5 +435,5 @@
   "repository": "integral-secant-arcs",
   "repository_map_sha256": "bbe3f256111bdfc18c197d4a31ba7df1e7a4195bd3b892569b876d4bbbc32d35",
   "schema_version": 1,
-  "source_commit": "61230af445242bb52654a773c3fd1381259731d4"
+  "source_commit": "13157b8452bf5def01ee2ab489ec08cdcaaa156a"
 }

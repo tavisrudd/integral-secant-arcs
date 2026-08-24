@@ -1,5 +1,7 @@
 # Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs
 
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22087679-blue.svg)](https://doi.org/10.5281/zenodo.22087679)
+
 ## Read the paper
 
 [**Open the paper (PDF) →**](integral_secant_arcs.pdf)
@@ -127,7 +129,14 @@ audit instructions in [`lean/README.md`](lean/README.md).
 - `REVIEWER_GUIDE.md` maps the load-bearing proof and trust checks.
 - `lean/` is the pinned Mathlib-only partial formal companion.
 - `verification/` contains exact evidence and source-level trust checks.
-- `.zenodo.json` contains deposit metadata; it creates no deposit or DOI.
+- `.zenodo.json` contains deposit metadata.
+
+## Citation
+
+The concept DOI for all versions is
+[`10.5281/zenodo.22087679`](https://doi.org/10.5281/zenodo.22087679). The
+first release, `v0.1.0`, has version DOI
+[`10.5281/zenodo.22087680`](https://doi.org/10.5281/zenodo.22087680).
 
 ## License
 
