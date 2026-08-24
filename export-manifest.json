@@ -76,7 +76,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "695d23d759fccdb4b97fbdbe1fd375d58e3eff6684f3f00d7b6d7acf1f65e0fd",
+      "sha256": "50f23253409d4577d297bc4d904a23d61f51eefdd990bef11b811566d17f9ee1",
       "source_blob": null
     },
     {
@@ -314,13 +314,13 @@
       "source_blob": "3c52f0faa09bc3b27c43cec365d82d6e35745658"
     },
     {
-      "bytes": 9137,
+      "bytes": 9303,
       "mode": "100644",
       "path": "sections/04-rational-parameters.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "0615e09e385ddb38df3f0638ce60e74237e13de504de64196eacd112028b5c51",
-      "source_blob": "7cc6b379d3453161340cb190a21c005722998800"
+      "sha256": "9bffca4f493d5d93f5e30a0b77766e06ac04c2cfd9f7bf9ade30f6811249e79b",
+      "source_blob": "c40d41ee99017eba604ea92460761023a2587a66"
     },
     {
       "bytes": 8262,
@@ -435,5 +435,5 @@
   "repository": "integral-secant-arcs",
   "repository_map_sha256": "bbe3f256111bdfc18c197d4a31ba7df1e7a4195bd3b892569b876d4bbbc32d35",
   "schema_version": 1,
-  "source_commit": "3c30073e35d5427fb025d3140bf0cc050b9e2a1c"
+  "source_commit": "a241d0e0428e76c7628bf487f4a200a2ead26342"
 }
