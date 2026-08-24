@@ -11,6 +11,10 @@ t_{2q/3+1}(2,q)\ge q^2/3+4q/3-o(q)
 
 over the tower \(q=3^h\).
 
+Referees can start with [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md), which maps
+the load-bearing proof steps, imported results, formal coverage, computational
+evidence, and hypothesis checks to their owning files.
+
 From this directory, build the manuscript with:
 
 ```text
