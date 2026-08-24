@@ -34,6 +34,11 @@ The load-bearing modular steps are in Sections 5 and 6.
    forward difference through `T_0+vm`, and then proves that the real lower
    bound for the forward difference is positive for every later `T`.  Thus it
    proves `T = ud(v+1)m + O_{u,v,C,K}(1)` uniformly over the bounded family.
+   In the subsequent coefficient calculation, the balanced internal degrees
+   can cross from `(a-1,a)` to `(a,a+1)`.  The display labelled
+   `eq:pair-linear` uses equality on the first branch and the convex
+   supporting-line lower bound on the second; it does not identify the two
+   branches.
 4. **Why are there only `O(q)` exceptional dual lines?**
    In the proofs of Theorems 1.1 and 1.3, the pair identity writes `-F(T)` as
    the sum of two nonnegative balancing losses.  The exact balancing-loss

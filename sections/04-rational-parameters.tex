@@ -189,12 +189,16 @@ for an integer \(h\) in a fixed finite set.  Put
  k\ge udm^2+L(h)m-O_{u,v}(1).
 \end{equation}
 
-At these parameters the balanced internal degrees are
-\((u+1)(v+1)-1\) and \((u+1)(v+1)\); the balanced external degrees are
-\(uv\) and \(uv+1\).  Substitution in \eqref{eq:phi-min} gives
+Write \(a=(u+1)(v+1)\).  The balanced external degrees are \(uv\) and
+\(uv+1\).  On the branch \(nT\le ak\), the balanced internal degrees are
+\(a-1\) and \(a\), and direct substitution in \eqref{eq:phi-min} gives the
+affine expression below.  On the other branch they are \(a\) and \(a+1\).
+Since the balanced pair sum is convex in \(T\), its value there lies above
+the affine continuation from the first branch.  Consequently
 \begin{equation}\label{eq:pair-linear}
  \frac{F(T)}m
- =\frac{(u+v)(2uv+u+v+1)}2\bigl(C(h)-c_m\bigr)+O_{u,v}(m^{-1}).
+ \ge\frac{(u+v)(2uv+u+v+1)}2\bigl(C(h)-c_m\bigr)
+   -O_{u,v}(m^{-1}).
 \end{equation}
 The integer condition \eqref{eq:arc-integer-condition} implies \(F(T)\le0\),
 so

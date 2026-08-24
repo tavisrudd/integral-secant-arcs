@@ -76,7 +76,7 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "13ae5a4e12966d586f90accaa6f5165977bae6c64ea65b8be7aca471fe54b112",
+      "sha256": "695d23d759fccdb4b97fbdbe1fd375d58e3eff6684f3f00d7b6d7acf1f65e0fd",
       "source_blob": null
     },
     {
@@ -89,13 +89,13 @@
       "source_blob": "43124d191c5c076c4da47e799ca5411fcb8c91f0"
     },
     {
-      "bytes": 7155,
+      "bytes": 7452,
       "mode": "100644",
       "path": "REVIEWER_GUIDE.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "9daa04f58bcca4f1eab04915e872ea3a3ec46cba3b8f8ef39416ca39e779708d",
-      "source_blob": "3666643fa426e9e1977f9ed0d36425df8fc967e6"
+      "sha256": "303c299b22d511e15f2e2a9bfbb15c66ff4cd1b92ceb5fb98a2ae4849df70702",
+      "source_blob": "954191e569329aa3432e3b3a27c51e7528bc3adb"
     },
     {
       "bytes": 567,
@@ -125,22 +125,22 @@
       "source_blob": "9c425c26718995102f09f1f08b3c00621140748c"
     },
     {
-      "bytes": 152823,
+      "bytes": 154288,
       "mode": "100644",
       "path": "integral_secant_arcs.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "8004d1d77f309cbc0dfb581ce7f6c32b4a4f708dea4d91f893ee75ce7d40fc36",
-      "source_blob": "656ae5e08bd3bcc8a37b3800ae41afc25664f553"
+      "sha256": "9ab93d6c47799b8bdcc0791dc779e8f5d83ddd576e9438525938c8f8e60a434e",
+      "source_blob": "97f144b29489cdf4a2886c01a64166f4c50bfa18"
     },
     {
-      "bytes": 7302,
+      "bytes": 7535,
       "mode": "100644",
       "path": "integral_secant_arcs.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "fdd0af3796bfea65bc9a11476b7f655a3c30b164c2c4e3709a58d3b0f6a2bd39",
-      "source_blob": "51fd77ce8d0dc309b178d182a2bc2c7f8fc4cbe4"
+      "sha256": "63e0962376a5f7fe450b11a5af43e133be6ec66a37c769de8a4715c0b8f82e12",
+      "source_blob": "f9a42d0bc1c8173f548e8e2434eb8de4a8326dfc"
     },
     {
       "bytes": 8,
@@ -314,13 +314,13 @@
       "source_blob": "3c52f0faa09bc3b27c43cec365d82d6e35745658"
     },
     {
-      "bytes": 8891,
+      "bytes": 9137,
       "mode": "100644",
       "path": "sections/04-rational-parameters.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "49c270529698b12084a8cade252f72b2ca39c20dcee927ef557881268aa71e3d",
-      "source_blob": "0a68a10562619d05e21d083b84c640838b8f380d"
+      "sha256": "0615e09e385ddb38df3f0638ce60e74237e13de504de64196eacd112028b5c51",
+      "source_blob": "7cc6b379d3453161340cb190a21c005722998800"
     },
     {
       "bytes": 8262,
@@ -328,8 +328,8 @@
       "path": "sections/05-modular-stability.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "ae34605fce02984c967100f8aeae14c3b18be2bd7b55aeca630733df9be520a9",
-      "source_blob": "2a9278f84d2352da09ce8893cf580fdf4284d410"
+      "sha256": "2ada948887a044eebc4f45d00d1bcb0e2e86dde5c89c1663873d6127b10a71dc",
+      "source_blob": "f067a55a3d8c93ca5cb64c2de4b44c6e79ed9a4f"
     },
     {
       "bytes": 5832,
@@ -341,13 +341,13 @@
       "source_blob": "aa73070df91841667836de215d88355b8b5318ac"
     },
     {
-      "bytes": 7450,
+      "bytes": 7551,
       "mode": "100644",
       "path": "sections/07-translations.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "fd312b9d35cbb9940a60032f23e8a85781644e32530f3326bd3929ef27059dae",
-      "source_blob": "c0616a1bb5ff89195dc638d6a70575c8c4623067"
+      "sha256": "189411005c9f3c68a033d221521ce1e50578f1cf9041070d2a3002b2afc9d60e",
+      "source_blob": "b732c54dd36fa81de3d1ec215e2a21135c3dc81b"
     },
     {
       "bytes": 1663,
@@ -433,7 +433,7 @@
   "paper_registry_sha256": "ac41b7b357cf4f0cf6dfe0669205cb3afa27074632c01a0c7237efe425833738",
   "release_output_policy": "immutable-source",
   "repository": "integral-secant-arcs",
-  "repository_map_sha256": "a13730c3d1f3793c546db36ee7e7ab0d05e8425c8d869859b262f4bb195e3676",
+  "repository_map_sha256": "bbe3f256111bdfc18c197d4a31ba7df1e7a4195bd3b892569b876d4bbbc32d35",
   "schema_version": 1,
-  "source_commit": "c8310ab11bab279d694037acdec5add5a88e6290"
+  "source_commit": "3c30073e35d5427fb025d3140bf0cc050b9e2a1c"
 }
