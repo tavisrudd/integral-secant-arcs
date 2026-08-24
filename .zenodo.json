@@ -1,6 +1,6 @@
 {
   "title": "Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs",
-  "description": "This preprint develops sharp integer bounds for the numbers of maximal secants through the points of a complete higher arc and its complement. The method refines the classical incidence bound at every rational equality parameter and, after modular repair, proves the asymptotic lower bound k >= q^2/3 + 4q/3 - o(q) for complete (k,2q/3+1)-arcs in PG(2,q) over q=3^h.",
+  "description": "This preprint develops sharp integer bounds for the numbers of maximal secants through the points of a complete higher arc and its complement. The method refines the classical incidence bound on the classified rational equality families with integral limiting degrees and, after modular repair, proves the asymptotic lower bound k >= q^2/3 + 4q/3 - o(q) for complete (k,2q/3+1)-arcs in PG(2,q) over q=3^h.",
   "creators": [
     {
       "name": "Rudd, Tavis",

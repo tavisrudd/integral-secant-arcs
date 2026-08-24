@@ -14,13 +14,13 @@
       "source_blob": "ef8df83a69e42112936e9a0a18c0b349eb89e89e"
     },
     {
-      "bytes": 1024,
+      "bytes": 1063,
       "mode": "100644",
       "path": ".zenodo.json",
       "rewrites": [],
       "role": "verification",
-      "sha256": "6c654250de32ec92f515167e2447d8708eec8737999e10234b11e5fddf7a4ad7",
-      "source_blob": "befc22c8217d6d87f8f732ac2d42c8e5718ae4d6"
+      "sha256": "2488147a196c563927ff7291372d6a8d746d5b3421ec7ed25f6146203fe1f888",
+      "source_blob": "815655627dc451ae30da7b387e922471e57f95ec"
     },
     {
       "bytes": 470,
@@ -76,17 +76,17 @@
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "e890c7bdd5bbe879c4f799538e64187a73330abd336e4308c9cd5a3dc54898ed",
+      "sha256": "1c1751da45542722387c439e40c661987e1bea9cce43fa2415676edefa0ed782",
       "source_blob": null
     },
     {
-      "bytes": 1354,
+      "bytes": 5755,
       "mode": "100644",
       "path": "README.md",
       "rewrites": [],
       "role": "support",
-      "sha256": "da403278f235828da7befda9e4787c66c407d56764860c3dfb9ef8eb47a5b16d",
-      "source_blob": "43124d191c5c076c4da47e799ca5411fcb8c91f0"
+      "sha256": "ef6099c4982076356794f54ed4bf742a528a113ae50762ed0d921d1d46db882e",
+      "source_blob": "d02d4e0e550212f14528e4f3318d7ca029a35080"
     },
     {
       "bytes": 7452,
@@ -435,5 +435,5 @@
   "repository": "integral-secant-arcs",
   "repository_map_sha256": "bbe3f256111bdfc18c197d4a31ba7df1e7a4195bd3b892569b876d4bbbc32d35",
   "schema_version": 1,
-  "source_commit": "e4dbe678f3204950304de3da51fb244ae5a75d62"
+  "source_commit": "61230af445242bb52654a773c3fd1381259731d4"
 }
