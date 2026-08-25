@@ -30,8 +30,8 @@
       "objects": "Positive rational parameters u and v and the manuscript's balanced-integer and real-incidence first-order coefficients.",
       "hypotheses": "Both rational parameters are positive.",
       "conclusion": "The coefficient difference equals the displayed positive rational factorization.",
-      "cautions": "Lean does not prove the complete arc bound, the integer minimization defining c_Z, the converse classification under the manuscript's integral-degree hypothesis, or any asymptotic localization of the number of n-secants.",
-      "statement_digest": "942596fc965c90bfa6cf09499e885c32b00a5aa08b6ba770b3441ed95b399272",
+      "cautions": "Lean does not prove the complete arc bound, the integer minimization defining c_Z, the converse classification under the manuscript's integral average-degree hypothesis, or any asymptotic localization of the number of n-secants.",
+      "statement_digest": "abfc92049cd74933babb417c271f9f45aa142f89f33c20ccd05a5f5c9c463ae8",
       "terminal_digest": "e1c6212b878d6b33596678915c1fcf3ba5bddc16a5e6de8f7189660ecc2a56ad"
     },
     {

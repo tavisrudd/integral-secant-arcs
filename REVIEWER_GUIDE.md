@@ -141,6 +141,10 @@ claim to perform that build.
   all attainable values.
 - Keep signed deficiencies signed; the characteristic-two even restriction
   costs `|D|/2` internally.
+- In the even-type lemma, `D ≥ 0` gives the balanced pair `{5,6}`; `D < 0`
+  gives `{6,7}`, where the displayed affine slack is an upper bound.  The
+  characteristic-two theorem's contradiction range proves `D > 0` before
+  using `{5,6}`.
 - Pass to a subsequence before calling the bounded repair-support size fixed.
 - Fix uniform bounds for both the first-order coefficient and constant
   remainder before invoking the secant-number localization lemma.

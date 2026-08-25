@@ -37,15 +37,19 @@ all its \(n\)-secants.  If \(R=\varnothing\) in
 \end{lemma}
 
 \begin{proof}
-The balanced internal multiplicities are five and six, and the balanced
-external multiplicity is two.  Put \(D=6k-nT\), the signed internal
-deficiency from six.  The incidence equations and the unrestricted integer
-pair bound give
+The balanced external pair is \(\{2,3\}\).  Put \(D=6k-nT\), the signed
+internal deficiency from six.  The incidence equations and the unrestricted
+integer pair bound give
 \begin{align*}
  D&=(6c-6h-32)m+o(m),\\
  e&=2(c+h-8)m+o(m),\\
- \text{available pair slack}&=(12c-2h-152)m+o(m).
+ S_{\mathrm{aff}}&=(12c-2h-152)m+o(m).
 \end{align*}
+If \(D\ge0\), the balanced internal pair is \(\{5,6\}\), and
+\(S_{\mathrm{aff}}\) is the available unrestricted pair slack to first
+order.  If \(D<0\), the balanced pair is \(\{6,7\}\); convexity of the
+internal \(\Phimin\) term makes the same low-branch affine continuation
+\(S_{\mathrm{aff}}\) an upper bound on the actual unrestricted slack.
 If every multiplicity is even, restricting the internal balanced distribution
 to even integers raises its minimum by \(|D|/2\), while the external
 restriction raises its minimum by \(e/2\).  The total increase is therefore
@@ -53,8 +57,8 @@ at least
 \[
  \frac{D+e}{2}=(4c-2h-24)m+o(m).
 \]
-The available slack must be at least this large, which simplifies to
-\(c\ge16\).
+In either branch, feasibility forces \(S_{\mathrm{aff}}\) to be at least this
+large, which simplifies to \(c\ge16\).
 \end{proof}
 
 \begin{lemma}[Parity of the repair]\label{lem:repair-parity}
@@ -98,6 +102,13 @@ so pass to a subsequence with \(c_m\to c\).  The leading incidence bound and
 Lemma~\ref{lem:secant-number-near-equality} give
 \(T-32m=O(1)\).  Pass to a further subsequence with fixed integer difference
 \(h\).
+
+Equation~\eqref{eq:characteristic-two-linear} and \(c\le73/6\) give
+\[
+ 6c-6h-32\ge424-30c\ge59.
+\]
+Thus \(D>0\) for all sufficiently large \(m\), so the balanced internal pair
+in this contradiction range is \(\{5,6\}\).
 
 As in the characteristic-three proof, the exact decomposition of \(-F(T)\)
 into the two nonnegative balancing losses and
