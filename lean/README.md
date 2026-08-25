@@ -1,4 +1,4 @@
-# Lean companion to *Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs*
+# Lean companion to *Integral Secant Distributions and Line-Code Obstructions for Complete (k,n)-Arcs*
 
 This Mathlib-only package is the paper-owned formal companion. Its
 reviewer-facing entry point is
@@ -16,16 +16,19 @@ TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Verification.AxiomAudit
 The package proves the integer unit-transfer and balancing identities, the
 abstract pair-interval overlap, the rational parameter substitutions and
 coefficient factorization, and the characteristic-three and
-characteristic-two discrete affine minimizations. These are kernel-checked
-arithmetic statements.
+characteristic-two discrete affine minimizations. It also checks the centered
+moment expansions, exact shell cancellation, and the terminal three-line phase
+boundary in the characteristic-three line-code obstruction. These are
+kernel-checked arithmetic statements.
 
 This is a partial formal companion. It does not define finite projective
-planes or complete `(k,n)`-arcs, and it does not formalize the modular
-stability theorems or the asymptotic reductions from the geometric hypotheses
-to the arithmetic bounds. No literature theorem is declared as a Lean axiom.
+planes or complete `(k,n)`-arcs, and it does not formalize the modular repair
+theorems, the exact small-codeword theorem, the line-code geometry, or the
+asymptotic reductions from the geometric hypotheses to the arithmetic bounds.
+No literature theorem is declared as a Lean axiom.
 
-Checked coverage snapshot: 19 claims; 13 absent; 6 fragmentary; 0 conditional;
-0 complete; 12 reviewer terminals, of which 5 are machinery serving no current
+Checked coverage snapshot: 23 claims; 13 absent; 10 fragmentary; 0 conditional;
+0 complete; 20 reviewer terminals, of which 5 are machinery serving no current
 manuscript claim.
 
 Within the monorepo, do not invoke Lean or Lake directly.  From the monorepo

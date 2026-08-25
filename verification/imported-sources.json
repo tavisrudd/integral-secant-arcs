@@ -54,6 +54,28 @@
         }
       ]
     },
+    "SWmodp:small-codeword": {
+      "citation": "SWmodp",
+      "pinpoint": "Theorem 4.3",
+      "used": "Exact representation of a sufficiently small-weight line-code word as a linear combination of ceil(w/(q+1)) distinct lines.",
+      "conventions": [
+        {
+          "aspect": "field and exponent",
+          "requirement": "The plane is PG(2,p^h), with q>27 and h>2.",
+          "matched": "The line-code obstruction is applied along q=3^e with e tending to infinity."
+        },
+        {
+          "aspect": "weight threshold",
+          "requirement": "The codeword weight is below (floor(sqrt(q))+1)(q+1-floor(sqrt(q))).",
+          "matched": "The centered norm bounds the residue-word weight by O(q), so the threshold holds for every sufficiently large q."
+        },
+        {
+          "aspect": "representation length",
+          "requirement": "The representation uses exactly ceil(w/(q+1)) distinct lines with nonzero field coefficients.",
+          "matched": "The proof denotes this number by t and, over F_3, takes the balanced nonzero coefficients in {-1,1}."
+        }
+      ]
+    },
     "SWeven:repair": {
       "citation": "SWeven",
       "pinpoint": "Theorem 1.1",

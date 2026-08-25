@@ -50,15 +50,15 @@ three.
 For every \(\varepsilon>0\), there is \(h_0\) such that, for \(h\ge h_0\),
 every complete \((k,2q/3+1)\)-arc in \(\PG(2,q)\), where \(q=3^h\), satisfies
 \begin{equation}\label{eq:characteristic-three-bound}
- k\ge \frac{q^2}{3}+\left(\frac43-\varepsilon\right)q.
+ k\ge \frac{q^2}{3}+\left(\frac53-\varepsilon\right)q.
 \end{equation}
 Equivalently,
 \[
- t_{2q/3+1}(2,q)\ge \frac{q^2}{3}+\frac{4q}{3}-o(q)
+ t_{2q/3+1}(2,q)\ge \frac{q^2}{3}+\frac{5q}{3}-o(q)
  \qquad (q=3^h\to\infty).
 \]
-\imports{SWmodp:repair}
-\lean{characteristicThree_affine_bounds}
+\imports{SWmodp:repair,SWmodp:small-codeword}
+\lean{characteristicThree_finalCoefficient}
 \end{theorem}
 
 The incidence-mixing bound gives only \(q^2/3+q+O(1)\) in this regime.  The
@@ -67,6 +67,12 @@ modular repair theorem of Sz\H{o}nyi--Weiner~\cite{SWmodp} then raises it to
 \(4/3\).  The second step uses more than modular stability: each point changed
 in the dual repaired multiset becomes a primal line on which completeness
 forces a linear amount of external secant excess.
+At that center, exact moments produce a ternary line-code word of weight
+\(O(q)\).  Sz\H{o}nyi--Weiner's exact small-codeword theorem represents it on
+only a bounded number of lines.  Two pointwise integer-shell inequalities
+force at least three generator lines and show that three lines require an
+additional \(q/3-o(q)\) points.  Combining this gap with the modular-repair
+bound yields the coefficient \(5/3\).
 Proposition~\ref{prop:rational-family-stability} isolates the structural part
 for every characteristic-compatible rational equality family: at the leading
 equality density, the full dual secant set is a bounded edit of an exact
@@ -158,8 +164,9 @@ after the planar applications.
 The paper is organized as follows.  Section~\ref{sec:integer-envelopes}
 proves the symmetric-design inequality and identifies incidence mixing as its
 real relaxation.  The next two sections specialize to \(n\)-secants and
-prove Theorem~\ref{thm:factor-pair}.  The modular-stability sections prove
-Theorems~\ref{thm:characteristic-three} and
-\ref{thm:characteristic-two}.  The final section gives the blocking-set and
+prove Theorem~\ref{thm:factor-pair}.  The modular-stability section proves an
+intermediate characteristic-three bound, the line-code section proves
+Theorem~\ref{thm:characteristic-three}, and the next section proves
+Theorem~\ref{thm:characteristic-two}.  The final section gives the blocking-set and
 coding translations and records the exact computational checks used to guard
 the finite algebra.

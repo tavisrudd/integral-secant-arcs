@@ -217,7 +217,20 @@ require
 which is impossible.
 \end{proof}
 
-\begin{proof}[Proof of Theorem~\ref{thm:characteristic-three}]
+\begin{proposition}[Characteristic-three modular-repair bound]
+\label{prop:characteristic-three-modular-bound}
+\coverage{fragment}
+For every \(\varepsilon>0\), all sufficiently large powers \(q=3^e\) have
+the following property: every complete \((k,2q/3+1)\)-arc in \(\PG(2,q)\)
+satisfies
+\[
+ k\ge \frac{q^2}{3}+\left(\frac43-\varepsilon\right)q.
+\]
+\imports{SWmodp:repair}
+\lean{characteristicThree_affine_bounds}
+\end{proposition}
+
+\begin{proof}
 Suppose the assertion fails.  For some \(\varepsilon>0\), pass to a sequence
 with
 \[
@@ -273,8 +286,7 @@ bound \(c\ge(18+h)/5\), this yields
  \max\left\{\frac{18+h}{5},3-h+r_{\min}(h)\right\}=4,
 \end{equation}
 where \(r_{\min}(h)=2\) for \(h\equiv1\pmod3\) and is one otherwise.  This
-contradicts the chosen sequence and proves
-\eqref{eq:characteristic-three-bound}.
+contradicts the chosen sequence and proves the proposition.
 \imports{SWmodp:repair}
 \uses{lem:repair-support,lem:no-uncorrected-characteristic-three,cor:n-secant-feasibility}
 \end{proof}

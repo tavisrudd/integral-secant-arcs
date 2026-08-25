@@ -12,6 +12,7 @@ roots = [
   "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Combinatorics.IntegerDegreeBounds",
   "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.RationalEqualityParameters",
   "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.CharacteristicBounds",
+  "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.LineCodeObstruction",
   "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.PaperInterface",
 ]
 

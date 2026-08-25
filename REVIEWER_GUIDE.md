@@ -13,9 +13,10 @@ identity and integer feasibility condition in
 [`sections/03-maximal-secants.tex`](sections/03-maximal-secants.tex).  The
 rational parameter calculation is in
 [`sections/04-rational-parameters.tex`](sections/04-rational-parameters.tex).
-The load-bearing modular steps are in Sections 5 and 6.
+The load-bearing modular-repair step is in Section 5, the ternary line-code
+obstruction is in Section 6, and the characteristic-two argument follows it.
 
-## Eight checks
+## Nine checks
 
 1. **What integer information survives the real incidence bound?**
    The interval-overlap condition uses the actual pair count as a witness in
@@ -75,7 +76,16 @@ The load-bearing modular steps are in Sections 5 and 6.
    repair support.  The exact Python evidence bundle and the Lean fragments
    independently check these terminal arithmetic calculations, but neither
    substitutes for the preceding geometric proof.
-8. **What inverse realization is actually proved?**
+8. **What creates the new `5/3` coefficient?**
+   Section `sec:line-code-obstruction` centers the full maximal-secant degree
+   vector at the former `4/3` bound.  The exact moments give its norm and a
+   nonnegative shell defect.  Szőnyi--Weiner Theorem 4.3 represents the
+   residue word on a bounded number `t` of distinct lines.  The first
+   pointwise shell inequality forces `t>=3`; the signed norm correction and
+   the arc cap give `t<=1+6 alpha+o(1)`.  Hence the displacement is at least
+   `q/3-o(q)`, and combining this with the Section 5 lower side gives
+   `4/3+1/3=5/3`.  The paper does not claim that `5/3` is optimal.
+9. **What inverse realization is actually proved?**
    Proposition `prop:two-character-inverse` treats an exact two-character
    point set in the dual plane.
    Summing its line characters through one dual point reconstructs the primal
@@ -86,8 +96,9 @@ The load-bearing modular steps are in Sections 5 and 6.
 ## Outside inputs
 
 The proof imports the Bishnoi--Mattheus--Schillewaert real incidence bound only
-for comparison and imports two Szőnyi--Weiner modular stability theorems in the
-headline applications.  [`verification/imported-sources.json`](verification/imported-sources.json)
+for comparison and imports two Szőnyi--Weiner modular repair theorems and the
+exact small-codeword theorem in the headline applications.
+[`verification/imported-sources.json`](verification/imported-sources.json)
 records the source location, hypotheses, and convention match for each import.
 The manuscript states the integer necessary condition before deriving the
 classical real inequality as a corollary.
@@ -98,12 +109,14 @@ The adjacent Lean package is a partial formal companion.  Its public interface
 is
 [`PaperInterface.lean`](lean/TavisRuddFiniteGeom/Papers/IntegralSecantArcs/PaperInterface.lean),
 and [`claims.json`](lean/verification/claims.json) gives the exact
-manuscript-to-declaration map.  It classifies 19 manuscript claims as 13 absent
-and 6 fragmentary; none is complete.  Lean checks integer balancing and
+manuscript-to-declaration map.  It classifies 23 manuscript claims as 13 absent
+and 10 fragmentary; none is complete.  Lean checks integer balancing and
 interval overlap, forward rational substitutions and coefficient algebra, and
-the terminal affine minima.  It does not formalize projective planes,
-`(k,n)`-arcs, the exceptional-line estimate, either modular stability theorem,
-repair support, or the asymptotic reductions.
+the terminal affine minima.  It also checks the centered-moment expansions,
+exact shell cancellation, phase boundary, and terminal rigidity integrality.  It
+does not formalize projective planes, `(k,n)`-arcs, the exceptional-line
+estimate, any imported repair or small-codeword theorem, the line-code
+geometry, repair support, or the asymptotic reductions.
 
 [`expected_axioms.txt`](lean/verification/expected_axioms.txt) is the baseline
 for a captured kernel audit, not evidence of a fresh run by itself.  The
@@ -150,6 +163,15 @@ claim to perform that build.
   characteristic-two theorem's contradiction range proves `D > 0` before
   using `{5,6}`.
 - Pass to a subsequence before calling the bounded repair-support size fixed.
+- In the line-code section, use the full family of maximal secants, verify that
+  the centered residue belongs to the ternary line code, and apply the exact
+  small-codeword theorem only after checking its exponent and weight threshold.
+- Keep the line representation on distinct lines and absorb discrepancies
+  between its integral sum and the balanced residue only at their bounded set
+  of pairwise intersections.
+- Treat the line-code result as a two-sided forbidden band; obtain the final
+  one-sided lower bound only by combining it with the modular-repair lower
+  side.  Do not infer optimality of `5/3`.
 - Fix uniform bounds for both the first-order coefficient and constant
   remainder before invoking the secant-number localization lemma.
 - Require a spanning point set for the stated rank-three projective-code

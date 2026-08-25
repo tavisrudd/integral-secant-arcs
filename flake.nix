@@ -1,5 +1,5 @@
 {
-  description = "Pinned toolchain for Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs";
+  description = "Pinned toolchain for Integral Secant Distributions and Line-Code Obstructions for Complete (k,n)-Arcs";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 

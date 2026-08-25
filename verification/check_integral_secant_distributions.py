@@ -746,6 +746,66 @@ def run_checks() -> dict[str, object]:
     assert odd_parity_minimum == (Fraction(73, 6), -3)
     assert even_parity_minimum == (Fraction(37, 3), -2)
 
+    # Pointwise shell checks for the sharp three-line compression.  These
+    # finite ranges are falsifiers only; the manuscript proves the inequalities
+    # for all relevant integers by residue classes.
+    line_code_shell_checks = 0
+    for on_arc, maximum_u in ((True, 4), (False, 0)):
+        for u in range(-100, maximum_u + 1):
+            residue = u % 3
+            z = 0 if residue == 0 else (1 if residue == 1 else -1)
+            shell = u * (u - 1) // 2 if on_arc else u * (u + 1) // 2
+            lhs = 2 * int(on_arc) * u - shell - u
+            assert lhs <= int(z != 0)
+            norm_correction = (u * u - z * z) - (u - z)
+            assert norm_correction >= 0
+            if not on_arc and z == 1:
+                assert norm_correction >= 6
+            line_code_shell_checks += 1
+
+    shell_collapse_checks = 0
+    for r in (3, 9, 27, 81, 243):
+        for delta in range(-2 * r, 2 * r + 1, max(1, r // 3)):
+            for j in range(-8, 13):
+                total = (9 - 3 * j) * r + 3 * delta - j + 1
+                internal = (10 - 2 * j) * r + 4 * delta - j
+                shell = Fraction((2 - j) * r + 1 + 5 * delta) + Fraction(j * (j - 7), 2)
+                collapsed = 2 * internal - shell - total
+                assert collapsed == 9 * r - Fraction((j - 1) * (j - 4), 2)
+                shell_collapse_checks += 1
+
+    phase_boundary_checks = 0
+    for line_count in range(3, 12):
+        boundary = Fraction(line_count - 1, 6)
+        assert line_count <= 1 + 6 * boundary
+        assert boundary >= Fraction(1, 3)
+        phase_boundary_checks += 1
+
+    centered_moment_rows = []
+    for q in (81, 243, 729):
+        r = q // 3
+        centered_moment_rows.append(
+            {
+                "q": q,
+                "branches": [
+                    {
+                        "T": 6 * r,
+                        "sum_u": 9 * r + 1,
+                        "norm_u": 15 * r + 1,
+                        "shell_defect": 2 * r + 1,
+                    },
+                    {
+                        "T": 6 * r + 1,
+                        "sum_u": 6 * r,
+                        "norm_u": 12 * r - 6,
+                        "shell_defect": r - 2,
+                    },
+                ],
+            }
+        )
+        for branch in centered_moment_rows[-1]["branches"]:
+            assert branch["norm_u"] < (isqrt(q) + 1) * (q + 1 - isqrt(q))
+
     rows = []
     for q in Q_VALUES:
         for s in range(2, min(8, q) + 1):
@@ -822,6 +882,9 @@ def run_checks() -> dict[str, object]:
             "cf_dual_threshold_instances": checked_cf_dual_threshold_instances,
             "four_line_even_type_spectrum_instances": checked_four_line_even_type_instances,
             "exact_two_six_integral_orders": exact_two_six_orders,
+            "line_code_pointwise_shell_instances": line_code_shell_checks,
+            "line_code_shell_collapse_instances": shell_collapse_checks,
+            "line_code_phase_boundary_instances": phase_boundary_checks,
         },
         "factor_pair_resonances": resonance_rows,
         "cf_parity_asymptotic": {
@@ -833,6 +896,13 @@ def run_checks() -> dict[str, object]:
                 "coefficient": fraction_record(even_parity_minimum[0]),
                 "offset": even_parity_minimum[1],
             },
+        },
+        "characteristic_three_line_code": {
+            "sharp_displacement": fraction_record(Fraction(1, 3)),
+            "support_invariant": "t>=3",
+            "signed_capacity_invariant": "t<=1+6*alpha+o(1)",
+            "consequence": "alpha>=1/3-o(1)",
+            "centered_moment_rows": centered_moment_rows,
         },
         "rows": rows,
         "wide_degree_rows": wide_degree_rows,

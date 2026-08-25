@@ -1,4 +1,4 @@
-# Integral Secant Distributions and Improved Bounds for Complete (k,n)-Arcs
+# Integral Secant Distributions and Line-Code Obstructions for Complete \((k,n)\)-Arcs
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22087679-blue.svg)](https://doi.org/10.5281/zenodo.22087679)
 
@@ -6,8 +6,8 @@
 
 [**Open the paper (PDF) →**](integral_secant_arcs.pdf)
 
-**Title:** *Integral Secant Distributions and Improved Bounds for Complete
-(k,n)-Arcs*
+**Title:** *Integral Secant Distributions and Line-Code Obstructions for
+Complete \((k,n)\)-Arcs*
 
 A `(k,n)`-arc is a set of `k` points in a finite projective plane with at most
 `n` points on any line. It is complete when every external point lies on an
@@ -18,14 +18,14 @@ with points of its complement.
 The principal application is
 
 ```text
-t_{2q/3+1}(2,q) ≥ q²/3 + 4q/3 − o(q)       (q = 3^h → ∞).
+t_{2q/3+1}(2,q) ≥ q²/3 + 5q/3 − o(q)        (q = 3^h → ∞).
 ```
 
 Equivalently, for every `epsilon > 0`, all sufficiently large powers
 `q = 3^h` satisfy
 
 ```text
-k ≥ q²/3 + (4/3 − epsilon)q
+k ≥ q²/3 + (5/3 − epsilon)q
 ```
 
 for every complete `(k,2q/3+1)`-arc in `PG(2,q)`. The classical real
@@ -57,6 +57,10 @@ whose linear coefficient is strictly larger than that of the real incidence
 bound. On characteristic-compatible branches, the Szőnyi--Weiner stability
 theorems reduce near equality to a bounded modular repair. Completeness then
 forces a linear secant excess for every point in the repair support.
+In characteristic three, the resulting center also yields a small-weight word
+in the ternary projective-plane line code. Two integer-shell inequalities
+force at least three generator lines and show that three lines cost an
+additional `q/3 − o(q)`, raising the lower coefficient from `4/3` to `5/3`.
 
 ## Main consequences
 
@@ -71,7 +75,7 @@ forces a linear secant excess for every point in the repair support.
   necessary near-extremal structural reduction, not a classification of the
   modular cores or their geometric realizations.
 - Over `q = 3^h`, ordinary completeness gives
-  `t_{2q/3+1}(2,q) ≥ q²/3 + 4q/3 − o(q)`.
+  `t_{2q/3+1}(2,q) ≥ q²/3 + 5q/3 − o(q)`.
 - Over `q = 2^h`, if every external point of a `(k,3q/4+1)`-arc lies on at
   least two maximal secants, then
   `k ≥ q²/2 + (73/48 − epsilon)q` for all sufficiently large `h`.
@@ -92,14 +96,16 @@ repair-support argument, and evidence boundary.
 The manuscript contains human proofs of the complete theorem chain. The
 paper-local Lean 4 package in [`lean/`](lean/) checks arithmetic fragments:
 integer balancing and interval overlap, rational substitutions and coefficient
-identities, and the terminal characteristic-three and characteristic-two
-affine minima.
+identities, the characteristic-three and characteristic-two affine minima,
+and the centered-moment expansions, exact shell cancellation, and terminal
+three-line phase boundary used in the line-code obstruction.
 
-The formal claim map reports 19 manuscript claims: 13 absent and 6
+The formal claim map reports 23 manuscript claims: 13 absent and 10
 fragmentary, with none classified as complete. Lean does not formalize finite
 projective planes, complete `(k,n)`-arcs, the exceptional-line estimate, the
-Szőnyi--Weiner stability theorems, repair support, or the asymptotic geometric
-reductions. No imported literature theorem is introduced as a Lean axiom. See
+Szőnyi--Weiner repair or small-codeword theorems, repair support, line-code
+geometry, or the asymptotic reductions. No imported literature theorem is
+introduced as a Lean axiom. See
 [`lean/README.md`](lean/README.md) and
 [`lean/verification/claims.json`](lean/verification/claims.json).
 

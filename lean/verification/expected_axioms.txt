@@ -11,3 +11,11 @@ TavisRuddFiniteGeom.Papers.IntegralSecantArcs.coefficient_difference_factorizati
 TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds: propext, Classical.choice, Quot.sound
 TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_odd_affine_bounds: propext, Classical.choice, Quot.sound
 TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_even_affine_bounds: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_sum: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_norm: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_internalSum: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.shellDefect_identity: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_shellCollapse: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_phaseBoundary: propext, Classical.choice, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_rigidityBoundary: propext, Quot.sound
+TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_finalCoefficient: propext, Classical.choice, Quot.sound

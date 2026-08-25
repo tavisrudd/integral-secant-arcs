@@ -5,21 +5,78 @@
   "reviewer_modules": [
     "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Combinatorics.IntegerDegreeBounds",
     "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.RationalEqualityParameters",
-    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.CharacteristicBounds"
+    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.CharacteristicBounds",
+    "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.Arithmetic.LineCodeObstruction"
   ],
   "claims": [
     {
       "manuscript_label": "thm:characteristic-three",
       "coverage": "fragment",
       "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_finalCoefficient"
+      ],
+      "objects": "The modular-repair coefficient 4/3, the sharp line-code displacement 1/3, and the final characteristic-three coefficient.",
+      "hypotheses": "No hypotheses are needed for the rational identity checked by Lean.",
+      "conclusion": "The sum 4/3+1/3 equals 5/3.",
+      "cautions": "Lean checks only the terminal rational identity. It does not prove the modular-repair lower bound, the line-code gap, their asymptotic combination, or any projective-geometric statement.",
+      "statement_digest": "6ec89dd1fd6048f683f63deb362d7e3604c6a4f39cf08e75cd92ee05b26cd70d",
+      "terminal_digest": "abefba22b39610c646b25b35a1e4d4a4e826133955024b0d6b7948dd2890e3a0"
+    },
+    {
+      "manuscript_label": "prop:characteristic-three-modular-bound",
+      "coverage": "fragment",
+      "declarations": [
         "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds"
       ],
-      "objects": "An integer secant-number offset h, an integer repair-support size r, and the two rational affine lower bounds used at the end of the characteristic-three argument.",
+      "objects": "An integer secant-number offset h, an integer repair-support size r, and the two rational affine lower bounds used in the characteristic-three modular-repair argument.",
       "hypotheses": "The support is nonempty, and it has size at least two when h is congruent to one modulo three.",
       "conclusion": "The maximum of the pair-count bound and the repair-support bound is at least four.",
-      "cautions": "Lean proves only the final discrete minimization. It does not define the projective plane or arc, import the Szőnyi--Weiner theorem, construct the repaired multiset, prove the support bounds, or carry out the asymptotic reduction.",
-      "statement_digest": "7d8e2acd85e1107dc8938e99dec6cb59595a0475107f449878a6f65293cd64fb",
+      "cautions": "Lean proves only the final discrete minimization. It does not define the projective plane or arc, import the Szőnyi--Weiner repair theorem, construct the repaired multiset, prove the support bounds, or carry out the asymptotic reduction.",
+      "statement_digest": "cb5485bd90877d73e03495de3f9d8c980d8877ba73f803edeb820737e67ad124",
       "terminal_digest": "855ece6ac936d685eaa9fde7cda7c19285ce9c6929dbdc54e02847b7c38043a2"
+    },
+    {
+      "manuscript_label": "lem:centered-moment-identities",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_sum",
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_norm",
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_internalSum",
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.shellDefect_identity"
+      ],
+      "objects": "The integer parameters r, delta, and j and the centered total sum, squared norm, internal sum, and doubled shell-defect expansion.",
+      "hypotheses": "The Lean declarations are polynomial identities over the integers after the manuscript's moment equations have supplied their left-hand sides.",
+      "conclusion": "The four displayed centered-moment expressions simplify to the formulas printed in the manuscript.",
+      "cautions": "Lean checks the substitutions and algebra only. It does not define secant degrees, prove the incidence moments, prove shell-defect nonnegativity, or derive the support inequality.",
+      "statement_digest": "57220809a56a9420ee8675b240de549f2bf90010afe954360589d876333dc6db",
+      "terminal_digest": "17dd23fa00274aa4d0c20431a40d05b6d66a9818d8eed82cfb9ed248fd405838"
+    },
+    {
+      "manuscript_label": "thm:line-code-gap",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_shellCollapse",
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_phaseBoundary"
+      ],
+      "objects": "The centered shell expressions, generator-line count t, and normalized size displacement alpha.",
+      "hypotheses": "The formal phase-boundary theorem assumes the geometric conclusions t>=3 and t<=1+6 alpha.",
+      "conclusion": "The shell expression cancels exactly and the two line-count inequalities force alpha>=1/3.",
+      "cautions": "Lean does not prove the pointwise shell inequalities, define the ternary line code, import the exact small-codeword theorem, derive either line-count inequality from geometry, control the asymptotic error, or prove the forbidden band.",
+      "statement_digest": "b1bdadaff203480c6096c65d82a5523f18210a2e4244fdc9850aeb51f6ad0696",
+      "terminal_digest": "eaf92d2440680f5790112b0cc781dc66d4e6315e41be69e730818f39081518b7"
+    },
+    {
+      "manuscript_label": "prop:three-line-rigidity",
+      "coverage": "fragment",
+      "declarations": [
+        "TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_rigidityBoundary"
+      ],
+      "objects": "The integral number t of lines in the exact small-codeword representation.",
+      "hypotheses": "The line count is at least three and strictly below four.",
+      "conclusion": "The line count equals three.",
+      "cautions": "Lean checks only the terminal integrality step. It does not prove the asymptotic upper bound below four, the exact line representation, or the geometric rigidity statement.",
+      "statement_digest": "83d0908d79dbb74a860cd43f3a504a2e4a5ec251d82d6f1e016a4c4048b79654",
+      "terminal_digest": "6ec458ae9bffc912c4c47bef348e88d6eefda60a997269ec79c09948015de873"
     },
     {
       "manuscript_label": "thm:factor-pair",
@@ -195,7 +252,7 @@
       "hypotheses": "The characteristic-three theorem and the standard complement correspondence.",
       "conclusion": "The complement is a minimal q/3-fold blocking set with the displayed upper bound.",
       "cautions": "Neither the geometric complement dictionary nor the asymptotic theorem is formalized.",
-      "statement_digest": "5b88427b3bf966240626333531a7f3eb96b6d27566c6ff4bb124cdb271efa592"
+      "statement_digest": "24c1231d48ff7dbd95b74420ba0bb2153a21bfa159394338b8a83f61cc9d07fe"
     },
     {
       "manuscript_label": "cor:projective-codes",

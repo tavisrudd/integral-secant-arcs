@@ -30,8 +30,8 @@
 \newcommand{\Phimax}{\Phi_{\max}}
 \newcommand{\binomtwo}[1]{\binom{#1}{2}}
 
-\title{Integral Secant Distributions and Improved Bounds for Complete
-(k,n)-Arcs}
+\title{Integral Secant Distributions and Line-Code Obstructions for Complete
+\((k,n)\)-Arcs}
 \author{Tavis Rudd}
 \date{August 2026}
 
@@ -39,29 +39,28 @@
 \maketitle
 
 \begin{abstract}
-We study complete \((k,n)\)-arcs in finite projective planes through the numbers
-of \(n\)-secants incident with each point.  We split the exact block-pair
-count between the arc and its complement and derive sharp integer bounds for
-both degree sequences.  The real relaxation recovers the classical incidence
-bound.  Integer secant distributions retain arithmetic information lost by
-spectral mixing and give a linear obstruction on every rational equality
-family with integral limiting degrees.  For each factorization \(\lambda=uv\), we obtain an
-explicit lower bound for \((k,n)\)-arcs such that every external point lies on
-at least \(\lambda\) \(n\)-secants, where \(q=(u+v+1)m\) and
-\(n=(u+1)m+1\).  This bound improves the spectral coefficient by a positive
-multiple of \(q\).  On characteristic-compatible families, near equality
-forces bounded modular repair, and completeness converts that defect into
-further linear improvements.  In the ordinary-completeness branch over
-\(\PG(2,3^h)\), this proves
+We study complete \((k,n)\)-arcs through the numbers of maximal secants
+incident with each point.  Splitting the exact block-pair count between the
+arc and its complement gives sharp integer bounds for both degree sequences;
+their real relaxation recovers the classical incidence bound.  On every
+rational equality family with integral limiting degrees, the integer
+remainders give a positive linear improvement.  For each factorization
+\(\lambda=uv\), we make this improvement explicit when every external point
+lies on at least \(\lambda\) maximal secants.  On
+characteristic-compatible families, near equality forces bounded modular
+repair, and completeness converts each repair point into further linear
+excess.  In characteristic three, exact moment identities produce a
+small-weight word in the projective-plane line code.  Its short line
+representation excludes a fixed linear neighborhood of the modular-repair
+bound and proves
 \[
- k\ge \frac{q^2}{3}+\frac{4q}{3}-o(q),
- \qquad n=\frac{2q}{3}+1.
+ t_{2q/3+1}(2,q)\ge \frac{q^2}{3}+\frac{5q}{3}-o(q),
+ \qquad q=3^h.
 \]
-Over characteristic two, an analogous parity argument gives a further linear
-improvement when every external point lies on two \(n\)-secants.  The integer
-incidence theorem also applies to selected blocks of any symmetric design and
-yields formulations for minimal multiple blocking sets and nonextendible
-projective codes.
+An analogous parity argument improves the characteristic-two bound under
+double maximal-secant coverage.  The integer theorem also applies to selected
+blocks of symmetric designs and to minimal multiple blocking sets and
+nonextendible projective codes.
 \end{abstract}
 
 \noindent\textbf{Keywords.} complete \((k,n)\)-arc; \(n\)-secant; multiple
@@ -77,6 +76,7 @@ stability.
 \input{sections/03-maximal-secants}
 \input{sections/04-rational-parameters}
 \input{sections/05-modular-stability}
+\input{sections/06-line-code-obstruction}
 \input{sections/06-characteristic-two}
 \input{sections/07-translations}
 

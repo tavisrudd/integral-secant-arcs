@@ -19,3 +19,11 @@ exported by the reviewer interface.
 #print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_affine_bounds
 #print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_odd_affine_bounds
 #print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicTwo_even_affine_bounds
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_sum
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_norm
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.centeredMoment_internalSum
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.shellDefect_identity
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_shellCollapse
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_phaseBoundary
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.threeLine_rigidityBoundary
+#print axioms TavisRuddFiniteGeom.Papers.IntegralSecantArcs.characteristicThree_finalCoefficient
