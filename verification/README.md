@@ -27,6 +27,6 @@ the role and replay command of the computational bundle.
 The adjacent `lean/` directory is a pinned Mathlib-only partial companion.
 Its static correspondence gate checks every theorem-like manuscript statement,
 the formal coverage annotations, reviewer declarations, expected axiom lists,
-and the dependency graph. Checked coverage snapshot: 18 claims; 12 absent; 6
+and the dependency graph. Checked coverage snapshot: 19 claims; 13 absent; 6
 fragmentary; 0 conditional; 0 complete; 12 reviewer terminals, of which 5 are
 machinery serving no current manuscript claim.

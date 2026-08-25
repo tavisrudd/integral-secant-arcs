@@ -65,6 +65,11 @@ forces a linear secant excess for every point in the repair support.
 - Ordered positive factorizations `lambda = uv` classify the rational equality
   families whose limiting internal degree is an integer greater than
   `lambda`.
+- On every characteristic-compatible rational equality family with
+  `k = u(u+v+1)m^2 + O(m)`, the full dual maximal-secant set can be changed at
+  `O(1)` support points into an exact `lambda mod p` multiset. This is a
+  necessary near-extremal structural reduction, not a classification of the
+  modular cores or their geometric realizations.
 - Over `q = 3^h`, ordinary completeness gives
   `t_{2q/3+1}(2,q) ≥ q²/3 + 4q/3 − o(q)`.
 - Over `q = 2^h`, if every external point of a `(k,3q/4+1)`-arc lies on at
@@ -90,7 +95,7 @@ integer balancing and interval overlap, rational substitutions and coefficient
 identities, and the terminal characteristic-three and characteristic-two
 affine minima.
 
-The formal claim map reports 18 manuscript claims: 12 absent and 6
+The formal claim map reports 19 manuscript claims: 13 absent and 6
 fragmentary, with none classified as complete. Lean does not formalize finite
 projective planes, complete `(k,n)`-arcs, the exceptional-line estimate, the
 Szőnyi--Weiner stability theorems, repair support, or the asymptotic geometric

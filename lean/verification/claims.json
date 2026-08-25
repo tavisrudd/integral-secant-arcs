@@ -138,6 +138,16 @@
       "statement_digest": "4dc62ec993b87440978a675f4bdd13d6bd6b6362e2419279305eeae4bb2d8fb2"
     },
     {
+      "manuscript_label": "prop:rational-family-stability",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "The dual point set of all maximal secants along a characteristic-compatible rational equality family.",
+      "hypotheses": "An ordered factorization lambda = uv with u+v+1 a power of the characteristic, leading-density arc size, and at least lambda maximal secants through every external point.",
+      "conclusion": "Only O(q) dual lines have the wrong intersection residue, and the dual secant set is an O(1)-support edit of an exact lambda modulo p multiset.",
+      "cautions": "The projective geometry, integer-loss reduction, Szőnyi--Weiner stability theorem, and asymptotic argument are not formalized. This is a necessary structural reduction, not a classification of exact modular cores or their geometric realizations.",
+      "statement_digest": "8178bd3fc355bfa459642e85edf1d1e20214e73763115ad501a3ff1c748f9645"
+    },
+    {
       "manuscript_label": "lem:repair-support",
       "coverage": "absent",
       "declarations": [],
@@ -145,7 +155,7 @@
       "hypotheses": "Characteristic compatibility, external secant coverage, fixed nonzero repair support, and the stated asymptotic parameters.",
       "conclusion": "Each repair-support point adds the displayed amount to the first-order lower bound.",
       "cautions": "The dual incidence construction, modular residues, and generator-line completeness count are not formalized.",
-      "statement_digest": "ec59bf052d97d5337c5744565f6eb3bd86adeb5fdc873d2b70792cfd79d6da09"
+      "statement_digest": "8849eec1b473909d4e2a01d4c31004f04652d0c559f1328f41f2e7a444efdfe2"
     },
     {
       "manuscript_label": "lem:no-uncorrected-characteristic-three",

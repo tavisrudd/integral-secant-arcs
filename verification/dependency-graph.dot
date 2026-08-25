@@ -14,6 +14,7 @@ digraph manuscript {
   "lem:repair-parity" [fillcolor="#ffffff", tooltip="absent"];
   "lem:repair-support" [fillcolor="#ffffff", tooltip="absent"];
   "lem:secant-number-near-equality" [fillcolor="#ffffff", tooltip="absent"];
+  "prop:rational-family-stability" [fillcolor="#ffffff", tooltip="absent"];
   "prop:simultaneous-equality" [fillcolor="#ffffff", tooltip="absent"];
   "prop:two-character-inverse" [fillcolor="#ffffff", tooltip="absent"];
   "thm:characteristic-three" [fillcolor="#fde8c8", tooltip="fragment"];
@@ -29,9 +30,12 @@ digraph manuscript {
   "LundSaraf:incidence-bound" -> "cor:mixing-relaxation" [style=dotted];
   "MurphyPetridis:variance-identity" -> "cor:mixing-relaxation" [style=dotted];
   "SWeven:repair" -> "thm:characteristic-two" [style=dotted];
+  "SWmodp:repair" -> "prop:rational-family-stability" [style=dotted];
   "SWmodp:repair" -> "thm:characteristic-three" [style=dotted];
+  "cor:n-secant-feasibility" -> "prop:rational-family-stability" [style=solid];
   "lem:degree-extrema" -> "thm:paired-envelope" [style=solid];
   "lem:pencil-bounds" -> "cor:n-secant-feasibility" [style=solid];
+  "lem:secant-number-near-equality" -> "prop:rational-family-stability" [style=solid];
   "thm:characteristic-three" -> "cor:blocking-set-form" [style=dashed];
   "thm:paired-envelope" -> "cor:mixing-relaxation" [style=solid];
   "thm:paired-envelope" -> "cor:n-secant-feasibility" [style=solid];

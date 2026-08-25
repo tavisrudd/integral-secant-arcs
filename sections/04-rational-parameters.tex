@@ -1,14 +1,14 @@
 \section{Rational equality parameters}\label{sec:rational-parameters}
 
 We first determine when the real incidence bound can be tight while the
-limiting number of \(n\)-secants through a point of the arc is an integer.
+limiting average internal \(n\)-secant degree is an integer.
 Suppose that
 \[
  \frac nq\longrightarrow\alpha,\qquad
  \frac{k}{q^2}\longrightarrow\beta,
 \]
 that equality holds asymptotically in \eqref{eq:classical-arc-bound}, and that
-the limiting value of \(\rho_n(P)\) is an integer \(a>\lambda\).  Equality in
+the limiting average internal degree is an integer \(a>\lambda\).  Equality in
 the incidence and coverage bounds gives
 \begin{equation}\label{eq:rational-system}
  a=\frac{\lambda\alpha(1-\beta)}{(1-\alpha)\beta},
@@ -174,17 +174,20 @@ shows that \(F(T)\le0\) forces \(0\le T-T_0<S\).  Since
 
 \begin{proof}[Proof of Theorem~\ref{thm:factor-pair}]
 Lemma~\ref{lem:rational-parameters} proves the classification.  If
-\((k-udm^2)/m\) exceeds a fixed constant larger than
+\(c_m=(k-udm^2)/m\) exceeds a fixed constant larger than
 \(c_{\mathbb Z}\), the claimed bound is automatic.
-In the remaining range, Lemma~\ref{lem:secant-number-near-equality} applies
-uniformly to the actual number of \(n\)-secants, because
+On the other hand, expanding the classical bound
+\eqref{eq:classical-arc-bound} at these parameters gives
+\(c_m\ge c_{\mathrm{mix}}-O_{u,v}(m^{-1})\).  Thus \(c_m\) is also bounded
+below, and in the remaining range
+Lemma~\ref{lem:secant-number-near-equality} applies with \(e_m=0\), uniformly
+to the actual number of \(n\)-secants, because
 \eqref{eq:arc-integer-condition} implies \(F(T)\le0\).  Hence
 \[
  T=ud(v+1)m+h
 \]
-for an integer \(h\) in a fixed finite set.  Put
-\(c_m=(k-udm^2)/m\).  Substitution in the external coverage inequality
-\(uvb\le vmT\) gives
+for an integer \(h\) in a fixed finite set.  Substitution in the external
+coverage inequality \(uvb\le vmT\) gives
 \begin{equation}\label{eq:coverage-linear}
  k\ge udm^2+L(h)m-O_{u,v}(1).
 \end{equation}

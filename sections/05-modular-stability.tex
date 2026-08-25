@@ -26,6 +26,82 @@ modular stability to arc and direction problems appear in
 Csajb\'ok--Weiner~\cite{CsajbokWeiner} and
 Adriaensen--Sz\H{o}nyi--Weiner~\cite{AdriaensenSzonyiWeiner}.
 
+The same argument gives a structural statement on every
+characteristic-compatible rational equality family.
+
+\begin{proposition}[Stability near a rational equality family]
+\label{prop:rational-family-stability}
+\coverage{absent}
+Fix \(u,v\ge1\), put \(\lambda=uv\), and suppose
+\(d=u+v+1=p^j\) for some prime \(p\).  Along a family
+\[
+ q=p^e=dm,\qquad n=(u+1)m+1,\qquad k=udm^2+O(m),
+ \qquad e\longrightarrow\infty,
+\]
+suppose every external point of a \((k,n)\)-arc lies on at least
+\(\lambda\) \(n\)-secants.  Let \(\mathcal L^*\) be the dual point set of all
+\(n\)-secants.  Then only \(O(q)\) lines of the dual plane meet
+\(\mathcal L^*\) in a number of points different from \(\lambda\pmod p\).
+Moreover, \(\mathcal L^*\) can be changed at \(O(1)\) distinct support points
+into a multiset meeting every line in \(\lambda\pmod p\) points.
+\imports{SWmodp:repair}
+\end{proposition}
+
+\begin{proof}
+Write \(k=udm^2+c_m m\), where \(c_m\) is bounded.  By
+Corollary~\ref{cor:n-secant-feasibility}, the actual secant number satisfies
+\(F(T)\le0\).  Lemma~\ref{lem:secant-number-near-equality} therefore gives
+\[
+ T=ud(v+1)m+O(1).
+\]
+Put \(a=(u+1)(v+1)\), so \(a-\lambda=d\equiv0\pmod p\).
+The exact formulas defining \(F\), evaluated with bounded \(c_m\) and this
+value of \(T\), give \(F(T)=O(m)\).  The pair identity therefore gives
+\[
+ \begin{aligned}
+ -F(T)={}&
+ \left(\sum_{P\in\mathcal K}\binom{\rho_n(P)}2-\Phimin(k,nT)\right)\\
+ &+\left(\sum_{Q\notin\mathcal K}\binom{\sigma_n(Q)}2
+              -\Phimin(b,(q+1-n)T)\right)=O(m).
+ \end{aligned}
+\]
+Both parentheses are nonnegative.  For all sufficiently large (m), put
+\(b_0=\lfloor nT/k\rfloor\in\{a-1,a\}\).  For every integer
+\(z\notin\{b_0,b_0+1\}\),
+\[
+ |z-a|\le (z-b_0)(z-b_0-1).
+\]
+Equation~\eqref{eq:balancing-loss} therefore shows that all but \(O(m)\)
+internal degrees lie in the adjacent balanced pair
+\(\{b_0,b_0+1\}\subseteq\{a-1,a,a+1\}\), and that
+\[
+ \sum_{\substack{P\in\mathcal K\\
+        \rho_n(P)\notin\{b_0,b_0+1\}}}
+ |\rho_n(P)-a|=O(m).
+\]
+Since
+\[
+ ak-nT=\sum_{P\in\mathcal K}(a-\rho_n(P))=O(m),
+\]
+and within either adjacent pair every degree unequal to \(a\) contributes
+the same signed unit, the number of internal degrees unequal to \(a\) is
+\(O(m)\).  Externally,
+the coverage hypothesis and the incidence sum give
+\[
+ \sum_{Q\notin\mathcal K}(\sigma_n(Q)-\lambda)
+ =(q+1-n)T-\lambda b=O(m),
+\]
+so only \(O(m)\) external degrees differ from \(\lambda\).  Thus only
+\(O(m)=O(q)\) dual lines have the wrong intersection residue.
+
+For all sufficiently large \(q\), this number lies below the
+Sz\H{o}nyi--Weiner threshold quoted above.  Their theorem changes
+\(\mathcal L^*\) at exactly \(\lceil\delta/(q+1)\rceil=O(1)\) distinct
+support points to obtain the required \(\lambda\pmod p\) multiset.
+\imports{SWmodp:repair}
+\uses{lem:secant-number-near-equality,cor:n-secant-feasibility}
+\end{proof}
+
 The following observation is where completeness re-enters the modular
 argument.
 
@@ -41,8 +117,9 @@ Fix an ordered factorization \(\lambda=uv\) and suppose
 \]
 where \(h\in\mathbb Z\).  Suppose every external point is on at least
 \(\lambda\) \(n\)-secants, and suppose \(\mathcal L^*\) can be changed at
-\(r\) distinct support points into a multiset meeting every line in
-\(\lambda\pmod p\) points.  If \(r\) is fixed and nonzero, then
+\(r\) distinct support points, with nonzero correction coefficient modulo
+\(p\) at each, into a multiset meeting every line in \(\lambda\pmod p\)
+points.  If \(r\) is fixed and nonzero, then
 \begin{equation}\label{eq:repair-support-bound}
  c\ge L(h)+\frac ru.
 \end{equation}
@@ -50,8 +127,10 @@ where \(h\in\mathbb Z\).  Suppose every external point is on at least
 
 \begin{proof}
 Dualize the \(r\) support points to \(r\) lines of the original plane.
-Away from their pairwise intersections, a point on one of these lines has
-\(n\)-secant multiplicity different from \(\lambda\pmod p\).  If it is
+Away from their pairwise intersections, a primal point on one support line
+corresponds dually to a line containing exactly one support point.  The
+correction coefficient there is nonzero modulo \(p\), so the original
+\(n\)-secant multiplicity differs from \(\lambda\pmod p\).  If the point is
 external, its multiplicity is at least \(\lambda+1\).  A support line contains
 at most \(n\) points of \(\mathcal K\), and the union loses only
 \(O(r^2)\) points at pairwise intersections.  Hence the total external excess
@@ -71,8 +150,10 @@ Comparing \eqref{eq:repair-excess-lower} and
 There is a useful restriction when \(r=1\).  Summing the line intersections
 of an exact \(\lambda\pmod p\) multiset over a pencil shows that its total
 multiplicity is \(\lambda\pmod p\).  Along a characteristic-compatible
-family the leading term of \(T\) is divisible by \(p\), so the correction has
-total multiplicity \(\lambda-h\pmod p\).  Consequently, if
+family write \(d=p^j\) and \(q=p^e=dm\).  Then \(m=p^{e-j}\) is divisible
+by \(p\) once \(e>j\), so the leading term of \(T\) is divisible by \(p\).
+The correction therefore has total multiplicity
+\(\lambda-h\pmod p\).  Consequently, if
 \begin{equation}\label{eq:support-one-obstruction}
  h\equiv\lambda\pmod p,
 \end{equation}
