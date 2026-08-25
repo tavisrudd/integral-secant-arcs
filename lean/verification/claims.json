@@ -70,8 +70,8 @@
       "objects": "Two integer pair counts, their lower and upper bounds, and a total pair count partitioned between them.",
       "hypotheses": "The two actual counts sum to the total and each lies in its declared integer interval.",
       "conclusion": "The external interval meets the reflection of the internal interval through the total pair count.",
-      "cautions": "Lean proves the interval-overlap implication once the pair partition and endpoints are supplied. It does not define symmetric designs, double-count block intersections, or compute heterogeneous integer-box extrema.",
-      "statement_digest": "7e93132d540e5ce29066148e7180dad3a809dd34978cece07be5e65389b1efd5",
+      "cautions": "Lean proves the interval-overlap implication once the pair partition and endpoints are supplied. It does not assert interval attainability or geometric realizability, define symmetric designs, double-count block intersections, or compute heterogeneous integer-box extrema.",
+      "statement_digest": "ae81594da8caf81d8530a586c8e7cc4b5715e7a4011bd7500c5d11b902de8b7d",
       "terminal_digest": "3c024b96ba9df93aeab831c9707fb4e5fa5ecbb947ca5e2eccbfca4b44a4cc1a"
     },
     {

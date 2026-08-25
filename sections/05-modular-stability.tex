@@ -13,6 +13,13 @@ intersection numbers are
 When \(u+v+1\) is a power of \(p\), these two numbers are congruent modulo
 \(p\).
 
+The two characteristic-specific arguments follow the same chain.  A bounded
+first-order coefficient localizes \(T\) to within \(O(1)\) of its continuous
+value, and the exact balancing loss then leaves only \(O(q)\) wrong-residue
+dual lines.  Modular stability compresses those lines to \(O(1)\) repair
+support; dualizing this support gives primal lines on which completeness
+forces a linear external excess.
+
 Sz\H{o}nyi and Weiner prove that, for \(q=p^e>27\) with \(e>1\), a multiset in
 \(\PG(2,q)\) having \(\delta\) lines with the wrong intersection residue can,
 under their stated upper bound on \(\delta\), be changed at exactly
@@ -97,7 +104,10 @@ so only \(O(m)\) external degrees differ from \(\lambda\).  Thus only
 For all sufficiently large \(q\), this number lies below the
 Sz\H{o}nyi--Weiner threshold quoted above.  Their theorem changes
 \(\mathcal L^*\) at exactly \(\lceil\delta/(q+1)\rceil=O(1)\) distinct
-support points to obtain the required \(\lambda\pmod p\) multiset.
+support points to obtain the required \(\lambda\pmod p\) multiset.  We take
+the support modulo \(p\), deleting any point whose correction coefficient is
+zero; every listed support point therefore has nonzero coefficient modulo
+\(p\).
 \imports{SWmodp:repair}
 \uses{lem:secant-number-near-equality,cor:n-secant-feasibility}
 \end{proof}

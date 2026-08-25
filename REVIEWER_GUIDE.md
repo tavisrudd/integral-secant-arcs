@@ -1,9 +1,9 @@
 # A referee's route through the proof
 
-The manuscript proves an exact integer incidence condition for a selected
+The manuscript proves an exact integer necessary condition for a selected
 block family in a symmetric design and applies it to the family of
 `n`-secants of a complete `(k,n)`-arc.  The characteristic-three and
-characteristic-two bounds add modular stability to that integer condition.
+characteristic-two bounds add modular stability to that necessary condition.
 
 ## A first pass
 
@@ -24,7 +24,7 @@ The load-bearing modular steps are in Sections 5 and 6.
    balancing-remainder formula identifies the nonnegative residue term
    discarded by the real relaxation.
 2. **Where do the rational equality parameters come from?**
-   Lemma 4.1 classifies triples with integral limiting internal degree
+   Lemma 4.1 classifies triples with integral limiting average internal degree
    `a > lambda`.  Under that hypothesis, factoring the integral discriminant
    gives an ordered factorization `lambda = uv` in positive integers.  The
    manuscript makes no classification claim for rational nonintegral `a`.
@@ -89,7 +89,7 @@ The proof imports the Bishnoi--Mattheus--Schillewaert real incidence bound only
 for comparison and imports two Szőnyi--Weiner modular stability theorems in the
 headline applications.  [`verification/imported-sources.json`](verification/imported-sources.json)
 records the source location, hypotheses, and convention match for each import.
-The manuscript states the integer incidence condition before deriving the
+The manuscript states the integer necessary condition before deriving the
 classical real inequality as a corollary.
 
 ## Formal and computational boundary
@@ -137,8 +137,12 @@ claim to perform that build.
 - Keep `a in Z`, `a > lambda`, and `u,v in Z_{>0}` in the rational
   classification.
 - Keep `A,B` nonempty and `T>0` when dividing in the real relaxation.
+- Check that the coefficient of `T` is positive before substituting the
+  coverage lower bound for `T` in the classical relaxation.
 - Treat pair-count intervals as necessary enclosing intervals, not as sets of
   all attainable values.
+- Normalize modular correction support by deleting zero coefficients modulo
+  `p` before applying the repair-support lemma.
 - Keep signed deficiencies signed; the characteristic-two even restriction
   costs `|D|/2` internally.
 - In the even-type lemma, `D ≥ 0` gives the balanced pair `{5,6}`; `D < 0`

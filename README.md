@@ -60,10 +60,10 @@ forces a linear secant excess for every point in the repair support.
 
 ## Main consequences
 
-- The integer incidence condition holds for every selected block family in a
+- The integer necessary condition holds for every selected block family in a
   symmetric design; the classical real inequality is its relaxation.
 - Ordered positive factorizations `lambda = uv` classify the rational equality
-  families whose limiting internal degree is an integer greater than
+  families whose limiting average internal degree is an integer greater than
   `lambda`.
 - On every characteristic-compatible rational equality family with
   `k = u(u+v+1)m^2 + O(m)`, the full dual maximal-secant set can be changed at

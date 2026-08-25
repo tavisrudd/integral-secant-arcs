@@ -44,7 +44,7 @@ lie at \(L\) or \(U\); counting the filled coordinates gives
 \eqref{eq:phi-max}.
 \end{proof}
 
-\begin{theorem}[Exact integer incidence condition]\label{thm:paired-envelope}
+\begin{theorem}[Exact integer necessary condition]\label{thm:paired-envelope}
 \coverage{fragment}
 Let \(\mathcal D\) be a symmetric \(2\)-\((v,K,\Lambda)\) design whose point
 set is partitioned into \(A\sqcup B\).  Let \(\cS\) be a family of \(T\)
@@ -69,9 +69,7 @@ Then
        \Lambda\binomtwo T-P_A^-\right]\ne\varnothing.
 \end{equation}
 For uniform boxes the endpoints are given by
-Lemma~\ref{lem:degree-extrema}; for heterogeneous boxes, repeated unit
-transfers toward the lower bounds give the minimum, and repeated transfers
-toward the upper bounds give the maximum.
+Lemma~\ref{lem:degree-extrema}.
 \lean{integerPairIntervals_overlap}
 \end{theorem}
 
@@ -89,6 +87,10 @@ Each sum lies in its exact integer interval.  Reflecting the interval for
 \eqref{eq:interval-overlap}.
 \uses{lem:degree-extrema}
 \end{proof}
+
+The interval overlap is necessary, not sufficient: membership of an integer
+in the two enclosing intervals does not assert that a selected block family
+realizes the corresponding pair counts.
 
 The real relaxation is familiar, but the following formulation makes the
 loss of information exact.
