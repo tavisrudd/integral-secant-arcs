@@ -114,20 +114,50 @@
           "all_negative_gap": 3,
           "delta": 27,
           "mixed_degree_four_count": 2243,
+          "mixed_positive_generator_cap_gaps": [
+            1,
+            2
+          ],
           "q": 81
         },
         {
           "all_negative_gap": 3,
           "delta": 81,
           "mixed_degree_four_count": 19847,
+          "mixed_positive_generator_cap_gaps": [
+            1,
+            2
+          ],
           "q": 243
         },
         {
           "all_negative_gap": 3,
           "delta": 243,
           "mixed_degree_four_count": 177635,
+          "mixed_positive_generator_cap_gaps": [
+            1,
+            2
+          ],
           "q": 729
         }
+      ],
+      "triangle_support_rows": [
+        [
+          1,
+          -3
+        ],
+        [
+          4,
+          -3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          -1
+        ]
       ],
       "triangular_survivors": [
         [
@@ -9636,7 +9666,7 @@
     "factor_pair_resonance_instances": 119,
     "four_line_even_type_spectrum_instances": 121,
     "infinite_family_formula_instances": 11,
-    "line_code_endpoint_candidate_rows": 8,
+    "line_code_endpoint_candidate_rows": 7,
     "line_code_endpoint_field_instances": 3,
     "line_code_phase_boundary_instances": 9,
     "line_code_pointwise_shell_instances": 206,

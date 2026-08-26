@@ -17,7 +17,7 @@ arithmetic.  It covers 5,386 direct convex-minimum instances, 1,368 bounded
 degree instances, 600 congruence-restricted instances, 25,494 polynomial
 identities, 246 raw first-order expansions, 144 characteristic-three
 zero-repair cases and 1,580 sharp line-code shell, cancellation, and phase
-boundary instances, the eight exact endpoint signed rows, three endpoint
+boundary instances, the seven exact endpoint candidate rows, three endpoint
 field instances, and the centered moment rows at
 \(q=81,243,729\).  The JSON
 records every declared search domain and count.  These finite checks do not

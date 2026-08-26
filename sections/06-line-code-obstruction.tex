@@ -240,33 +240,45 @@ shows that, for every sufficiently large member of the sequence,
 where \(z_P\in\{-1,0,1\}\) is the balanced representative of \(u_P\).
 Write \(\sigma=\varepsilon_1+\varepsilon_2+\varepsilon_3\).
 
-We first record the exact scalar reduction.  Substitute \(\delta=r\) in
-Lemma~\ref{lem:centered-moment-identities}, use
-\eqref{eq:three-line-support}, and compare \(u\) with its balanced residue
-\(z\).  Coverage, the arc cap, and
+We first record the exact scalar reduction.  Put
+\(R_+=\{P:z_P=1\}\), \(R_-=\{P:z_P=-1\}\), and let
+\(a=(3+\sigma)/2\) be the number of positive generator lines.  Pointwise
+on \(\mathcal A\), one has
+\(u_P\le e_P+\mathbf1_{R_+\cup R_-}(P)\); off \(\mathcal A\), one has
+\(e_P\ge1\) on \(R_+\).  Therefore
+\begin{equation}\label{eq:endpoint-shell-cap}
+ \sum_{P\in\mathcal A}u_P
+ \le E-|R_+|+2|\mathcal A\cap R_+|
+       +|\mathcal A\cap R_-|.
+\end{equation}
+The signed three-line representation gives
+\(|R_+|=aq+O(1)\).  The arc cap on its three generator lines gives
 \[
+ |\mathcal A\cap R_+|\le a(2q/3+1)+O(1),\qquad
+ |\mathcal A\cap R_-|\le(3-a)(2q/3+1)+O(1).
+\]
+Substitution of the exact centered identities in
+\eqref{eq:endpoint-shell-cap} yields \(j\ge1+a\) for all sufficiently
+large \(q\).
+
+Also \(E\ge0\) gives \(j\le7\), while summing the residue word and comparing
+\(u\) with its balanced representative give
+\begin{equation}\label{eq:endpoint-scalar-conditions}
  \sigma\equiv1-j\pmod3,
  \qquad
- \left|\sum_P(u_P-z_P)\right|
- \le \sum_P(u_P^2-z_P^2)
+ |4-j-\sigma|\le7-j.
+\end{equation}
+Indeed the second inequality is the coefficient of \(q\) in
+\(\left|\sum_P(u_P-z_P)\right|\le\sum_P(u_P^2-z_P^2)\).
+Checking the four values \(\sigma\in\{-3,-1,1,3\}\) under
+\(1+a\le j\le7\) and \eqref{eq:endpoint-scalar-conditions} leaves
+\[
+ (j,\sigma)=(1,-3),(2,-1),(3,1),(4,-3),(4,3),(5,-1),(7,-3).
 \]
-leave the six possibilities
+For the last row, \(\sum_Pu_P^2=3q-6<w\), so the six possibilities are
 \begin{equation}\label{eq:endpoint-six-rows}
  (j,\sigma)=(1,-3),(2,-1),(3,1),(4,-3),(4,3),(5,-1).
 \end{equation}
-Here is the endpoint bookkeeping.  Before the last two scalar inequalities,
-the only additional rows are \((1,3)\) and \((7,-3)\).  For \((7,-3)\),
-one has \(\sum_Pu_P^2=3q-6<w\).  For \((1,3)\), let
-\(R_+=\{P:z_P=1\}\).  The pointwise shell inequality on the arc gives
-\[
- \sum_{P\in\mathcal A}u_P
- \le E-|R_+|+2|\mathcal A\cap R_+|+O(1)
- \le 3q+O(1),
-\]
-because the three positive lines contain at most \(3(2q/3+1)\) arc
-points.  This contradicts
-\(\sum_{P\in\mathcal A}u_P=4q-1\).  Thus no row is lost through an
-asymptotic rounding.
 
 The three lines cannot be concurrent.  When their signs agree, the exact
 inequality above gives the following contradictions; the two numerical
@@ -280,29 +292,52 @@ columns are \(\left|\sum u-\sum z\right|\) and
  (4,3)&3q+3&3q-15.
 \end{array}
 \]
-For the mixed-sign rows, the positive generator lines are maximal secants.
-Their positive nonvertices include at least \(q/3-1\) external points when
-\(j=2,5\), and at least \(2q/3-1\) when \(j=3\).  Substitution in the exact
-pointwise correction \eqref{eq:signed-norm-correction} makes
+For the mixed-sign rows, the arc cap leaves at least \(q/3-1\) external
+positive nonvertices when \(j=2,5\), and at least \(2q/3-1\) external
+positive residues when \(j=3\).  Substitution in the exact pointwise
+correction \eqref{eq:signed-norm-correction} makes
 \eqref{eq:positive-line-cost} fail by six in each case.
 
-The generators therefore form a triangle.  Dualize them to noncollinear
-points \(Q_1,Q_2,Q_3\), and put
-\(p_i=(1+\varepsilon_i)/2\).  The exact incidence identity
-\eqref{eq:incidence-of-centered-word} says that an ordinary line through a
-positive \(Q_i\) has \(\mathcal D\)-degree three, while one through a
-negative \(Q_i\) has degree two.  If \(x_{ij}\) is the degree of the
-connector \(Q_iQ_j\), the three pencil equations give
-\begin{equation}\label{eq:endpoint-connector-degrees}
- x_{ij}=\frac{j+2+p_i+p_j-p_k}{2},
+The generators therefore form a triangle.  Its residue support has size
+\(3q\) when the signs agree and \(3q-2\) when they are mixed.  Comparing
+with \eqref{eq:three-line-support} immediately excludes the rows
+\((2,-1)\) and \((3,1)\).  In each remaining row equality holds in the
+pointwise inequality \eqref{eq:shell-support-lower}.  Checking its three
+residue classes gives the exact degree rule
+\begin{equation}\label{eq:endpoint-equality-degrees}
+ z_P=1\Longrightarrow d_P=3,\qquad
+ z_P=-1\Longrightarrow d_P=2,\qquad
+ z_P=0\Longrightarrow d_P\in\{1,4\}.
+\end{equation}
+
+Dualize the generator lines to noncollinear points \(Q_1,Q_2,Q_3\), put
+\(p_i=(1+\varepsilon_i)/2\), and put
+\(y_i=\mathbf1_{\mathcal D}(Q_i)\).  If \(x_{ij}\) is the
+\(\mathcal D\)-degree of the connector \(Q_iQ_j\), then the \(q-1\)
+ordinary lines through \(Q_i\) have degree \(2+p_i\) by
+\eqref{eq:endpoint-equality-degrees}.  Counting incidences with
+\(\mathcal D\) in that pencil gives the general identity
+\begin{equation}\label{eq:endpoint-pencil-equation}
+ x_{ij}+x_{ik}=j+2+p_i+q(y_i-p_i),
  \qquad \{i,j,k\}=\{1,2,3\}.
 \end{equation}
-Requiring the three connector degrees to be positive integers reduces
-\eqref{eq:endpoint-six-rows} to
+
+For \((j,\sigma)=(1,-3)\), all three connectors have degree three, so
+\eqref{eq:endpoint-pencil-equation} would give \(6=3+qy_i\), impossible
+for \(q>3\).  For \((4,3)\), all connectors have degree two, and the same
+equation gives \(4=7+q(y_i-1)\), again impossible for \(q>3\).
+For \((4,-3)\), it gives \(y_i=0\) and connector degrees
+\((3,3,3)\).  Finally take \((5,-1)\), with one positive generator.  At
+its point \(Q_i\), the two connectors have degrees in \(\{1,4\}\), and
+\eqref{eq:endpoint-pencil-equation} forces \(y_i=1\) and their sum to be
+eight; both therefore have degree four.  At either negative generator the
+remaining connector has degree three, so the same equation forces \(y_i=0\).
+Thus the only surviving rows and connector profiles are
 \[
- (j,\sigma)=(4,-3)\quad\text{or}\quad(5,-1),
+ (j,\sigma)=(4,-3),(5,-1),\qquad
+ (x_{12},x_{13},x_{23})=(3,3,3),(4,4,3),
 \]
-with connector degrees \((3,3,3)\) and \((4,4,3)\), respectively.
+up to relabeling.
 
 For \((j,\sigma)=(4,-3)\), the positive residue consists only of the three
 triangle vertices.  On \(\mathcal A\), the pointwise inequality
@@ -312,10 +347,12 @@ triangle vertices.  On \(\mathcal A\), the pointwise inequality
 \]
 a contradiction.
 
-It remains to exclude \((j,\sigma)=(5,-1)\).  Equality in the support
-inequality forces every line degree to lie in \(\{1,2,3,4\}\), with
+It remains to exclude \((j,\sigma)=(5,-1)\).  Let \(N_i\) be the number of
+lines of \(\mathcal D\)-degree \(i\).  The equality rule
+\eqref{eq:endpoint-equality-degrees} gives
+\(N_2=2q-2\) and \(N_3=q\), while the total-line and first-moment identities
+give
 \[
- N_2=2q-2,\qquad N_3=q,\qquad
  N_4=\frac{q(q+2)}3+2.
 \]
 Let \(A_i\) count points of \(\mathcal A\) whose dual lines have
