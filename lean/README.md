@@ -27,7 +27,7 @@ theorems, the exact small-codeword theorem, the line-code geometry, or the
 asymptotic reductions from the geometric hypotheses to the arithmetic bounds.
 No literature theorem is declared as a Lean axiom.
 
-Checked coverage snapshot: 23 claims; 13 absent; 10 fragmentary; 0 conditional;
+Checked coverage snapshot: 24 claims; 14 absent; 10 fragmentary; 0 conditional;
 0 complete; 20 reviewer terminals, of which 5 are machinery serving no current
 manuscript claim.
 

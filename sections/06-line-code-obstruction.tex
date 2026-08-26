@@ -216,6 +216,123 @@ sufficiently large fields.  The exact small-codeword theorem supplies the
 claimed signed representation.
 \end{proof}
 
+\begin{proposition}[Exact endpoint obstruction]
+\label{prop:exact-five-thirds-endpoint}
+\coverage{absent}
+For all sufficiently large \(q=3^e\), there is no complete
+\[
+ \left(\frac{q^2}{3}+\frac{5q}{3},\frac{2q}{3}+1\right)\text{-arc}
+ \quad\text{in }\PG(2,q).
+\]
+\end{proposition}
+
+\begin{proof}
+Suppose that such arcs exist for arbitrarily large \(q\), and pass to a
+sequence of them.  Put \(q=3r\) and \(\delta=r\) in
+\eqref{eq:line-code-offsets}.  Proposition~\ref{prop:three-line-rigidity}
+shows that, for every sufficiently large member of the sequence,
+\[
+ z=\varepsilon_1\mathbf1_{L_1}
+   +\varepsilon_2\mathbf1_{L_2}
+   +\varepsilon_3\mathbf1_{L_3}\pmod3,
+ \qquad \varepsilon_i\in\{-1,1\},
+\]
+where \(z_P\in\{-1,0,1\}\) is the balanced representative of \(u_P\).
+Write \(\sigma=\varepsilon_1+\varepsilon_2+\varepsilon_3\).
+
+We first record the exact scalar reduction.  Substitute \(\delta=r\) in
+Lemma~\ref{lem:centered-moment-identities}, use
+\eqref{eq:three-line-support}, and compare \(u\) with its balanced residue
+\(z\).  Coverage, the arc cap, and
+\[
+ \sigma\equiv1-j\pmod3,
+ \qquad
+ \left|\sum_P(u_P-z_P)\right|
+ \le \sum_P(u_P^2-z_P^2)
+\]
+leave the six possibilities
+\begin{equation}\label{eq:endpoint-six-rows}
+ (j,\sigma)=(1,-3),(2,-1),(3,1),(4,-3),(4,3),(5,-1).
+\end{equation}
+Here is the endpoint bookkeeping.  Before the last two scalar inequalities,
+the only additional rows are \((1,3)\) and \((7,-3)\).  For \((7,-3)\),
+one has \(\sum_Pu_P^2=3q-6<w\).  For \((1,3)\), let
+\(R_+=\{P:z_P=1\}\).  The pointwise shell inequality on the arc gives
+\[
+ \sum_{P\in\mathcal A}u_P
+ \le E-|R_+|+2|\mathcal A\cap R_+|+O(1)
+ \le 3q+O(1),
+\]
+because the three positive lines contain at most \(3(2q/3+1)\) arc
+points.  This contradicts
+\(\sum_{P\in\mathcal A}u_P=4q-1\).  Thus no row is lost through an
+asymptotic rounding.
+
+The three lines cannot be concurrent.  When their signs agree, the exact
+inequality above gives the following contradictions; the two numerical
+columns are \(\left|\sum u-\sum z\right|\) and
+\(\sum u^2-w\), respectively:
+\[
+\begin{array}{c|c|c}
+ (j,\sigma)&\left|\sum u-\sum z\right|&\sum u^2-w\\ \hline
+ (1,-3)&6q&6q-6\\
+ (4,-3)&3q-3&3q-15\\
+ (4,3)&3q+3&3q-15.
+\end{array}
+\]
+For the mixed-sign rows, the positive generator lines are maximal secants.
+Their positive nonvertices include at least \(q/3-1\) external points when
+\(j=2,5\), and at least \(2q/3-1\) when \(j=3\).  Substitution in the exact
+pointwise correction \eqref{eq:signed-norm-correction} makes
+\eqref{eq:positive-line-cost} fail by six in each case.
+
+The generators therefore form a triangle.  Dualize them to noncollinear
+points \(Q_1,Q_2,Q_3\), and put
+\(p_i=(1+\varepsilon_i)/2\).  The exact incidence identity
+\eqref{eq:incidence-of-centered-word} says that an ordinary line through a
+positive \(Q_i\) has \(\mathcal D\)-degree three, while one through a
+negative \(Q_i\) has degree two.  If \(x_{ij}\) is the degree of the
+connector \(Q_iQ_j\), the three pencil equations give
+\begin{equation}\label{eq:endpoint-connector-degrees}
+ x_{ij}=\frac{j+2+p_i+p_j-p_k}{2},
+ \qquad \{i,j,k\}=\{1,2,3\}.
+\end{equation}
+Requiring the three connector degrees to be positive integers reduces
+\eqref{eq:endpoint-six-rows} to
+\[
+ (j,\sigma)=(4,-3)\quad\text{or}\quad(5,-1),
+\]
+with connector degrees \((3,3,3)\) and \((4,4,3)\), respectively.
+
+For \((j,\sigma)=(4,-3)\), the positive residue consists only of the three
+triangle vertices.  On \(\mathcal A\), the pointwise inequality
+\(u_P\le2e_P+\mathbf1_{\{z_P=1\}}\) therefore gives
+\[
+ 2q-4=\sum_{P\in\mathcal A}u_P\le2E+3=2q-7,
+\]
+a contradiction.
+
+It remains to exclude \((j,\sigma)=(5,-1)\).  Equality in the support
+inequality forces every line degree to lie in \(\{1,2,3,4\}\), with
+\[
+ N_2=2q-2,\qquad N_3=q,\qquad
+ N_4=\frac{q(q+2)}3+2.
+\]
+Let \(A_i\) count points of \(\mathcal A\) whose dual lines have
+\(\mathcal D\)-degree \(i\), put \(b=A_1\), and put \(h=N_4-A_4\).
+The selected-point and selected-incidence equations reduce to
+\[
+ A_3=\frac{2q}{3}+1+b+2h.
+\]
+Only one degree-three point lies off the positive generator line, so its arc
+cap gives \(b+2h\le1\).  Hence \(h=0\), and both degree-four connector
+vertices are selected.  At least \(2q/3\) selected degree-three points then
+lie on the positive generator; the two connector vertices raise its
+intersection with \(\mathcal A\) to at least \(2q/3+2\), contradicting the
+maximum \(2q/3+1\).  This excludes the last row.
+\uses{lem:centered-moment-identities,prop:three-line-rigidity}
+\end{proof}
+
 \begin{proof}[Proof of Theorem~\ref{thm:characteristic-three}]
 Fix \(\varepsilon>0\).  If \(\varepsilon>1/3\),
 Proposition~\ref{prop:characteristic-three-modular-bound} already gives the

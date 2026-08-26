@@ -3,7 +3,7 @@
   "note": "Every theorem in the manuscript has a mathematical proof. The bundle below is an independent exact-arithmetic cross-check and is not a premise of a theorem.",
   "evidence": {
     "integral-secant-checks": {
-      "role": "Checks the balanced and bounded integer degree formulas against independent dynamic programs; verifies the incidence-mixing polynomial identity; recomputes the rational equality coefficients from exact pair counts; checks the declared bounded characteristic-three and characteristic-two residue cases; and replays the centered moments, pointwise shell inequalities, exact shell cancellation, and phase boundary in the characteristic-three line-code obstruction. It verifies finite algebra and stated bounded grids, not the existence or nonexistence of projective arcs and not the imported repair or small-codeword theorems.",
+      "role": "Checks the balanced and bounded integer degree formulas against independent dynamic programs; verifies the incidence-mixing polynomial identity; recomputes the rational equality coefficients from exact pair counts; checks the declared bounded characteristic-three and characteristic-two residue cases; and replays the centered moments, pointwise shell inequalities, exact shell cancellation, phase boundary, endpoint signed-row ledger, connector degrees, and terminal scalar gaps in the characteristic-three line-code obstruction. It verifies finite algebra and stated bounded grids, not the existence or nonexistence of projective arcs and not the imported repair or small-codeword theorems.",
       "checksum_manifest": "verification/integral-secant-checks.sha256",
       "commands": [
         "nix shell nixpkgs#python3 --command python3 verification/check_integral_secant_distributions.py check"

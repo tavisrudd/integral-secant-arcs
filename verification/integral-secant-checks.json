@@ -70,6 +70,76 @@
       }
     ],
     "consequence": "alpha>=1/3-o(1)",
+    "exact_endpoint": {
+      "candidate_rows": [
+        [
+          1,
+          -3
+        ],
+        [
+          2,
+          -1
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          4,
+          -3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          5,
+          -1
+        ]
+      ],
+      "connector_degrees": {
+        "(4, -3)": [
+          3,
+          3,
+          3
+        ],
+        "(5, -1)": [
+          4,
+          4,
+          3
+        ]
+      },
+      "field_rows": [
+        {
+          "all_negative_gap": 3,
+          "delta": 27,
+          "mixed_degree_four_count": 2243,
+          "q": 81
+        },
+        {
+          "all_negative_gap": 3,
+          "delta": 81,
+          "mixed_degree_four_count": 19847,
+          "q": 243
+        },
+        {
+          "all_negative_gap": 3,
+          "delta": 243,
+          "mixed_degree_four_count": 177635,
+          "q": 729
+        }
+      ],
+      "triangular_survivors": [
+        [
+          4,
+          -3
+        ],
+        [
+          5,
+          -1
+        ]
+      ]
+    },
     "sharp_displacement": {
       "denominator": 3,
       "numerator": 1
@@ -9566,6 +9636,8 @@
     "factor_pair_resonance_instances": 119,
     "four_line_even_type_spectrum_instances": 121,
     "infinite_family_formula_instances": 11,
+    "line_code_endpoint_candidate_rows": 8,
+    "line_code_endpoint_field_instances": 3,
     "line_code_phase_boundary_instances": 9,
     "line_code_pointwise_shell_instances": 206,
     "line_code_shell_collapse_instances": 1365,

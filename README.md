@@ -76,6 +76,9 @@ additional `q/3 − o(q)`, raising the lower coefficient from `4/3` to `5/3`.
   modular cores or their geometric realizations.
 - Over `q = 3^h`, ordinary completeness gives
   `t_{2q/3+1}(2,q) ≥ q²/3 + 5q/3 − o(q)`.
+- For all sufficiently large `q = 3^h`, no complete
+  `(q²/3+5q/3,2q/3+1)`-arc exists; positive sublinear displacement remains
+  open.
 - Over `q = 2^h`, if every external point of a `(k,3q/4+1)`-arc lies on at
   least two maximal secants, then
   `k ≥ q²/2 + (73/48 − epsilon)q` for all sufficiently large `h`.
@@ -89,7 +92,7 @@ additional `q/3 − o(q)`, raising the lower coefficient from `4/3` to `5/3`.
 [`REVIEWER_GUIDE.md`](REVIEWER_GUIDE.md) gives a short route through the proof
 and an explicit checklist for the balancing-branch crossing, secant-number
 localization, exceptional-line estimate, imported stability hypotheses,
-repair-support argument, and evidence boundary.
+repair-support argument, exact endpoint reduction, and evidence boundary.
 
 ## Proof and evidence boundary
 
@@ -100,7 +103,7 @@ identities, the characteristic-three and characteristic-two affine minima,
 and the centered-moment expansions, exact shell cancellation, and terminal
 three-line phase boundary used in the line-code obstruction.
 
-The formal claim map reports 23 manuscript claims: 13 absent and 10
+The formal claim map reports 24 manuscript claims: 14 absent and 10
 fragmentary, with none classified as complete. Lean does not formalize finite
 projective planes, complete `(k,n)`-arcs, the exceptional-line estimate, the
 Szőnyi--Weiner repair or small-codeword theorems, repair support, line-code

@@ -16,6 +16,7 @@ digraph manuscript {
   "lem:repair-support" [fillcolor="#ffffff", tooltip="absent"];
   "lem:secant-number-near-equality" [fillcolor="#ffffff", tooltip="absent"];
   "prop:characteristic-three-modular-bound" [fillcolor="#fde8c8", tooltip="fragment"];
+  "prop:exact-five-thirds-endpoint" [fillcolor="#ffffff", tooltip="absent"];
   "prop:rational-family-stability" [fillcolor="#ffffff", tooltip="absent"];
   "prop:simultaneous-equality" [fillcolor="#ffffff", tooltip="absent"];
   "prop:three-line-rigidity" [fillcolor="#fde8c8", tooltip="fragment"];
@@ -43,6 +44,7 @@ digraph manuscript {
   "SWmodp:small-codeword" -> "thm:line-code-gap" [style=dotted];
   "cor:n-secant-feasibility" -> "prop:characteristic-three-modular-bound" [style=solid];
   "cor:n-secant-feasibility" -> "prop:rational-family-stability" [style=solid];
+  "lem:centered-moment-identities" -> "prop:exact-five-thirds-endpoint" [style=solid];
   "lem:centered-moment-identities" -> "thm:line-code-gap" [style=solid];
   "lem:degree-extrema" -> "thm:paired-envelope" [style=solid];
   "lem:no-uncorrected-characteristic-three" -> "prop:characteristic-three-modular-bound" [style=solid];
@@ -50,6 +52,7 @@ digraph manuscript {
   "lem:pencil-bounds" -> "thm:line-code-gap" [style=solid];
   "lem:repair-support" -> "prop:characteristic-three-modular-bound" [style=solid];
   "lem:secant-number-near-equality" -> "prop:rational-family-stability" [style=solid];
+  "prop:three-line-rigidity" -> "prop:exact-five-thirds-endpoint" [style=solid];
   "thm:characteristic-three" -> "cor:blocking-set-form" [style=dashed];
   "thm:paired-envelope" -> "cor:mixing-relaxation" [style=solid];
   "thm:paired-envelope" -> "cor:n-secant-feasibility" [style=solid];

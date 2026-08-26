@@ -85,7 +85,13 @@ obstruction is in Section 6, and the characteristic-two argument follows it.
    the arc cap give `t<=1+6 alpha+o(1)`.  Hence the displacement is at least
    `q/3-o(q)`, and combining this with the Section 5 lower side gives
    `4/3+1/3=5/3`.  The paper does not claim that `5/3` is optimal.
-9. **What inverse realization is actually proved?**
+9. **What happens at the exact `5/3` endpoint?**
+   Proposition `prop:exact-five-thirds-endpoint` reduces equality to six
+   signed three-line rows.  Exact norm and arc-cap inequalities exclude
+   concurrence; the connector-pencil equations leave two triangular rows,
+   and their degree spectra violate the arc cap.  This excludes zero repair,
+   not positive sublinear repair.
+10. **What inverse realization is actually proved?**
    Proposition `prop:two-character-inverse` treats an exact two-character
    point set in the dual plane.
    Summing its line characters through one dual point reconstructs the primal
@@ -109,7 +115,7 @@ The adjacent Lean package is a partial formal companion.  Its public interface
 is
 [`PaperInterface.lean`](lean/TavisRuddFiniteGeom/Papers/IntegralSecantArcs/PaperInterface.lean),
 and [`claims.json`](lean/verification/claims.json) gives the exact
-manuscript-to-declaration map.  It classifies 23 manuscript claims as 13 absent
+manuscript-to-declaration map.  It classifies 24 manuscript claims as 14 absent
 and 10 fragmentary; none is complete.  Lean checks integer balancing and
 interval overlap, forward rational substitutions and coefficient algebra, and
 the terminal affine minima.  It also checks the centered-moment expansions,
@@ -172,6 +178,9 @@ claim to perform that build.
 - Treat the line-code result as a two-sided forbidden band; obtain the final
   one-sided lower bound only by combining it with the modular-repair lower
   side.  Do not infer optimality of `5/3`.
+- In the endpoint proposition, keep the six signed rows exact, distinguish
+  concurrent from triangular generators, and apply the connector-pencil
+  equations before either final arc-cap contradiction.
 - Fix uniform bounds for both the first-order coefficient and constant
   remainder before invoking the secant-number localization lemma.
 - Require a spanning point set for the stated rank-three projective-code

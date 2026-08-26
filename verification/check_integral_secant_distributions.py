@@ -781,6 +781,71 @@ def run_checks() -> dict[str, object]:
         assert boundary >= Fraction(1, 3)
         phase_boundary_checks += 1
 
+    # Exact arithmetic ledger at displacement q/3.  The manuscript supplies
+    # the projective-geometric exclusions; this independently checks the
+    # finite signed rows, connector degrees, and two terminal scalar gaps.
+    endpoint_candidates = []
+    for secant_offset in range(-2, 8):
+        for coefficient_sum in (-3, -1, 1, 3):
+            if coefficient_sum % 3 != (1 - secant_offset) % 3:
+                continue
+            positive_lines = (3 + coefficient_sum) // 2
+            norm_surplus = 7 - secant_offset
+            sum_correction = 4 - secant_offset - coefficient_sum
+            if (
+                secant_offset >= 1
+                and abs(sum_correction) <= norm_surplus
+                and norm_surplus - sum_correction >= 2 * positive_lines
+            ):
+                endpoint_candidates.append((secant_offset, coefficient_sum))
+    assert endpoint_candidates == [
+        (1, -3), (1, 3), (2, -1), (3, 1),
+        (4, -3), (4, 3), (5, -1), (7, -3),
+    ]
+
+    endpoint_rows = [
+        row for row in endpoint_candidates if row not in ((1, 3), (7, -3))
+    ]
+    assert endpoint_rows == [
+        (1, -3), (2, -1), (3, 1), (4, -3), (4, 3), (5, -1)
+    ]
+
+    endpoint_triangle_rows = []
+    endpoint_connector_degrees = {}
+    for secant_offset, coefficient_sum in endpoint_rows:
+        positive_lines = (3 + coefficient_sum) // 2
+        memberships = [1] * positive_lines + [0] * (3 - positive_lines)
+        numerators = [
+            secant_offset + 2 + memberships[i] + memberships[j] - memberships[k]
+            for i, j, k in ((0, 1, 2), (0, 2, 1), (1, 2, 0))
+        ]
+        if all(value > 0 and value % 2 == 0 for value in numerators):
+            endpoint_triangle_rows.append((secant_offset, coefficient_sum))
+            endpoint_connector_degrees[str((secant_offset, coefficient_sum))] = [
+                value // 2 for value in numerators
+            ]
+    assert endpoint_triangle_rows == [(4, -3), (5, -1)]
+    assert endpoint_connector_degrees == {
+        "(4, -3)": [3, 3, 3],
+        "(5, -1)": [4, 4, 3],
+    }
+
+    endpoint_field_rows = []
+    for q in (81, 243, 729):
+        r = q // 3
+        all_negative_gap = (2 * q - 4) - (2 * (q - 5) + 3)
+        assert all_negative_gap == 3
+        degree_four_count = q * (q + 2) // 3 + 2
+        assert degree_four_count > 0
+        endpoint_field_rows.append(
+            {
+                "q": q,
+                "delta": r,
+                "all_negative_gap": all_negative_gap,
+                "mixed_degree_four_count": degree_four_count,
+            }
+        )
+
     centered_moment_rows = []
     for q in (81, 243, 729):
         r = q // 3
@@ -885,6 +950,8 @@ def run_checks() -> dict[str, object]:
             "line_code_pointwise_shell_instances": line_code_shell_checks,
             "line_code_shell_collapse_instances": shell_collapse_checks,
             "line_code_phase_boundary_instances": phase_boundary_checks,
+            "line_code_endpoint_candidate_rows": len(endpoint_candidates),
+            "line_code_endpoint_field_instances": len(endpoint_field_rows),
         },
         "factor_pair_resonances": resonance_rows,
         "cf_parity_asymptotic": {
@@ -903,6 +970,12 @@ def run_checks() -> dict[str, object]:
             "signed_capacity_invariant": "t<=1+6*alpha+o(1)",
             "consequence": "alpha>=1/3-o(1)",
             "centered_moment_rows": centered_moment_rows,
+            "exact_endpoint": {
+                "candidate_rows": [list(row) for row in endpoint_rows],
+                "triangular_survivors": [list(row) for row in endpoint_triangle_rows],
+                "connector_degrees": endpoint_connector_degrees,
+                "field_rows": endpoint_field_rows,
+            },
         },
         "rows": rows,
         "wide_degree_rows": wide_degree_rows,

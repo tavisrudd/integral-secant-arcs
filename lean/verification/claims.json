@@ -79,6 +79,16 @@
       "terminal_digest": "6ec458ae9bffc912c4c47bef348e88d6eefda60a997269ec79c09948015de873"
     },
     {
+      "manuscript_label": "prop:exact-five-thirds-endpoint",
+      "coverage": "absent",
+      "declarations": [],
+      "objects": "A complete (q^2/3+5q/3,2q/3+1)-arc over a sufficiently large ternary field and the three-line representation of its centered residue word.",
+      "hypotheses": "The field order is a sufficiently large power of three and the arc lies at the exact five-thirds linear endpoint.",
+      "conclusion": "No such complete arc exists.",
+      "cautions": "Lean does not formalize the equality-case signed-row reduction, the concurrent-line exclusion, the connector-pencil equations, either final triangular contradiction, or the projective-geometric statement. The adjacent deterministic checker independently replays only the finite arithmetic ledger.",
+      "statement_digest": "9812f619d8c22e2fc0372a149fc587a6a0b67404cecfcad26bcd0f3884c2c24d"
+    },
+    {
       "manuscript_label": "thm:factor-pair",
       "coverage": "fragment",
       "declarations": [
