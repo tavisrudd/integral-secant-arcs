@@ -1,8 +1,8 @@
 {
+  "content_sha256": "c7b7aee3763e2b142bad2fc0432a6b27a7043a447b9fe9fbe28fa02763e12390",
   "excluded_path_count": 2,
   "excluded_release_outputs": [],
   "excluded_symlinks": [],
-  "exporter_blob": "bc16a3f02957af1342e19dfe7fad78e003d8c5dc",
   "files": [
     {
       "bytes": 44,
@@ -72,11 +72,11 @@
       "source_blob": "29f2601a9747f66f5aaae397516056590d418ffa"
     },
     {
-      "bytes": 301,
+      "bytes": 506,
       "mode": "100644",
       "path": "PROVENANCE.md",
       "role": "provenance",
-      "sha256": "9a746e2d83c398ee84a3d459155b0fe144d80d30303c45c3c1f240f12f73aeec",
+      "sha256": "a42d3fbcee69a6989e3b5092265c2d8bfbde25720a5d4bbe6e11f23c0483ac44",
       "source_blob": null
     },
     {
@@ -125,22 +125,22 @@
       "source_blob": "9c425c26718995102f09f1f08b3c00621140748c"
     },
     {
-      "bytes": 194430,
+      "bytes": 195231,
       "mode": "100644",
       "path": "integral_secant_arcs.pdf",
       "rewrites": [],
       "role": "release-output",
-      "sha256": "14b471b66448663b4f7f825e19456815e9bd005dd033079a18762057ac9b487a",
-      "source_blob": "614ce0e3a37a7ca190ceafec0f52d7b74952c2e4"
+      "sha256": "7c387c6c8a9199a8f4851fb4bc5c9bf95c6407f1836ad57ba00fe6e101c4b41b",
+      "source_blob": "7fbb2d5fe721337a8393e7f84c31e39bf59735d8"
     },
     {
-      "bytes": 7596,
+      "bytes": 7807,
       "mode": "100644",
       "path": "integral_secant_arcs.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "114eafc051a5302749d65e6a39d395a4b730f05eac4d8a67e8641b895893818f",
-      "source_blob": "6b1f2d4f4d501e1bf48f9ca2141ad45c3d3bfdeb"
+      "sha256": "09fb97922c91bdb77f31a81e8da600ef947e1f1189131355e9e749576a930555",
+      "source_blob": "53983e592b1f2d02d16a992a40a293e402e4ab3a"
     },
     {
       "bytes": 8,
@@ -296,13 +296,13 @@
       "source_blob": "ca74e5420ac1336a78618c8ef2273f78ff5e83c5"
     },
     {
-      "bytes": 9152,
+      "bytes": 9698,
       "mode": "100644",
       "path": "sections/01-introduction.tex",
       "rewrites": [],
       "role": "manuscript-source",
-      "sha256": "39226cdfbec4d801e86d4b3faaf23d62459d240ffaff2e665214d298740c6e56",
-      "source_blob": "9915a674daf1285523597c26007aa61ee400f43a"
+      "sha256": "b486096ba39852943ab0060e9f5a817f34cf18576ca13ad9a4b459f251a9992b",
+      "source_blob": "949b4b5c14a1c5078d5d2d43d093d00cb342fba3"
     },
     {
       "bytes": 5293,
@@ -445,13 +445,6 @@
     "integral_secant_arcs.tex"
   ],
   "manifest_self_excluded": true,
-  "paper_ids": [
-    "integral_secant_arcs"
-  ],
-  "paper_registry_sha256": "a78ad495a4099048d45a5e168a68300030515136b3ec3571e9a031d88b3232ea",
-  "release_output_policy": "immutable-source",
   "repository": "integral-secant-arcs",
-  "repository_map_sha256": "34498ac7fb13d970c5548a069ff053c3ccceccef5650c47babe55a75e511c4df",
-  "schema_version": 1,
-  "source_commit": "8f68b8b029bedad1537e104cb30b7e52e33a7add"
+  "schema_version": 1
 }
